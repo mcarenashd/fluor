@@ -15,4 +15,6 @@ svg{
 
 circle:hover {
   animation-play-state: paused;
+}body {
+
 }
