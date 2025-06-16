@@ -3,11 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <title>Document</title>
+        <link rel="stylesheet" href="src/css/style.css">
+        <link rel="stylesheet" href="src/css/index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Forum&family=Fredoka:wght@300..700&family=Marmelad&family=Oswald:wght@700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Forum&family=Fredoka:wght@300..700&family=Marmelad&family=Oswald:wght@700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Forum&family=Fredoka:wght@300..700&family=Marmelad&family=Oswald:wght@700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <title>Document</title>
 </head>
-
 <body>
-    <h1>FLUOR</h1>
+    <nav class="navbar">Este es el navbar</nav>
+    <div class="index">
+        <svg viewBox="0 0 30 30">
+            <defs>
+                <radialGradient id="grad3d" cx="30%" cy="30%" r="70%">
+                    <stop offset="0%" stop-color="#ffffff" />
+                    <stop offset="100%" stop-color="#592851" />
+                </radialGradient>
+                <radialGradient id="grad3d2" cx="30%" cy="30%" r="70%">
+                    <stop offset="0%" stop-color="#ffffff" />
+                    <stop offset="100%" stop-color="#A8BFBB" />
+                </radialGradient>
+                <radialGradient id="grad3d3" cx="30%" cy="30%" r="70%">
+                    <stop offset="0%" stop-color="#ffffff" />
+                    <stop offset="100%" stop-color="#732F6E" />
+                </radialGradient>
+                <radialGradient id="grad3d4" cx="30%" cy="30%" r="70%">
+                    <stop offset="0%" stop-color="#ffffff" />
+                    <stop offset="100%" stop-color="#BFAAAA" />
+                </radialGradient>
+                <radialGradient id="grad3d5" cx="30%" cy="30%" r="70%">
+                    <stop offset="0%" stop-color="#ffffff" />
+                    <stop offset="100%" stop-color="#86A694" />
+                </radialGradient>
+            </defs>
+            <!-- Las Órbitas -->
+            <circle cx="50%" cy="50%" r="20%" stroke="#86A694" stroke-width="0.05" fill="none" />
+            <circle cx="50%" cy="50%" r="13%" stroke="#86A694" stroke-width="0.05" fill="none" />  
+            <!-- Los Protones -->
+            <!-- Link a Jugamos--> 
+            <a href="pages/jugamos.html">
+             <circle cx="50%" cy="30%" r="5%" fill="url(#grad3d)" style="cursor:pointer;"/>
+             <text x="50%" y="31%" text-anchor="middle" fill="#fff" font-size="5%">IR</text>
+                   <animateTransform 
+                   attributeName="transform" 
+                   attributeType="XML" 
+                   type="rotate" 
+                   from="360 15 15" 
+                   to="0 15 15" 
+                   dur="60s" 
+                   repeatCount="indefinite" />
+             </a>
+             <!-- Link a Historia--> 
+             <a href="pages/historia.html">
+             <circle cx="50%" cy="70%" r="5%" fill="url(#grad3d2)"/>
+             <text x="50%" y="71%" text-anchor="middle" fill="#fff" font-size="5%">IR</text>
+                   <animateTransform 
+                   attributeName="transform" 
+                   attributeType="XML" 
+                   type="rotate" 
+                   from="360 15 15" 
+                   to="0 15 15" 
+                   dur="60s" 
+                   repeatCount="indefinite" />             
+             </a>
+             <!-- Link a Creadoras--> 
+             <a href="pages/donde-estoy.html">
+             <circle cx="33%" cy="40%" r="5%" fill="url(#grad3d3)"/>
+             <text x="33%" y="41%" text-anchor="middle" fill="#fff" font-size="5%">IR</text>
+                   <animateTransform 
+                   attributeName="transform" 
+                   attributeType="XML" 
+                   type="rotate" 
+                   from="360 15 15" 
+                   to="0 15 15" 
+                   dur="60s" 
+                   repeatCount="indefinite" /> 
+             </a>
+             <!-- Link a Donde Estoy--> 
+             <a href="pages/donde-estoy.html">
+             <circle cx="38%" cy="50%" r="5%" fill="url(#grad3d4)"/>
+             <text x="38%" y="51%" text-anchor="middle" fill="#fff" font-size="5%">IR</text>
+                   <animateTransform 
+                   attributeName="transform" 
+                   attributeType="XML" 
+                   type="rotate" 
+                   from="0 15 15" 
+                   to="360 15 15" 
+                   dur="60s" 
+                   repeatCount="indefinite" /> 
+             </a>
+             <!-- Link a Historia--> 
+             <a href="pages/donde-estoy.html">
+             <circle cx="62%" cy="50%" r="5%" fill="url(#grad3d5)"/> 
+             <text x="62%" y="51%" text-anchor="middle" fill="#fff" font-size="5%">IR</text>
+                   <animateTransform 
+                   attributeName="transform" 
+                   attributeType="XML" 
+                   type="rotate" 
+                   from="0 15 15" 
+                   to="360 15 15" 
+                   dur="60s" 
+                   repeatCount="indefinite" /> 
+             </a>
+        </svg>
+    </div>
+    <div class="info-section">
+        <h1>FLUOR</h1>
+        <h2>FLUOR</h2>
+        <h3>FLUOR</h3>
+        <p> Así se van a ver los párrafos</p>
+    <a href="pages/donde-estoy.html">
+        <div class="btn-container">
+            <div class="btn-fill"></div>
+            <div class="btn-text">Start Adventure</div>
+        </div>
+    </a>
+    </div>
+<footer> hola</footer>
 </body>
 
 </html>
