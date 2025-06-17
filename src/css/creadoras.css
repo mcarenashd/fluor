@@ -7,17 +7,45 @@ body {
     height: 100%;
     border-radius: 15px;
     display: flex;
+    flex-wrap: wrap;
+    gap: 60git lopx;
+    justify-content: center;
+    
 
 
 }
 img {
-    width: 150px;
-}
+    width: 200px;
+    /* margin-bottom:0; */
+    border-radius: 60px;
 
-.card-rectangulo {
+}
+.card-front{
     width: 200px;
     height: 400px;
-    background-color: #592851;
     margin: 2px;
     border-radius: 100px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 200px;
+    
+}
+
+.morada {
+    background-color: #592851;
+}
+.violeta {
+    background-color: #732F6E;
+}
+.verdec {
+    background-color:#A8BFBB ;
+}
+.verdeo {
+background-color:#86A694 ;
+}
+.rosa {
+background-color:#BFAAAA ;
 }
