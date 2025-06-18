@@ -5,44 +5,78 @@ h1{
     text-align: center;
 }
 .container {
-    /* background-color: blue;   */
     width: 100%;
     height: 100%;
     border-radius: 15px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 60px;
-    justify-content: center;
-    
-
+    display: flex;/*convierte el contenedor en flexible*/
+    flex-wrap: wrap;/*Permite que los elementos "salten" a la siguiente línea si no caben*/
+    gap: 60px;/*Espacio de 60 píxeles entre cada elemento hijo*/
+    justify-content: center;/* Centra los elementos horizontalmente*/
 
 }
 img {
     width: 200px;
      height: 300px;  
      border-radius: 60px; 
-    display: flex;
-    object-fit: cover;
-     margin-top: auto; 
-    margin-bottom: 0px;
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
+    /* display: flex; */
+    object-fit: cover;/* Mantiene las proporciones de la imagen, recortando si es necesario*/
+     margin-top: auto; /*Empuja la imagen hacia abajo dentro de su contenedor*/
+    margin-bottom: 0px;/*no hay margen inferior*/
+    border-bottom-left-radius: 50px;/*Esquina inferior izquierda más redondeada*/
+    border-bottom-right-radius: 50px;/*Esquina inferior derecha más redondeada*/
    
 }
+/*CONTENEDOR DE TARJETA */
+.card {
+    perspective: 1000px;/*Establece la "distancia de visualización" para efectos 3D
+Mientras mayor el valor, menos pronunciado el efecto 3D*/
+}
+
+/*INTERIOR DE LA TARJETA*/
+.card-inner {
+    position: relative;/*Permite posicionar elementos hijos de forma absoluta*/
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 2s;/*ANIMACIÓN - Cualquier cambio en transform durará 0.6*/
+    transform-style: preserve-3d;/*Mantiene las transformaciones 3D en elementos hijos*/
+
+
+}
+/*ACTIVACION DE LA ROTACIO*/
+.card:hover .card-inner {/*Cuando el mouse está sobre .card, selecciona el .card-inner interior*/
+    transform: rotateY(180deg);/*Rota el elemento 180 grados en el eje Y (horizontal)
+RESULTADO: La tarjeta se voltea mostrando su parte trasera*/
+}
+ /*CARA FRONTAL DE LA TARJETA*/
 .card-front{ /* esto es las tarjatas de colores*/
     width: 200px;
     height: 400px;
     margin: 2px;
-    border-radius: 100px;
+    border-radius: 100px; /*Esquinas muy redondas*/
     display: flex;
     align-items: flex-end;  /* se alinea abajo*/
-    justify-content: space-between; 
-    flex-grow: 1;
-    flex-shrink: 1;
+    justify-content: space-between;   
+    justify-content: center;
+    flex-grow: 1;/*Puede crecer si hay espacio extra*/
+    flex-shrink: 1;/*Puede encogerse si falta espacio*/
     flex-basis: 200px;
     overflow: hidden; /*la imagen se queda dentro de ka tarjeta*/
-   
+    backface-visibility: hidden;/*oculta la parte trasera cuando este rotada*/
+} 
+/*CARA TRASERA DE LA TARJETA*/
+.card-back {
+    position: absolute; /*Se posiciona de forma absoluta (se superpone)*/
+    top:0;/*Se posiciona en la parte superior*/
+    left: 0;/*Se posiciona en la parte izquierda*/
+    transform: rotateY(180deg);/*Está rotada 180° inicialmente (oculta)*/
+    backface-visibility: hidden;/*Oculta su parte trasera*/
+    width: 200px;/* DE AQUI PARA ABAJO LE HE DADO LO MISMOS VALORES QUE A LA CARA FRONTAL*/
+    height: 400px;
+    margin: 2px;
+    border-radius: 100px;
 }
+     
 
 .morada {
     background-color: #592851;
@@ -64,4 +98,12 @@ text-align: center;
 margin: 1px;
 color: white;
 
+}
+.card-back p {
+    color: white;
+    margin-top: 100px;
+    text-align: left;
+    margin-left: 20px;
+    margin-right: 20px;
+ 
 }
