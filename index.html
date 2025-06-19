@@ -15,7 +15,7 @@
 <body>
     <nav class="navbar">Este es el navbar</nav>
     <div class="index">
-        <svg viewBox="0 0 100 100" widht="100%" height="100%">
+        <svg id="mySvg" viewBox="0 0 100 100" widht="100%" height="100%">
             <defs>
                 <radialGradient id="grad3d" cx="30%" cy="30%" r="70%">
                     <stop offset="0%" stop-color="#ffffff" />
@@ -84,7 +84,7 @@
                    repeatCount="indefinite" /> 
              </a>
              <!-- Link a Donde Estoy--> 
-             <a href="pages/donde-estoy.html">
+             <a href="pages/creadoras.html">
              <circle cx="26%" cy="60%" r="7%" fill="url(#grad3d4)"/>
              <text x="26%" y="61%" text-anchor="middle" fill="#fff" font-size="15%">IR4</text>
                    <animateTransform 
@@ -110,7 +110,7 @@
                    repeatCount="indefinite" /> 
              </a>
              <!-- Estos son los protones que no tienen link -->
-            <circle cx="75%" cy="79%" r="6%" fill="url(#grad3d5)"> 
+            <circle id="circulo1" cx="75%" cy="79%" r="6%" fill="blue" style="cursor:pointer"> 
                    <animateTransform 
                    attributeName="transform" 
                    attributeType="XML" 
@@ -166,6 +166,7 @@
     </div>
 
 <footer> hola</footer>
+<script src="src/js/script.js"></script>
 </body>
 
 </html>

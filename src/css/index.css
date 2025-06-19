@@ -8,8 +8,13 @@ body {
     /* display: flex; */
     width: 100%;
     height: 100%;
-    box-sizing: border-box; /* qué hace*/
+    /* box-sizing: border-box; qué hace */
+    justify-content: center;
+}
 
+svg {
+  display: block;
+  margin: 0 auto;
 }
 
 .index svg { 
@@ -18,6 +23,7 @@ body {
     object-fit: contain;
     display: block;
     box-sizing: border-box;
+    justify-content: center;
 }
 
 circle:hover {
