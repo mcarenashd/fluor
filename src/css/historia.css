@@ -43,11 +43,27 @@ body {background-color: var(--mint-gray);
 .content-overlay {
     position: relative;
     z-index: 1;
-    text-align: center;
+    text-align: justify;
     padding: 2rem;
     background-color: rgba(0, 0, 0, 0.5); /* Overlay semitransparente para mejor legibilidad */
     border-radius: 10px;
-    max-width: 800px;
+    max-width: 700px;
+    height: 1200px;
+    transform: perspective(200px) rotateX(20deg);
+    animation: intro 20s linear infinite;
+}
+
+@keyframes intro {
+    0% {
+        transform: perspective(200px) rotateX(14deg) translateY(800px);
+    }
+    60% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: perspective(200px) rotateX(20deg) translateY(-1000px);
+        opacity: 0;
+    }
 }
 
 
