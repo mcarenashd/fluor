@@ -1,1 +1,1 @@
-/* COMENTARIO */
+// comentario//
