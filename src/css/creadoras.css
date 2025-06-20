@@ -107,3 +107,42 @@ color: white;
     margin-right: 20px;
  
 }
+.gratitude{
+    text-align: center;
+}
+/*quitamos la viñeta estandar*/
+.list-atomica{
+    list-style: none;
+    padding-left: 1rem;
+    /* text-align: center; */
+
+}
+ /* 2️ Creamos espacio para el icono a la izquierda */
+.list-atomica li {
+    position: relative;
+    padding-left: 2rem;
+}
+
+/* 3 Inyectamos el icono */
+.list-atomica li ::before { /*se utiliza before para poner el que queremos nosotros*/
+    content: ""; /*aqui no se pone nada para que salga tu icono*/
+    position: absolute;
+    left: 0;
+    top: 0.15em;
+    width: 1.2rem;
+    height: 1.2rem;
+    background: url(/src/images/img-creadoras/atom-illustration-on-a-transparent-background-premium-quality-symbols-line-flat-color-icon-for-concept-and-graphic-design-vector.jpg);
+    background-size: contain;/*todo esto se pone pq si no no saldria nuestro icono de la url*/
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+.icono-LinkedIn{
+    width: 60px;
+    height: 60px;
+    margin-top: 4rem;
+    transition: transform 0.3s;
+}
+.icono-LinkedIn :hover{
+    transform: scale(1.2);
+}
