@@ -12,7 +12,7 @@
 
 body {background-color: var(--mint-gray);
   font-weight: 300;
-  color: rgba(249, 249, 237, 1);
+  color: rgb(0, 0, 0);
       margin: 0;
     padding: 0;
 
@@ -20,11 +20,15 @@ body {background-color: var(--mint-gray);
 
 .intro-starwars {
     position: relative;
+    color: rgba(249, 249, 237, 1);
     min-height: 100vh;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 20px;
+    padding: 30px 30px 30px 30px;
+    margin: 5%;
 }
 
 .background-video {
@@ -50,12 +54,12 @@ body {background-color: var(--mint-gray);
     max-width: 700px;
     height: 1200px;
     transform: perspective(200px) rotateX(20deg);
-    animation: intro 20s linear infinite;
+    animation: intro 50s linear infinite;
 }
 
 @keyframes intro {
     0% {
-        transform: perspective(200px) rotateX(14deg) translateY(800px);
+        transform: perspective(200px) rotateX(10deg) translateY(800px);
     }
     60% {
         opacity: 0.5;
