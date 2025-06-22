@@ -15,8 +15,8 @@ h1{
 
 }
 img {
-    width: 200px;
-     height: 300px;  
+     width: 200px;
+     height: 300px;   
      border-radius: 60px; 
     /* display: flex; */
     object-fit: cover;/* Mantiene las proporciones de la imagen, recortando si es necesario*/
@@ -24,12 +24,21 @@ img {
     margin-bottom: 0px;/*no hay margen inferior*/
     border-bottom-left-radius: 50px;/*Esquina inferior izquierda más redondeada*/
     border-bottom-right-radius: 50px;/*Esquina inferior derecha más redondeada*/
-   
-}
+   }
+    .imagen-rose {
+    /* width: 400px; */
+     height:400px;   
+    /* object-position: cover; */
+    margin-bottom: -5.5rem;
+    
+    margin-top:-2.5rem ; 
+
+   } 
 /*CONTENEDOR DE TARJETA */
 .card {
     perspective: 1000px;/*Establece la "distancia de visualización" para efectos 3D
 Mientras mayor el valor, menos pronunciado el efecto 3D*/
+    
 }
 
 /*INTERIOR DE LA TARJETA*/
@@ -63,6 +72,7 @@ RESULTADO: La tarjeta se voltea mostrando su parte trasera*/
     flex-basis: 200px;
     overflow: hidden; /*la imagen se queda dentro de ka tarjeta*/
     backface-visibility: hidden;/*oculta la parte trasera cuando este rotada*/
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.8);;
 } 
 /*CARA TRASERA DE LA TARJETA*/
 .card-back {
@@ -75,6 +85,7 @@ RESULTADO: La tarjeta se voltea mostrando su parte trasera*/
     height: 400px;
     margin: 2px;
     border-radius: 100px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.8);;
 }
      
 
@@ -84,10 +95,10 @@ RESULTADO: La tarjeta se voltea mostrando su parte trasera*/
 .violeta {
     background-color: #732F6E;
 }
-.verdec {
+.verde-c {
     background-color:#A8BFBB ;
 }
-.verdeo {
+.verde-o {
 background-color:#86A694 ;
 }
 .rosa {
@@ -99,48 +110,66 @@ margin: 1px;
 color: white;
 
 }
-.card-back p {
+    .rosa p {  
     color: white;
-    margin-top: 100px;
-    text-align: left;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-top: 2rem; 
+    text-align:  center;
+     margin-left: 20px;
+    margin-right: 20px; 
  
 }
-.gratitude{
+ /* .gratitude{
+    text-align: center; 
+} */
+.agradecimiento-contenedor {
     text-align: center;
+    margin: 0 5rem; /*centra horizontalmente el bloque arriba y abajo o en los lados auto*/
+   
 }
 /*quitamos la viñeta estandar*/
 .list-atomica{
-    list-style: none;
-    padding-left: 1rem;
-    /* text-align: center; */
-
+    list-style: none;/*quita los puntitos que pone html en las listas*/
+    padding-left: 1rem; 
+    margin-left: 5rem;
+    margin-right: 5rem;
+    font-family:"Baloo 2", sans-serif;
+    font-size: 18px;
+    font-weight:lighter;  
+ 
 }
  /* 2️ Creamos espacio para el icono a la izquierda */
 .list-atomica li {
-    position: relative;
-    padding-left: 2rem;
+    position: relative;/*Necesaria si algún elemento hijo usa position: absolute (aunque aquí ya no lo usamos, por si acaso).*/
+    padding-left: 2.5rem;  
+    text-align: left;  
+    gap: 1rem; /*Añade espacio entre el icono y el texto.*/
+    display: flex;/* convierte el li en un contenedor flexible para poder alinear el icono y el texto uno al lado del otro*/
+    line-height: 1.5;/*Aumenta la altura de línea para que el texto sea más legible.*/
+    align-items: flex-start; /*Alinea el icono y el texto arriba del todo. Si quieres que estén centrados verticalmente, puedes usar center.*/
+    margin: 0 auto 2rem auto; /*Centra cada <li> y le da espacio entre uno y otro (1.5rem abajo).*/
 }
 
 /* 3 Inyectamos el icono */
-.list-atomica li ::before { /*se utiliza before para poner el que queremos nosotros*/
+.list-atomica li::before { /*se utiliza before para poner el que queremos nosotros*/
     content: ""; /*aqui no se pone nada para que salga tu icono*/
-    position: absolute;
+    position: absolute;  
     left: 0;
-    top: 0.15em;
-    width: 1.2rem;
-    height: 1.2rem;
-    background: url(/src/images/img-creadoras/atom-illustration-on-a-transparent-background-premium-quality-symbols-line-flat-color-icon-for-concept-and-graphic-design-vector.jpg);
-    background-size: contain;/*todo esto se pone pq si no no saldria nuestro icono de la url*/
-    background-repeat: no-repeat;
-    background-position: center;
-
+   flex-shrink: 0;/*Impide que el icono se deforme cuando el espacio se reduce.*/
+    width: 1.2rem;/*Tamaño del icono.*/
+    height: 1.2rem; 
+    background: url(/src/images/img-creadoras/fluorite-gemstones-icon-png.webp);
+   /*todo esto se pone pq si no no saldria nuestro icono de la url,*/
+    background-size: contain;/*Ajusta el icono para que encaje sin recortarse.*/
+    background-repeat: no-repeat;/*Evita que se repita la imagen.*/
+    background-position: center;/*Centra la imagen dentro del espacio asignado.*/
+    margin-top: 0.2rem;
 }
+
+
 .icono-LinkedIn{
     width: 60px;
     height: 60px;
-    margin-top: 4rem;
+    /* margin-top: 4rem; */
     transition: transform 0.3s;
 }
 .icono-LinkedIn :hover{
