@@ -22,10 +22,14 @@ h2, .p_short {
     text-align: center;
 }
 
+.intro-starwars h2 {
+    padding-top: 3em;
+}
+
 .intro-starwars {
     position: relative;
     color: rgba(249, 249, 237, 1);
-    min-height: 15vh;
+    max-height: 25em;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -58,7 +62,7 @@ h2, .p_short {
     max-width: 700px;
     height: 1200px;
     transform: perspective(200px) rotateX(14deg);
-    animation: intro 30s linear forwards
+    animation: intro 60s linear infinite;
 }
 
 @keyframes intro {
