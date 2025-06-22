@@ -28,23 +28,26 @@
         </video>
         <div class="content-overlay">
             <h2>El Elemento Fantasma</h2>
-            <p>Hace mucho, mucho tiempo...</p>
-            <p>en un laboratorio no muy lejano...</p>
+            <p>Hace mucho, mucho tiempo... en un laboratorio no muy lejano...</p>
             <p>Un elemento químico permanecía oculto, misterioso e incontrolable. Durante siglos, los alquimistas y
                 científicos lo perseguían sin éxito. Su nombre: <strong>flúor</strong>, el ladrón de electrones, el más
                 reactivo del universo. Era el <em>elemento maldito</em>.</p>
             <p>En el siglo XIX, muchos lo intentaron aislar... y muchos murieron en el intento. Corrosivo, volátil,
                 peligroso... el flúor devoraba metal, carne y voluntad.</p>
-            <p>Hasta que en 1886, el químico francés <strong>Henri Moissan</strong> logró lo imposible: <strong>aislar el flúor puro</strong> usando electrólisis en condiciones extremas. Su hazaña le valió el <strong>Premio Nobel</strong> en 1906, y el respeto eterno del mundo científico.</p>
-            <p>Desde entonces, el flúor se ha infiltrado en cada rincón del planeta: protege nuestros dientes en la pasta dental, resiste el calor en el <strong>teflón</strong> de nuestras sartenes, y circula en los circuitos de la industria espacial.</p>
-            <p>Este es el legado del flúor.</p>
-            <p>Poderoso. Invisible. Imparable.</p>
-            <p>Y esta... es su historia.</p>
+            <p>Hasta que en 1886, el químico francés <strong>Henri Moissan</strong> logró lo imposible: <strong>aislar
+                    el flúor puro</strong> usando electrólisis en condiciones extremas. Su hazaña le valió el
+                <strong>Premio Nobel</strong> en 1906, y el respeto eterno del mundo científico.
+            </p>
+            <p>Desde entonces, el flúor se ha infiltrado en cada rincón del planeta: protege nuestros dientes en la
+                pasta dental, resiste el calor en el <strong>teflón</strong> de nuestras sartenes, y circula en los
+                circuitos de la industria espacial.</p>
+            <p class="p_short">Este es el legado del flúor.</p>
+            <p class="p_short">Poderoso. Invisible. Imparable.</p>
+            <p class="p_short">Y esta... es su historia.</p>
         </div>
     </main>
-    <div class="info-section"> 
+    <div class="info-section">
         <h2>Quiz</h2>
-        <p>Practica lo que has aprendido</p>
         <section class="question" data-answer="b">
             <h3>¿Quién logró aislar el flúor puro por primera vez en 1886?</h3>
             <div class="options">
@@ -52,8 +55,6 @@
                 <label><input type="radio" name="q1" value="b"> b) Henri Moissan</label>
                 <label><input type="radio" name="q1" value="c"> c) Gay-Lussac</label>
             </div>
-            <button onclick="checkAnswer(this)">Comprobar</button>
-            <div class="result"></div>
         </section>
         <section class="question" data-answer="b">
             <h3>¿Qué característica hace al flúor el elemento más reactivo del universo?</h3>
@@ -62,8 +63,6 @@
                 <label><input type="radio" name="q2" value="b"> b) Su alta electronegatividad</label>
                 <label><input type="radio" name="q2" value="c"> c) Su baja densidad</label>
             </div>
-            <button onclick="checkAnswer(this)">Comprobar</button>
-            <div class="result"></div>
         </section>
         <section class="question" data-answer="b">
             <h3>¿Cuál de los siguientes usos del flúor se menciona en la historia?</h3>
@@ -72,12 +71,14 @@
                 <label><input type="radio" name="q3" value="b"> b) Protección dental</label>
                 <label><input type="radio" name="q3" value="c"> c) Producción de fertilizantes</label>
             </div>
-            <button onclick="checkAnswer(this)">Comprobar</button>
-            <div class="result"></div>
         </section>
+        <div class="btn-container" onclick="checkAllAnswers()">
+            <div class="btn-fill"></div>
+            <div class="btn-text">Comprobar</div>
+        </div>
+        <div id="resultado-final" class="result"></div>
     </div>
-<script src="../src/js/historia.js"></script>
+    <script src="../src/js/historia.js"></script>
 </body>
 
 </html>
-
