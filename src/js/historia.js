@@ -1,13 +1,13 @@
+//---------------BACKGROUND VIDEO STARWARS----------------
 document.addEventListener('DOMContentLoaded', function() {
     const video = document.getElementById('background-video');
     video.play().catch(e => {
         console.log('Autoplay bloqueado por el navegador');
-        // Opcionalmente mostrar un botón de play
     });
 });
 
 
-//QUIZ
+//-----------------------QUIZ----------------------
 function checkAllAnswers() {
     const questions = document.querySelectorAll('.question');
     const totalQuestions = questions.length;
@@ -32,13 +32,21 @@ function checkAllAnswers() {
             confirmButtonText: "¡Increíble!",
             confirmButtonColor: "#f9d369",
             background: "#FDF6E2",
-            color: "#592851"
+            color: "#592851",
+            customClass: {
+              popup: 'swal-custom-popup',
+              confirmButton: 'my-custom-confirm'
+            }
         });
         
-        // ¡AQUÍ ACTIVAMOS LOS FUEGOS ARTIFICIALES!
+        // Se activan los fuegos artificiales
         startFireworks();
         
     } else {
+          // Reproducir sonido de error
+        var wrongSound = new Audio('../src/images/img-historia/incorrect-buzzer-retro.wav');
+        wrongSound.volume = 0.08; 
+        wrongSound.play();
         // Mensaje de error con SweetAlert2
         Swal.fire({
             icon: "error",
@@ -47,12 +55,16 @@ function checkAllAnswers() {
             confirmButtonText: "Intentar de nuevo",
             confirmButtonColor: "#732F6E",
             background: "#FDF6E2",
-            color: "#592851"
+            color: "#592851",
+            customClass: {
+              popup: 'swal-custom-popup',
+              confirmButton: 'my-custom-confirm'
+              }
         });
     }
 }
 
-// FUNCIÓN PARA FUEGOS ARTIFICIALES
+//--------------------FUEGOS ARTIFICIALES--------------------
 function startFireworks() {
     // Crear un contenedor temporal para los fuegos artificiales
     const fireworksContainer = document.createElement('div');

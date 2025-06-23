@@ -1,4 +1,4 @@
-/* CSS HEX */
+/*-------CSS HEX---------*/
 :root {
   --plum-deep: #592851;
   --berry-dark: #732F6E;
@@ -9,10 +9,10 @@
   --mustard: #FBCB66;
 }
 
-
+/*-------ESTILOS GENERALES---------*/
 body {background-color: var(--mint-gray);
   font-weight: 300;
-  color: rgb(0, 0, 0);
+  color: var(--plum-deep);
       margin: 0;
     padding: 0;
 
@@ -22,13 +22,14 @@ h2, .p_short {
     text-align: center;
 }
 
+/*----------INTRO STARWARS---------*/
 .intro-starwars h2 {
     padding-top: 3em;
 }
 
 .intro-starwars {
     position: relative;
-    color: rgba(249, 249, 237, 1);
+    color: var(--mustard);
     max-height: 25em;
     overflow: hidden;
     display: flex;
@@ -57,7 +58,7 @@ h2, .p_short {
     z-index: 1;
     text-align: justify;
     padding: 2rem;
-    background-color: rgba(0, 0, 0, 0.5); /* Overlay semitransparente para mejor legibilidad */
+    background-color: rgba(0, 0, 0, 0.5); 
     border-radius: 10px;
     max-width: 700px;
     height: 1200px;
@@ -79,33 +80,8 @@ h2, .p_short {
 }
 
 
-/* Responsive */
-@media (max-width: 768px) {
-    .intro-starwars {
-        width: 95%;
-        height: 700px;
-        margin: 20px auto;
-        border-radius: 20px;
-    }
-    
-    .content-overlay {
-        padding: 2rem;
-        max-width: 90%;
-    }
-    
-    h2 {
-        font-size: 28px;
-    }
-    
-    p {
-        font-size: 16px;
-    }
-}
 
-
-/*QUIZ*/
-
-
+/*----------------QUIZ------------------*/
 
 .question {
   margin-bottom: 20px;
@@ -153,7 +129,7 @@ h2, .p_short {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #f9d369;
+  background-color: var(--mustard);
   border-radius: 50px;
   top: 10px;
   left: 0;
@@ -181,4 +157,47 @@ h2, .p_short {
 
 .btn-container:hover {
   transform: translateY(-5px);
+}
+
+/*---------------------CUSTOM ALERT-------------------*/
+.swal-custom-popup {
+  font-family: "Baloo 2", sans-serif;
+  border-radius: 50px;
+}
+
+.my-custom-confirm {
+  
+  border: 2.5px solid black;
+  border-radius: 50px;
+  box-shadow: 4px 4px 0 #949494;
+  background-color: var(--mustard);
+  font-family: "Baloo 2", sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+  color: black;
+  padding: 10px 20px;
+}
+
+
+/* Responsive - pendiente revisar */
+@media (max-width: 768px) {
+    .intro-starwars {
+        width: 95%;
+        height: 700px;
+        margin: 20px auto;
+        border-radius: 20px;
+    }
+    
+    .content-overlay {
+        padding: 2rem;
+        max-width: 90%;
+    }
+    
+    h2 {
+        font-size: 28px;
+    }
+    
+    p {
+        font-size: 16px;
+    }
 }
