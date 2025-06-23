@@ -10,23 +10,34 @@ document.addEventListener('DOMContentLoaded', function() {
 
 //QUIZ
 
-function checkAnswer(button) {
-  const questionDiv = button.parentElement;
-  const selected = questionDiv.querySelector('input[type="radio"]:checked');
-  const resultDiv = questionDiv.querySelector('.result');
-  const correct = questionDiv.dataset.answer;
+function checkAllAnswers() {
+  const questions = document.querySelectorAll('.question');
+  const totalQuestions = questions.length;
+  let correctAnswers = 0;
 
-  if (!selected) {
-    resultDiv.textContent = "Selecciona una respuesta.";
-    resultDiv.style.color = "#cc0000";
-    return;
-  }
+  questions.forEach((question, index) => {
+    const correct = question.dataset.answer;
+    const selected = question.querySelector('input[type="radio"]:checked');
+    if (selected && selected.value === correct) {
+      correctAnswers++;
+    }
+  });
 
-  if (selected.value === correct) {
-    resultDiv.textContent = "¡Correcto!";
+  const resultDiv = document.getElementById("resultado-final");
+
+  if (correctAnswers === totalQuestions) {
+    resultDiv.textContent =
+      "¡Has domado al elemento maldito! Tú también has logrado lo imposible: comprender al más rebelde de los elementos. El flúor ya no tiene secretos para ti.";
     resultDiv.style.color = "#006600";
   } else {
-    resultDiv.textContent = "Incorrecto 😬";
+    resultDiv.textContent =
+      "El elemento fantasma sigue siendo un misterio para ti. No es una derrota: es un desafío. Vuelve a repasar su historia… y enfréntate de nuevo al reto.";
     resultDiv.style.color = "#cc0000";
   }
 }
+
+import { Fireworks } from 'fireworks-js'
+
+const container = document.querySelector('.container')
+const fireworks = new Fireworks(container, { /* options */ })
+fireworks.start()
