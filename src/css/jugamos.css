@@ -1,1 +1,10 @@
 /* COMENTARIO */
+body{
+    background-color: #86A694;
+}
+
+.box-container{
+    background-color:#FDF6E2;
+    width: 65%;
+    height: 65%;
+}
