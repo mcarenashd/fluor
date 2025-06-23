@@ -5,6 +5,10 @@ body{
 
 .box-container{
     background-color:#FDF6E2;
-    width: 65%;
-    height: 65%;
+    width: 600px;
+    height: 600px;
+    border-radius: 20%;
+    display: flex;
+    justify-self: center;
+    align-items: center;
 }
