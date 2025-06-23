@@ -1,3 +1,4 @@
+
 h1 {
     font-family:"Fredoka", sans-serif;
     font-size: 48px;
@@ -18,9 +19,9 @@ h3 {
 }
 
 p {
-     font-family:"Baloo 2", sans-serif;
+    font-family:"Baloo 2", sans-serif;
     font-size: 18px;
-    font-weight:lighter;      
+    font-weight:lighter;     
 }
 
 .btn-container {
@@ -80,5 +81,143 @@ p {
     border-radius: 30px;
 }
 
+/* NAVBAR DEFINITIVO */
 
+.h1-nav{
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  margin: 0 auto;
+}
+
+.nav-text {
+  color: #592851;
+  text-align: left;
+  font-family: "Fredoka-Medium", sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  position: absolute;
+  left: 4%;
+  top: 9%;
+}
+
+.nav-container1 {
+  height: 80px;
+  position: relative;
+}
+
+.nav-container2 {
+  height: 100%;
+  position: static;
+}
+
+.nav-rectangle {
+  background: linear-gradient(
+    90deg,
+    rgba(89, 40, 81, 1) 15.384615957736969%,
+    rgba(115, 47, 110, 1) 34.13461446762085%,
+    rgba(168, 191, 187, 1) 54.326921701431274%,
+    rgba(134, 166, 148, 1) 70.67307829856873%,
+    rgba(191, 170, 170, 1) 88.46153616905212%,
+    rgba(89, 40, 81, 1) 100%  
+  );
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0.25px;
+  top: 0.5px;
+  background-size: 200% 100%;                    
+  animation: slideGradient 4s ease-in-out infinite; 
+}
+
+.nav-line {
+  margin-top: -2px;
+  border-style: solid;
+  border-color: #fdf6e2;
+  border-width: 2px 0 0 0;
+  width: 100%;
+  height: 0px;
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform-origin: 0 0;
+  transform: rotate(180deg) scale(1, 1);
+}
+
+.nav-image {
+  width: 20%;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  overflow: visible;
+}
+
+.navbar-sliding {
+    /*  fradiente original + repetición del primer color al final */
+    background: linear-gradient(
+        90deg,
+        rgba(89, 40, 81, 1) 15.384615957736969%,
+        rgba(115, 47, 110, 1) 34.13461446762085%,
+        rgba(168, 191, 187, 1) 54.326921701431274%,
+        rgba(134, 166, 148, 1) 70.67307829856873%,
+        rgba(191, 170, 170, 1) 88.46153616905212%,
+        rgba(89, 40, 81, 1) 100%  /* ← Color inicial repetido al final */
+    );
+        /* Hace el gradiente el doble de ancho para poder deslizarlo */
+    background-size: 200% 100%;
+    
+    /* Aplica la animación */
+    animation: slideGradient 4s ease-in-out infinite;
+}
+
+/*Definición de la animación con keyframes */
+@keyframes slideGradient {
+    0%, 100% {
+        background-position: 0% 50%;    /* Posición inicial */
+    }
+    50% {
+        background-position: 100% 50%;  /* Posición final (deslizado) */
+    }
+}
+
+/* Diferentes velocidades */
+.navbar-sliding-fast {
+    background: linear-gradient(
+        90deg,
+        rgba(89, 40, 81, 1) 15.384615957736969%,
+        rgba(115, 47, 110, 1) 34.13461446762085%,
+        rgba(168, 191, 187, 1) 54.326921701431274%,
+        rgba(134, 166, 148, 1) 70.67307829856873%,
+        rgba(191, 170, 170, 1) 88.46153616905212%,
+        rgba(89, 40, 81, 1) 100%
+    );
+    background-size: 200% 100%;
+    animation: slideGradient 2s ease-in-out infinite; /* ← Más rápido */
+}
+
+
+.navbar-sliding-slow {
+    background: linear-gradient(
+        90deg,
+        rgba(89, 40, 81, 1) 15.384615957736969%,
+        rgba(115, 47, 110, 1) 34.13461446762085%,
+        rgba(168, 191, 187, 1) 54.326921701431274%,
+        rgba(134, 166, 148, 1) 70.67307829856873%,
+        rgba(191, 170, 170, 1) 88.46153616905212%,
+        rgba(89, 40, 81, 1) 100%
+    );
+    background-size: 200% 100%;
+    animation: slideGradient 6s ease-in-out infinite; /* ← Más lento */
+}
+
+/* FOOTER DEFINITIVO*/
+
+#text-footer{
+  color:#fdf6e2;
+  text-align: center;
+}
 

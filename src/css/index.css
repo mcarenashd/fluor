@@ -5,16 +5,43 @@ body {
 
 
 .index{
-    margin: 2px;
+    /* display: flex; */
+    width: 100%;
+    height: 100%;
+    /* box-sizing: border-box; qué hace */
+    justify-content: center;
 }
 
-svg{
-    margin: 0;
-    padding: 0;
+svg {
+  display: block;
+  margin: 0 auto;
+}
+
+.index svg { 
+    width: 60%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    box-sizing: border-box;
+    justify-content: center;
 }
 
 circle:hover {
   animation-play-state: paused;
-}body {
-
 }
+
+.info-section {
+  width: 40%;
+  height: 100%;
+  padding: 2rem;
+  margin: 0;
+  background-color: #FDF6E2;
+  border-radius: 30px;
+}
+
+text{
+    font-family:"Baloo 2", sans-serif;
+    font-weight: bolder;
+    font-size: 2px;
+}
+
