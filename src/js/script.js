@@ -15,3 +15,11 @@ const circulo = document.getElementById("circulo1");
   svg.addEventListener("mouseleave", () => {
     svg.unpauseAnimations();
   });
+
+  const circle2 = document.getElementById("circulo2");
+
+  circle2.addEventListener("click", () =>{
+    alert("El flúor es el elemento químico más electronegativo: atrae más fuerte los electrones que cualquier otro.")
+  })
+
+
