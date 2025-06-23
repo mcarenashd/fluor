@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function() {
     const video = document.getElementById('background-video');
     video.play().catch(e => {
@@ -25,17 +24,31 @@ function checkAllAnswers() {
     const resultDiv = document.getElementById("resultado-final");
 
     if (correctAnswers === totalQuestions) {
-        resultDiv.textContent =
-            "¡Has domado al elemento maldito! Tú también has logrado lo imposible: comprender al más rebelde de los elementos. El flúor ya no tiene secretos para ti.";
-        resultDiv.style.color = "#006600";
+        // Mensaje de éxito con SweetAlert2
+        Swal.fire({
+            title: "¡Elemento Domado!",
+            text: "¡Has domado al elemento maldito! Tú también has logrado lo imposible: comprender al más rebelde de los elementos. El flúor ya no tiene secretos para ti.",
+            icon: "success",
+            confirmButtonText: "¡Increíble!",
+            confirmButtonColor: "#f9d369",
+            background: "#FDF6E2",
+            color: "#592851"
+        });
         
         // ¡AQUÍ ACTIVAMOS LOS FUEGOS ARTIFICIALES!
         startFireworks();
         
     } else {
-        resultDiv.textContent =
-            "El elemento fantasma sigue siendo un misterio para ti. No es una derrota: es un desafío. Vuelve a repasar su historia… y enfréntate de nuevo al reto.";
-        resultDiv.style.color = "#cc0000";
+        // Mensaje de error con SweetAlert2
+        Swal.fire({
+            icon: "error",
+            title: "El Misterio Persiste...",
+            text: "El elemento fantasma sigue siendo un misterio para ti. No es una derrota: es un desafío. Vuelve a repasar su historia… y enfréntate de nuevo al reto.",
+            confirmButtonText: "Intentar de nuevo",
+            confirmButtonColor: "#732F6E",
+            background: "#FDF6E2",
+            color: "#592851"
+        });
     }
 }
 
