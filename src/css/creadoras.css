@@ -14,24 +14,25 @@ h1{
     justify-content: center;/* Centra los elementos horizontalmente*/
 
 }
-img {
+.imagines {
      width: 200px;
      height: 300px;   
      border-radius: 60px; 
     /* display: flex; */
     object-fit: cover;/* Mantiene las proporciones de la imagen, recortando si es necesario*/
      margin-top: auto; /*Empuja la imagen hacia abajo dentro de su contenedor*/
-    margin-bottom: 0px;/*no hay margen inferior*/
+     margin-bottom: 0px; /*no hay margen inferior */
     border-bottom-left-radius: 50px;/*Esquina inferior izquierda más redondeada*/
     border-bottom-right-radius: 50px;/*Esquina inferior derecha más redondeada*/
    }
     .imagen-rose {
     /* width: 400px; */
      height:400px;   
-    /* object-position: cover; */
-    margin-bottom: -5.5rem;
-    
-    margin-top:-2.5rem ; 
+     object-position: cover; 
+      margin-bottom: -5.5rem;  
+   
+     margin-top:-2.5rem ;  
+     object-fit: cover;/* Mantiene las proporciones de la imagen, recortando si es necesario*/    
 
    } 
 /*CONTENEDOR DE TARJETA */
@@ -174,4 +175,27 @@ color: white;
 }
 .icono-LinkedIn :hover{
     transform: scale(1.2);
+}
+/* creo el efecto de los corazones*/
+.corazon-lluvia {
+    position: fixed; /*se queda fijo en la pantalla*/
+    top: -50px;/*empieza arriba fuera de la pantalla*/
+    font-size: 24px; /*tamaño corazon*/
+    z-index: 9999; /*se pone por encima de todo*/
+    pointer-events: none; /* no interfiere con click de raton*/
+    animation: caer 3s linear forwards; /*animacion de caida*/
+}
+/*animacion de caida*/
+@keyframes caer {
+    0% {
+        transform: translateY(-50px) rotate(0deg);/* el corazon esta arriba y es transparente*/
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1; /* a los 10% el corazon ya es visible un 1*/
+    }
+
+      100% { transform: translateY(calc(100vh + 50px)) rotate(360deg);/* alfinal que es el 100% ha caido y desaparece*/
+      }
 }
