@@ -1,1 +1,83 @@
-1-feature-inde
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/css/style.css">
+    <link rel="stylesheet" href="../src/css/historia.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Forum&family=Fredoka:wght@300..700&family=Marmelad&family=Oswald:wght@700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Forum&family=Fredoka:wght@300..700&family=Marmelad&family=Oswald:wght@700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Forum&family=Fredoka:wght@300..700&family=Marmelad&family=Oswald:wght@700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Historia - Flúor</title>
+</head>
+
+<body>
+    <main class="intro-starwars">
+        <video class="background-video" muted loop id="background-video">
+            <source src="../src/images/img-historia/video_space.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento video.
+        </video>
+        <div class="content-overlay">
+            <h2>El Elemento Fantasma</h2>
+            <p>Hace mucho, mucho tiempo...</p>
+            <p>en un laboratorio no muy lejano...</p>
+            <p>Un elemento químico permanecía oculto, misterioso e incontrolable. Durante siglos, los alquimistas y
+                científicos lo perseguían sin éxito. Su nombre: <strong>flúor</strong>, el ladrón de electrones, el más
+                reactivo del universo. Era el <em>elemento maldito</em>.</p>
+            <p>En el siglo XIX, muchos lo intentaron aislar... y muchos murieron en el intento. Corrosivo, volátil,
+                peligroso... el flúor devoraba metal, carne y voluntad.</p>
+            <p>Hasta que en 1886, el químico francés <strong>Henri Moissan</strong> logró lo imposible: <strong>aislar el flúor puro</strong> usando electrólisis en condiciones extremas. Su hazaña le valió el <strong>Premio Nobel</strong> en 1906, y el respeto eterno del mundo científico.</p>
+            <p>Desde entonces, el flúor se ha infiltrado en cada rincón del planeta: protege nuestros dientes en la pasta dental, resiste el calor en el <strong>teflón</strong> de nuestras sartenes, y circula en los circuitos de la industria espacial.</p>
+            <p>Este es el legado del flúor.</p>
+            <p>Poderoso. Invisible. Imparable.</p>
+            <p>Y esta... es su historia.</p>
+        </div>
+    </main>
+    <div class="info-section"> 
+        <h2>Quiz</h2>
+        <p>Practica lo que has aprendido</p>
+        <section class="question" data-answer="b">
+            <h3>¿Quién logró aislar el flúor puro por primera vez en 1886?</h3>
+            <div class="options">
+                <label><input type="radio" name="q1" value="a"> a) Humphry Davy</label>
+                <label><input type="radio" name="q1" value="b"> b) Henri Moissan</label>
+                <label><input type="radio" name="q1" value="c"> c) Gay-Lussac</label>
+            </div>
+            <button onclick="checkAnswer(this)">Comprobar</button>
+            <div class="result"></div>
+        </section>
+        <section class="question" data-answer="b">
+            <h3>¿Qué característica hace al flúor el elemento más reactivo del universo?</h3>
+            <div class="options">
+                <label><input type="radio" name="q2" value="a"> a) Su capacidad para formar enlaces metálicos</label>
+                <label><input type="radio" name="q2" value="b"> b) Su alta electronegatividad</label>
+                <label><input type="radio" name="q2" value="c"> c) Su baja densidad</label>
+            </div>
+            <button onclick="checkAnswer(this)">Comprobar</button>
+            <div class="result"></div>
+        </section>
+        <section class="question" data-answer="b">
+            <h3>¿Cuál de los siguientes usos del flúor se menciona en la historia?</h3>
+            <div class="options">
+                <label><input type="radio" name="q3" value="a"> a) Fabricación de baterías</label>
+                <label><input type="radio" name="q3" value="b"> b) Protección dental</label>
+                <label><input type="radio" name="q3" value="c"> c) Producción de fertilizantes</label>
+            </div>
+            <button onclick="checkAnswer(this)">Comprobar</button>
+            <div class="result"></div>
+        </section>
+    </div>
+<script src="../src/js/historia.js"></script>
+</body>
+
+</html>
+

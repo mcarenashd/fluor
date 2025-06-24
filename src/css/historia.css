@@ -1,1 +1,95 @@
-/* COMENTARIO */
+/* CSS HEX */
+:root {
+  --plum-deep: #592851;
+  --berry-dark: #732F6E;
+  --mint-gray: #A8BFBB;
+  --sage-green: #86A694;
+  --rose-dust: #BFAAAA;
+  --cream: #FDF6E2;
+  --mustard: #FBCB66;
+}
+
+
+body {background-color: var(--mint-gray);
+  font-weight: 300;
+  color: rgb(0, 0, 0);
+      margin: 0;
+    padding: 0;
+
+}
+
+.intro-starwars {
+    position: relative;
+    color: rgba(249, 249, 237, 1);
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    padding: 30px 30px 30px 30px;
+    margin: 5%;
+}
+
+.background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    object-fit: cover;
+}
+
+.content-overlay {
+    position: relative;
+    z-index: 1;
+    text-align: justify;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay semitransparente para mejor legibilidad */
+    border-radius: 10px;
+    max-width: 700px;
+    height: 1200px;
+    transform: perspective(200px) rotateX(20deg);
+    animation: intro 50s linear infinite;
+}
+
+@keyframes intro {
+    0% {
+        transform: perspective(200px) rotateX(10deg) translateY(800px);
+    }
+    60% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: perspective(200px) rotateX(20deg) translateY(-1000px);
+        opacity: 0;
+    }
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .intro-starwars {
+        width: 95%;
+        height: 700px;
+        margin: 20px auto;
+        border-radius: 20px;
+    }
+    
+    .content-overlay {
+        padding: 2rem;
+        max-width: 90%;
+    }
+    
+    h2 {
+        font-size: 28px;
+    }
+    
+    p {
+        font-size: 16px;
+    }
+}
