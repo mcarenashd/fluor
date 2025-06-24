@@ -1,9 +1,11 @@
 body {
     background-color: #BFAAAA
 }
-h1{
+
+ .title {
     text-align: center;
-}
+    color: #592851;
+ }
 .container {
     width: 100%;
     height: 100%;
@@ -26,16 +28,7 @@ h1{
     /*border-bottom-left-radius: 50px;Esquina inferior izquierda más redondeada*/
     /*border-bottom-right-radius: 50px;/Esquina inferior derecha más redondeada*/
    }
-    /* .imagen-rose {
     
-     height:400px;   
-     object-position: cover; 
-      margin-bottom: -5.5rem;  
-   
-     margin-top:-2.5rem ;  
-     object-fit: cover;  
-
-   }  */
 /*CONTENEDOR DE TARJETA */
 .card {
     perspective: 1000px;/*Establece la "distancia de visualización" para efectos 3D
@@ -112,22 +105,30 @@ margin: 1px;
 color: white;
 
 }
-    .rosa p {  
-    color: white;
+
+.rosa p, .verde-c p, .morada p,  .violeta p  {  
+    color:  white;
     margin-top: 2rem; 
     text-align:  center;
-     margin-left: 20px;
+    margin-left: 20px;
     margin-right: 20px; 
-    
 }
 
- /* .gratitude{
-    text-align: center; 
-} */
+.morada p {
+    margin-top: 6rem;  
+ }
+   
+ .verde-c p {
+     margin-top: 3rem;
+ }
+ .violeta p{
+    margin-top: 5rem;
+ }
+
 .agradecimiento-contenedor {
     text-align: center;
     margin: 0 5rem; /*centra horizontalmente el bloque arriba y abajo o en los lados auto*/
-   
+   color: #592851;
 }
 /*quitamos la viñeta estandar*/
 .list-atomica{
@@ -166,8 +167,19 @@ color: white;
     background-repeat: no-repeat;/*Evita que se repita la imagen.*/
     background-position: center;/*Centra la imagen dentro del espacio asignado.*/
     margin-top: 0.2rem;
+   
 }
+ .list-atomica:hover li::before {
+    filter: brightness(1.5);
+    filter:
+        drop-shadow(0 0 2px #592851)
+        drop-shadow(0 0 3px #732F6E)
+        drop-shadow(0 0 4px #A8BFBB )
+        drop-shadow(0 0 5px #86A694 )
+        drop-shadow(0 0 6px #BFAAAA);        
 
+    
+}
 
 .icono-LinkedIn{
     width: 60px;

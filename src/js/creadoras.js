@@ -98,3 +98,4 @@ Esta línea toma el número que salió antes (por ejemplo 400) y lo convierte en
 
 Se lo asigna al estilo left, que posiciona el corazón horizontalmente desde la izquierda.*/
 
+
