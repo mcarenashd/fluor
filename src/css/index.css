@@ -1,179 +1,191 @@
 body {
-    background-color: #592851;
+  background-color: #592851;
 }
 
-.index{
-    display: flex;
-    width: 100%;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-    margin-top: 5%;
+.index {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5%;
 }
 .atom {
-    position: relative;
-    width: 90vmin;
-    aspect-ratio: 1/1;
+  position: relative;
+  width: 90vmin;
+  aspect-ratio: 1/1;
 }
 
-.orbit{
-    position: absolute;
-    height: 100%;
-    width: 100%; 
+.orbit {
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
 
-.outer-orbit{
-    position: absolute;
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    border: 2px solid #86A694;
-    border-radius: 50%;
+.outer-orbit {
+  position: absolute;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border: 2px solid #86a694;
+  border-radius: 50%;
 }
 
-.inner-orbit{
-    position: absolute;
-    width: 60%;
-    aspect-ratio: 1 / 1;
-    border: 2px solid #86A694;
-    border-radius: 50%;
-    top: 20%; 
-    left: 20%;
-    display: flex;
-    align-items: center;     /* centra verticalmente */
-    justify-content: center;
+.inner-orbit {
+  position: absolute;
+  width: 60%;
+  aspect-ratio: 1 / 1;
+  border: 2px solid #86a694;
+  border-radius: 50%;
+  top: 20%;
+  left: 20%;
+  display: flex;
+  align-items: center; /* centra verticalmente */
+  justify-content: center;
 }
 
-.fluor-image{
-    width: 70%;
+.fluor-image {
+  width: 70%;
 }
-.proton{
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    display: flex;
+.proton {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: flex;
 }
 
 @keyframes orbit-outer {
-    0% {
-        transform: rotate(0deg) translateX(45vmin) rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg) translateX(45vmin) rotate(-360deg);
-    }
+  0% {
+    transform: rotate(0deg) translateX(45vmin) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(45vmin) rotate(-360deg);
+  }
 }
 
 @keyframes orbit-inner {
-    0% {
-        transform: rotate(0deg) translateX(27vmin) rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg) translateX(27vmin) rotate(-360deg);
-    }
+  0% {
+    transform: rotate(0deg) translateX(27vmin) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(27vmin) rotate(-360deg);
+  }
 }
 
 /* Estilos base para todos los protones */
-.proton-1, .proton-2, .proton-3, .proton-4, .proton-5, .proton-6, .proton-7, .proton-8, .proton-9 {
-    position: absolute;
-    width: 15%;
-    aspect-ratio: 1 / 1;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    text-align: center;
-    padding: 5px;
-    /* Posición central para que funcione la rotación */
-    top: 50%;
-    left: 50%;
-    margin-top: -7.5%; /* Ajustar para centrar (mitad del width) */
-    margin-left: -7.5%; /* Ajustar para centrar (mitad del width) */
+.proton-1,
+.proton-2,
+.proton-3,
+.proton-4,
+.proton-5,
+.proton-6,
+.proton-7,
+.proton-8,
+.proton-9 {
+  position: absolute;
+  width: 15%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+  padding: 5px;
+  /* Posición central para que funcione la rotación */
+  top: 50%;
+  left: 50%;
+  margin-top: -7.5%; /* Ajustar para centrar (mitad del width) */
+  margin-left: -7.5%; /* Ajustar para centrar (mitad del width) */
 }
 
 /* Protones en órbita externa */
 .proton-1 {
-    background: radial-gradient(circle at 25% 25%, #ffffff 0%, #BFAAAA 60%);
-    animation: orbit-outer 60s linear infinite;
-    animation-delay: -0s;
+  background: radial-gradient(circle at 25% 25%, #ffffff 0%, #bfaaaa 60%);
+  animation: orbit-outer 60s linear infinite;
+  animation-delay: -0s;
 }
 
 .proton-5 {
-    background: radial-gradient(circle at 30% 30%, #ffffff 0%, #86A694 50%);
-    animation: orbit-outer 60s linear infinite;
-    animation-delay: -12s;
+  background: radial-gradient(circle at 30% 30%, #ffffff 0%, #86a694 50%);
+  animation: orbit-outer 60s linear infinite;
+  animation-delay: -12s;
 }
 
 .proton-6 {
-    background: radial-gradient(circle at 25% 25%, #ffffff 0%, #FDF6E2 60%);
-    animation: orbit-outer 60s linear infinite;
-    animation-delay: -24s;
+  background: radial-gradient(circle at 25% 25%, #ffffff 0%, #fdf6e2 60%);
+  animation: orbit-outer 60s linear infinite;
+  animation-delay: -24s;
 }
 
 .proton-7 {
-    background: radial-gradient(circle at 25% 25%, #ffffff 0%, #FDF6E2 60%);
-    animation: orbit-outer 60s linear infinite;
-    animation-delay: -36s;
+  background: radial-gradient(circle at 25% 25%, #ffffff 0%, #fdf6e2 60%);
+  animation: orbit-outer 60s linear infinite;
+  animation-delay: -36s;
 }
 
 .proton-8 {
-    background: radial-gradient(circle at 25% 25%, #ffffff 0%, #FDF6E2 60%);
-    animation: orbit-outer 60s linear infinite;
-    animation-delay: -48s;
+  background: radial-gradient(circle at 25% 25%, #ffffff 0%, #fdf6e2 60%);
+  animation: orbit-outer 60s linear infinite;
+  animation-delay: -48s;
 }
 
 /* Protones en órbita interna */
 .proton-2 {
-    background: radial-gradient(circle at 25% 25%, #ffffff 0%, #732F6E 70%);
-    animation: orbit-inner 60s linear infinite;
-    animation-delay: -5s;
+  background: radial-gradient(circle at 25% 25%, #ffffff 0%, #732f6e 70%);
+  animation: orbit-inner 60s linear infinite;
+  animation-delay: -5s;
 }
 
 .proton-3 {
-    background: radial-gradient(circle at 30% 30%, #ffffff 0%, #A8BFBB 50%);
-    animation: orbit-inner 60s linear infinite;
-    animation-delay: -19s;
+  background: radial-gradient(circle at 30% 30%, #ffffff 0%, #a8bfbb 50%);
+  animation: orbit-inner 60s linear infinite;
+  animation-delay: -19s;
 }
 
 .proton-4 {
-    background: radial-gradient(circle at 25% 25%, #ffffff 0%, #FDF6E2 60%);
-    animation: orbit-inner 60s linear infinite;
-    animation-delay: -36s;
+  background: radial-gradient(circle at 25% 25%, #ffffff 0%, #fdf6e2 60%);
+  animation: orbit-inner 60s linear infinite;
+  animation-delay: -36s;
 }
 
 .proton-9 {
-    background: radial-gradient(circle at 25% 25%, #ffffff 0%, #FDF6E2 60%);
-    animation: orbit-inner 60s linear infinite;
-    animation-delay: -51s;
+  background: radial-gradient(circle at 25% 25%, #ffffff 0%, #fdf6e2 60%);
+  animation: orbit-inner 60s linear infinite;
+  animation-delay: -51s;
 }
 
-#proton9 {
-pointer-events: auto;
-z-index: 100;
-cursor: pointer;
+#proton9, #proton8 {
+  pointer-events: auto;
+  z-index: 100;
+  cursor: pointer;
 }
 
-.text-button{
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    font-size: clamp(10px, 1.5vw, 16px); /* Ajusta el tamaño del font dependiendo el tamaño de la pantalla */
-    padding: 5%;
-    font-family:"Baloo 2", sans-serif;
-    font-weight: bolder;
-    color: black;  
+.text-button {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(
+    10px,
+    1.5vw,
+    16px
+  ); /* Ajusta el tamaño del font dependiendo el tamaño de la pantalla */
+  padding: 5%;
+  font-family: "Baloo 2", sans-serif;
+  font-weight: bolder;
+  color: #592851;
 }
 
 /* FOOTER STYLE */
-footer{
-    margin-top: 7%;
+footer {
+  margin-top: 7%;
 }
-#text-footer{
-  color:#fdf6e2;
+#text-footer {
+  color: #fdf6e2;
   text-align: center;
 }
 
 /* NAVBAR STYLE */
-.h1-nav{
+.h1-nav {
   margin: 0 auto;
 }
 a {
@@ -208,14 +220,14 @@ a {
     rgba(168, 191, 187, 1) 54.326921701431274%,
     rgba(134, 166, 148, 1) 70.67307829856873%,
     rgba(191, 170, 170, 1) 88.46153616905212%,
-    rgba(89, 40, 81, 1) 100%  /* ← Solo añadir esta línea */
+    rgba(89, 40, 81, 1) 100% /* ← Solo añadir esta línea */
   );
   width: 100%;
   height: 100%;
   position: absolute;
   left: 0.25px;
   top: 0.5px;
-  background-size: 200% 100%;                    /* ← Añadir */
+  background-size: 200% 100%; /* ← Añadir */
   animation: slideGradient 4s ease-in-out infinite; /* ← Añadir */
 }
 .line-1 {
@@ -241,72 +253,106 @@ a {
 }
 
 .navbar-sliding {
-    /* Tu gradiente original + repetición del primer color al final */
-    background: linear-gradient(
-        90deg,
-        rgba(89, 40, 81, 1) 15.384615957736969%,
-        rgba(115, 47, 110, 1) 34.13461446762085%,
-        rgba(168, 191, 187, 1) 54.326921701431274%,
-        rgba(134, 166, 148, 1) 70.67307829856873%,
-        rgba(191, 170, 170, 1) 88.46153616905212%,
-        rgba(89, 40, 81, 1) 100%  /* ← Color inicial repetido al final */
-    );
-        /* Hace el gradiente el doble de ancho para poder deslizarlo */
-    background-size: 200% 100%;
-    
-    /* Aplica la animación */
-    animation: slideGradient 4s ease-in-out infinite;
+  /* Tu gradiente original + repetición del primer color al final */
+  background: linear-gradient(
+    90deg,
+    rgba(89, 40, 81, 1) 15.384615957736969%,
+    rgba(115, 47, 110, 1) 34.13461446762085%,
+    rgba(168, 191, 187, 1) 54.326921701431274%,
+    rgba(134, 166, 148, 1) 70.67307829856873%,
+    rgba(191, 170, 170, 1) 88.46153616905212%,
+    rgba(89, 40, 81, 1) 100% /* ← Color inicial repetido al final */
+  );
+  /* Hace el gradiente el doble de ancho para poder deslizarlo */
+  background-size: 200% 100%;
+
+  /* Aplica la animación */
+  animation: slideGradient 4s ease-in-out infinite;
 }
 
 /* PASO 2: Define la animación keyframes */
 @keyframes slideGradient {
-    0%, 100% {
-        background-position: 0% 50%;    /* Posición inicial */
-    }
-    50% {
-        background-position: 100% 50%;  /* Posición final (deslizado) */
-    }
+  0%,
+  100% {
+    background-position: 0% 50%; /* Posición inicial */
+  }
+  50% {
+    background-position: 100% 50%; /* Posición final (deslizado) */
+  }
 }
 
 /* OPCIONAL: Versiones con diferentes velocidades */
 .navbar-sliding-fast {
-    background: linear-gradient(
-        90deg,
-        rgba(89, 40, 81, 1) 15.384615957736969%,
-        rgba(115, 47, 110, 1) 34.13461446762085%,
-        rgba(168, 191, 187, 1) 54.326921701431274%,
-        rgba(134, 166, 148, 1) 70.67307829856873%,
-        rgba(191, 170, 170, 1) 88.46153616905212%,
-        rgba(89, 40, 81, 1) 100%
-    );
-    background-size: 200% 100%;
-    animation: slideGradient 2s ease-in-out infinite; /* ← Más rápido */
+  background: linear-gradient(
+    90deg,
+    rgba(89, 40, 81, 1) 15.384615957736969%,
+    rgba(115, 47, 110, 1) 34.13461446762085%,
+    rgba(168, 191, 187, 1) 54.326921701431274%,
+    rgba(134, 166, 148, 1) 70.67307829856873%,
+    rgba(191, 170, 170, 1) 88.46153616905212%,
+    rgba(89, 40, 81, 1) 100%
+  );
+  background-size: 200% 100%;
+  animation: slideGradient 2s ease-in-out infinite; /* ← Más rápido */
 }
-
 
 .navbar-sliding-slow {
-    background: linear-gradient(
-        90deg,
-        rgba(89, 40, 81, 1) 15.384615957736969%,
-        rgba(115, 47, 110, 1) 34.13461446762085%,
-        rgba(168, 191, 187, 1) 54.326921701431274%,
-        rgba(134, 166, 148, 1) 70.67307829856873%,
-        rgba(191, 170, 170, 1) 88.46153616905212%,
-        rgba(89, 40, 81, 1) 100%
-    );
-    background-size: 200% 100%;
-    animation: slideGradient 6s ease-in-out infinite; /* ← Más lento */
+  background: linear-gradient(
+    90deg,
+    rgba(89, 40, 81, 1) 15.384615957736969%,
+    rgba(115, 47, 110, 1) 34.13461446762085%,
+    rgba(168, 191, 187, 1) 54.326921701431274%,
+    rgba(134, 166, 148, 1) 70.67307829856873%,
+    rgba(191, 170, 170, 1) 88.46153616905212%,
+    rgba(89, 40, 81, 1) 100%
+  );
+  background-size: 200% 100%;
+  animation: slideGradient 6s ease-in-out infinite; /* ← Más lento */
 }
 
-h2#swal2-title{
-    font-family:"Fredoka", sans-serif;
-    font-size: 45px;
-    font-weight: bold;
-    margin-top: 0px;
-    }
+/* CODIGO PARA LOS POPUPS */
 
-div#swal2-container{
-    font-family:"Baloo 2", sans-serif;
-    font-size: 16px;
-    font-weight:lighter; 
-    }
+h2#swal2-title {
+  font-family: "Fredoka", sans-serif;
+  font-size: 2vw;
+  font-weight: bold;
+  margin-top: 0px;
+  padding: 2%;
+  margin-top: 5%;
+}
+
+div#swal2-container {
+  font-family: "Baloo 2", sans-serif;
+  font-size: 16px;
+  font-weight: lighter;
+  padding: 0;
+  overflow: hidden;
+  margin: 0;
+}
+
+.swal-custom-popup {
+  font-family: "Baloo 2", sans-serif;
+  border-radius: 50px;
+  overflow: hidden;
+  width: 25%;
+  height: 90%;
+}
+
+.my-custom-confirm {
+  border: 2.5px solid black;
+  border-radius: 50px;
+  box-shadow: 4px 4px 0 #949494;
+  background-color: var(--mustard);
+  font-family: "Baloo 2", sans-serif;
+  font-size: 1vw;
+  font-weight: bold;
+  color: black;
+  padding: 10px 20px;
+}
+
+.swal-custom-image {
+    object-fit: cover !important; /* Para que la imagen cubra todo el espacio */
+    margin: 0;
+    overflow: hidden;
+
+}
