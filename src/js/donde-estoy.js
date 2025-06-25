@@ -63,7 +63,7 @@ function mostrarMensaje () {
                 <li>🎯 Puedo combinarme con casi todo, incluso gases nobles.</li>
             </ul>
         `,
-            imageUrl: "src\images\img-donde-estoy\fluor-gif2.gif",
+            imageUrl: "../src/images/img-donde-estoy/gif-prueba.gif",
             confirmButtonText: "Home",
             confirmButtonColor: "#f9d369",
             background: "#FDF6E2",   
