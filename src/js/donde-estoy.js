@@ -1,4 +1,4 @@
-// File: ../src/js/script.js
+/* // File: ../src/js/script.js
 
 // Espera a que el DOM esté completamente cargado
 document.addEventListener('DOMContentLoaded', () => {
@@ -49,3 +49,37 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+ */
+
+const boton = document.getElementById("boton");
+
+function mostrarMensaje () {
+        Swal.fire({
+            title: "Propiedades del flúor",
+            html: `<ul style="text-align: left; margin: 0 auto; display: inline-block;">
+                <li>🌈 Mi número atómico es 9.</li>
+                <li>🔬 Soy el elemento más electronegativo de todos.</li>
+                <li>🔢 Soy un gas amarillo, tóxico y muy reactivo..</li>
+                <li>🎯 Puedo combinarme con casi todo, incluso gases nobles.</li>
+            </ul>
+        `,
+            imageUrl: "src\images\img-donde-estoy\fluor-gif2.gif",
+            confirmButtonText: "Home",
+            confirmButtonColor: "#f9d369",
+            background: "#FDF6E2",   
+            color: "#592851",
+            customClass: {
+              popup: 'swal-custom-popup',
+              confirmButton: 'my-custom-confirm',
+              image: 'swal-custom-image' 
+            },
+            backdrop: `
+          rgba(0,0,123,0.4)
+             url("/images/nyan-cat.gif")
+            left top
+            no-repeat
+            `
+         });
+}
+
+boton.addEventListener("click", function(){mostrarMensaje()})

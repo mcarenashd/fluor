@@ -177,7 +177,56 @@ h2 {
   }
 }
 
+/* CODIGO PARA LOS POPUPS */
 
+h2#swal2-title {
+  font-family: "Fredoka", sans-serif;
+  font-size: 2vw;
+  font-weight: bold;
+  margin-top: 0px;
+  padding: 2%;
+  margin-top: 5%;
+}
+
+div#swal2-container {
+  font-family: "Baloo 2", sans-serif;
+  font-size: 16px;
+  font-weight: lighter;
+  padding: 1px;
+  overflow: hidden;
+  margin: 0px;
+
+}
+
+.swal-custom-popup {
+  font-family: "Baloo 2", sans-serif;
+  border-radius: 50px;
+  overflow: hidden;
+  width: 30%;
+  height: 90%;
+  margin: 0;
+}
+
+.my-custom-confirm {
+  border: 2.5px solid black;
+  border-radius: 50px;
+  box-shadow: 4px 4px 0 #949494;
+  background-color: var(--mustard);
+  font-family: "Baloo 2", sans-serif;
+  font-size: 1vw;
+  font-weight: bold;
+  color: black;
+  padding: 10px 20px;
+}
+
+.swal-custom-image {
+    object-fit: cover !important; /* Para que la imagen cubra todo el espacio */
+    margin: 0;
+    overflow: hidden;
+    object-position: center;
+    height: 300px;
+    width: 100%;
+}
 
 
 
