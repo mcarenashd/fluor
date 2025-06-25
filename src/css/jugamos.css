@@ -1,0 +1,14 @@
+/* COMENTARIO */
+body{
+    background-color: #86A694;
+}
+
+.box-container{
+    background-color:#FDF6E2;
+    width: 600px;
+    height: 600px;
+    border-radius: 20%;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+}
