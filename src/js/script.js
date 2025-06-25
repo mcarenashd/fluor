@@ -1,12 +1,4 @@
 // Event listeners para protones
-const proton4 = document.getElementById("proton4");
-if (proton4) {
-  proton4.addEventListener("click", () => {
-    alert("El flúor es el elemento químico más electronegativo: atrae más fuerte los electrones que cualquier otro.");
-  });
-}
-
-
 // Control de animaciones - HOVER SOBRE TODO EL ÁTOMO
 const atomContainer = document.getElementById("atom"); // El contenedor principal del átomo
 
@@ -38,7 +30,7 @@ const proton9 = document.getElementById("proton9");
 
 function mostrarMensaje1 () {
         Swal.fire({
-            title: "¿Datos científicos interesantes?",
+            title: "Datos científicos interesantes",
             html: `<ul style="text-align: left; margin: 0 auto; display: inline-block;">
                 <li>🔥 Soy el elemento más electronegativo de todos.</li>
                 <li>💎 A temperatura ambiente soy un gas tóxico y amarillo.</li>
@@ -73,15 +65,15 @@ const proton8 = document.getElementById("proton8");
 
 function mostrarMensaje () {
         Swal.fire({
-            title: "Comparaciones y contexto",
+            title: "Propiedades del flúor",
             html: `<ul style="text-align: left; margin: 0 auto; display: inline-block;">
-                <li>🌈 “Soy un halógeno como el cloro y el yodo.</li>
-                <li>🔬 Estoy en el grupo 17 de la tabla periódica..</li>
-                <li>🔢 Mi número atómico es 9.</li>
-                <li>🎯 Con solo 1 electrón más, alcanzo la estabilidad.</li>
+                <li>🌈 Mi número atómico es 9.</li>
+                <li>🔬 Soy el elemento más electronegativo de todos.</li>
+                <li>🔢 Soy un gas amarillo, tóxico y muy reactivo..</li>
+                <li>🎯 Puedo combinarme con casi todo, incluso gases nobles.</li>
             </ul>
         `,
-            imageUrl: "src/images/img-index/fluor-gif2.gif",
+            imageUrl: "src/images/img-index/fluor-gif3.gif",
             confirmButtonText: "Home",
             confirmButtonColor: "#f9d369",
             background: "#FDF6E2",   
@@ -102,10 +94,16 @@ function mostrarMensaje () {
 
 proton8.addEventListener("click", function(){mostrarMensaje()})
 
+const proton7 = document.getElementById("proton7");
+
 function mostrarMensaje2 () {
         Swal.fire({
-            title: "¿Quién soy?",
-            text: 'El flúor puro es un gas amarillo pálido, tóxico y corrosivo. ¡Debe manejarse con mucho cuidado!',
+            title: "Curiosidades",
+            html: `<ul style="text-align: left; margin: 0 auto; display: inline-block;">
+                <li>🌈 Demasiado de mí mancha los dientes: fluorosis.</li>
+                <li>🔬 Formo enlaces tan fuertes que casi son indestructibles.</li>
+                <li>🔢 Estoy en gafas especiales, cohetes y satélites.</li>
+                <li>🎯 En química orgánica, ¡soy clave para moléculas súper resistentes!</li>`,
             imageUrl: "src/images/img-index/fluor-gif2.gif",
             confirmButtonText: "Home",
             confirmButtonColor: "#f9d369",
@@ -127,16 +125,63 @@ function mostrarMensaje2 () {
 
 proton7.addEventListener("click", function(){mostrarMensaje2()})
 
-        // Swal.fire({
-        //     title: "¿Quién soy?",
-        //     text: "El flúor es el elemento químico más electronegativo: atrae más fuerte los electrones que cualquier otro.",
-        //     icon: "success",
-        //     confirmButtonText: "¡Increíble!",
-        //     confirmButtonColor: "#f9d369",
-        //     background: "#FDF6E2",
-        //     color: "#592851",
-        //     customClass: {
-        //       popup: 'swal-custom-popup',
-        //       confirmButton: 'my-custom-confirm'
-        //     }
-        // });
+const proton6 = document.getElementById("proton6");
+function mostrarMensaje3 () {
+        Swal.fire({
+            title: "Curiosidades",
+            html: `<ul style="text-align: left; margin: 0 auto; display: inline-block;">
+                <li>🌈 Demasiado de mí mancha los dientes: fluorosis.</li>
+                <li>🔬 Formo enlaces tan fuertes que casi son indestructibles.</li>
+                <li>🔢 Estoy en gafas especiales, cohetes y satélites.</li>
+                <li>🎯 En química orgánica, ¡soy clave para moléculas súper resistentes!</li>`,
+            imageUrl: "src/images/img-index/fluor-gif2.gif",
+            confirmButtonText: "Home",
+            confirmButtonColor: "#f9d369",
+            background: "#FDF6E2",   
+            color: "#592851",
+            customClass: {
+              popup: 'swal-custom-popup',
+              confirmButton: 'my-custom-confirm',
+              image: 'swal-custom-image' 
+            },
+            backdrop: `
+          rgba(0,0,123,0.4)
+             url("/images/nyan-cat.gif")
+            left top
+            no-repeat
+            `
+         });
+}
+
+proton6.addEventListener("click", function(){mostrarMensaje3()})
+
+const proton4 = document.getElementById("proton4");
+
+function mostrarMensaje4 () {
+        Swal.fire({
+            title: "Curiosidades",
+            html: `<ul style="text-align: left; margin: 0 auto; display: inline-block;">
+                <li> ⚗️ Fui descubierto por Henri Moissan en 1886.</li>
+                <li> 🧫 Muchos científicos murieron intentando aislarme.</li>
+                <li> 📜 Mi nombre viene del latín fluere, que significa fluir.</li>
+                <li> 🧪 Durante siglos se me conocía solo por mis compuestos.`,
+            imageUrl: "src/images/img-index/fluor-gif4.gif",
+            confirmButtonText: "Home",
+            confirmButtonColor: "#f9d369",
+            background: "#FDF6E2",   
+            color: "#592851",
+            customClass: {
+              popup: 'swal-custom-popup',
+              confirmButton: 'my-custom-confirm',
+              image: 'swal-custom-image' 
+            },
+            backdrop: `
+          rgba(0,0,123,0.4)
+             url("/images/nyan-cat.gif")
+            left top
+            no-repeat
+            `
+         });
+}
+
+proton4.addEventListener("click", function(){mostrarMensaje4()})

@@ -154,7 +154,7 @@ body {
   animation-delay: -51s;
 }
 
-#proton9, #proton8 {
+#proton9, #proton8, #proton7, #proton6, #proton4 {
   pointer-events: auto;
   z-index: 100;
   cursor: pointer;
@@ -325,17 +325,19 @@ div#swal2-container {
   font-family: "Baloo 2", sans-serif;
   font-size: 16px;
   font-weight: lighter;
-  padding: 0;
+  padding: 1px;
   overflow: hidden;
-  margin: 0;
+  margin: 0px;
+
 }
 
 .swal-custom-popup {
   font-family: "Baloo 2", sans-serif;
   border-radius: 50px;
   overflow: hidden;
-  width: 25%;
+  width: 30%;
   height: 90%;
+  margin: 0;
 }
 
 .my-custom-confirm {
@@ -354,5 +356,13 @@ div#swal2-container {
     object-fit: cover !important; /* Para que la imagen cubra todo el espacio */
     margin: 0;
     overflow: hidden;
+    object-position: center;
+    height: 300px;
+    width: 100%;
+}
 
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
