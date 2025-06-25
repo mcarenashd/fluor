@@ -35,8 +35,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const texto = document.createElement('p');
     texto.textContent = '🔍 Curiosidad: El flúor fue aislado por primera vez en 1886 por el químico francés Henri Moissan, ¡quien perforó sus propios guantes con sus ácidos para estudiarlo!';
     texto.style.marginTop = '12px';
-    texto.style.color = '#fff';
-    texto.style.textShadow = '0 1px 2px rgba(0,0,0,0.7)';
+    texto.style.color = ' #592851';
+    texto.style.textShadow = '0 1px 2px rgb(0, 0, 0)';
     texto.style.maxWidth = '600px';
     texto.style.marginLeft = 'auto';
     texto.style.marginRight = 'auto';
@@ -47,3 +47,5 @@ document.addEventListener('DOMContentLoaded', () => {
     btnContainer.parentNode.insertBefore(container, btnContainer.nextSibling);
   });
 });
+
+
