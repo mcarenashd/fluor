@@ -10,6 +10,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Forum&family=Fredoka:wght@300..700&family=Marmelad&family=Oswald:wght@700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Forum&family=Fredoka:wght@300..700&family=Marmelad&family=Oswald:wght@700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Forum&family=Fredoka:wght@300..700&family=Marmelad&family=Oswald:wght@700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <title>Document</title>
 </head>
 <body>
@@ -19,161 +20,38 @@
         <div class="nav-rectangle"></div>
     </div>
     <div class="nav-line"></div>
-    <img class="nav-image" src="src/images/img-general/vector_3.png" alt="nav-image"/>
+    <img class="nav-image" src="src/images/img-general/vector_3.png" alt="nav-image">
     <div class="nav-text"><a href="index.html"><h1 class="h1-nav">FLÚOR</h1></a></div>
     </div>
    </nav>
-    <div class="index">
-        <svg id="mySvg" viewBox="0 0 100 100" widht="100%" height="100%">
-            <defs>
-                <radialGradient id="grad-jugamos" cx="30%" cy="30%" r="70%">
-                    <stop offset="0%" stop-color="#ffffff" />
-                    <stop offset="100%" stop-color="#86A694" />
-                </radialGradient>
-                <radialGradient id="grad-creadoras" cx="30%" cy="30%" r="70%">
-                    <stop offset="0%" stop-color="#ffffff" />
-                    <stop offset="100%" stop-color="#BFAAAA" />
-                </radialGradient>
-                <radialGradient id="grad-donde" cx="30%" cy="30%" r="70%">
-                    <stop offset="0%" stop-color="#ffffff" />
-                    <stop offset="100%" stop-color="#732F6E" />
-                </radialGradient>
-                <radialGradient id="grad-historia" cx="30%" cy="30%" r="70%">
-                    <stop offset="0%" stop-color="#ffffff" />
-                    <stop offset="100%" stop-color="#A8BFBB" />
-                </radialGradient>
-                <radialGradient id="grad-datos" cx="30%" cy="30%" r="70%">
-                    <stop offset="0%" stop-color="#ffffff" />
-                    <stop offset="100%" stop-color="#FDF6E2" />
-                </radialGradient>
-            </defs>
-            <!-- Las Órbitas -->
-            <image class="imagen-fluor" href="src/images/img-index/fluor_white_F.png" x="30%" y="30%" width="40%"></image>
-            <circle cx="50%" cy="50%" r="40%" stroke="#86A694" stroke-width="0.25" fill="none" />
-            <circle cx="50%" cy="50%" r="25%" stroke="#86A694" stroke-width="0.25" fill="none" />  
-            
-            <!-- Los Protones -->
-            <!-- Link a Jugamos--> 
-            <a href="pages/jugamos.html">
-             <circle cx="50%" cy="25%" r="7%" fill="url(#grad-jugamos)" style="cursor:pointer;"/>
-             <text x="50%" y="25%" text-anchor="middle" fill="#fff" font-size="15%">¿Jugamos?</text>
-                   <animateTransform 
-                   attributeName="transform" 
-                   attributeType="XML" 
-                   type="rotate" 
-                   from="0 50 50" 
-                   to="360 50 50"
-                   dur="60s" 
-                   repeatCount="indefinite" /> 
-             </a>
-
-             <!-- Link a Creadoras--> 
-             <a href="pages/creadoras.html">
-             <circle cx="12%" cy="40%" r="7%" fill="url(#grad-creadoras)"/>
-             <text x="12%" y="41%" text-anchor="middle" fill="#fff" font-size="15%">Creadoras!</text>
-                   <animateTransform 
-                   attributeName="transform" 
-                   attributeType="XML" 
-                   type="rotate" 
-                   from="0 50 50" 
-                   to="360 50 50"
-                   dur="60s" 
-                   repeatCount="indefinite" /> 
-             </a>
-             <!-- Link a Donde Estoy--> 
-             <a href="pages/donde-estoy.html">
-             <circle cx="50%" cy="75%" r="7%" fill="url(#grad-donde)"/>
-             <text x="50%" y="75%" text-anchor="middle" fill="#fff" font-size="15%"> ¿Dónde Estoy?</text>
-                   <animateTransform 
-                   attributeName="transform" 
-                   attributeType="XML" 
-                   type="rotate" 
-                   from="0 50 50" 
-                   to="360 50 50"
-                   dur="60s" 
-                   repeatCount="indefinite" /> 
-             </a>
-             <!-- Link a Historia--> 
-             <a href="pages/historia.html">
-             <circle cx="89%" cy="50%" r="7%" fill="url(#grad-historia)"/> 
-             <text x="89%" y="51%" text-anchor="middle" fill="#fff" font-size="15%">Historia!</text>
-                   <animateTransform 
-                   attributeName="transform" 
-                   attributeType="XML" 
-                   type="rotate" 
-                   from="0 50 50" 
-                   to="360 50 50" 
-                   dur="60" 
-                   repeatCount="indefinite" /> 
-             </a>
-             <!-- Estos son los protones que no tienen link -->
-            <circle id="circulo1" cx="75%" cy="79%" r="6%" fill="url(#grad-datos)" style="cursor:pointer"> 
-                   <animateTransform 
-                   attributeName="transform" 
-                   attributeType="XML" 
-                   type="rotate" 
-                   from="0 50 50" 
-                   to="360 50 50" 
-                   dur="60" 
-                   repeatCount="indefinite" />  
-            </circle>
-            <circle id="circulo2" cx="25%" cy="20%" r="6%" fill="url(#grad-datos)" style="cursor:pointer"> 
-                   <animateTransform 
-                   attributeName="transform" 
-                   attributeType="XML" 
-                   type="rotate" 
-                   from="0 50 50" 
-                   to="360 50 50" 
-                   dur="60" 
-                   repeatCount="indefinite" />  
-            </circle>
-            <circle cx="75%" cy="20%" r="6%" fill="url(#grad-datos)"> 
-                   <animateTransform 
-                   attributeName="transform" 
-                   attributeType="XML" 
-                   type="rotate" 
-                   from="0 50 50" 
-                   to="360 50 50" 
-                   dur="60" 
-                   repeatCount="indefinite" />  
-             </circle>
-            <circle cx="25%" cy="80%" r="6%" fill="url(#grad-datos)"> 
-                   <animateTransform 
-                   attributeName="transform" 
-                   attributeType="XML" 
-                   type="rotate" 
-                   from="0 50 50" 
-                   to="360 50 50" 
-                   dur="60" 
-                   repeatCount="indefinite" />  
-             </circle>
-            <circle cx="25%" cy="55%" r="6%" fill="url(#grad-datos)"> 
-                   <animateTransform 
-                   attributeName="transform" 
-                   attributeType="XML" 
-                   type="rotate" 
-                   from="0 50 50" 
-                   to="360 50 50" 
-                   dur="60" 
-                   repeatCount="indefinite" />  
-             </circle>             
-        </svg>
-    <!-- <div class="info-section">
-        <h1>FLUOR</h1>
-        <h2>FLUOR</h2>
-        <h3>FLUOR</h3>
-        <p> Así se van a ver los párrafos</p>
-        <a href="pages/donde-estoy.html">
-        <div class="btn-container">
-            <div class="btn-fill"></div>
-            <div class="btn-text">Start Adventure</div>
+    <div class="index" id="indexCont">
+        <div class="atom" id="atom">
+            <!--Órbitas-->
+            <div class="orbit" id="orbitCont">
+            <div class="inner-orbit"><img class="fluor-image" src="src/images/img-index/fluor_white_F.png" alt="fluor-img"></div>
+            <div class="outer-orbit"></div>
+            </div>
+            <!--Protones-->
+            <div class="proton" id="protonCont">
+                <div class="rotador-1">
+                <div class="proton-1" id="proton1"><a href="pages/creadoras.html" class="text-button"> ¡Las científicas detrás del átomo! </a></div>
+                </div>
+                <div class="proton-2"><a href="pages/donde-estoy.html" class="text-button"> Mi lugar en el universo químico </a></div>
+                <div class="proton-3"><a href="pages/historia.html" class="text-button"> Mi pasado radiante </a></div>
+                <div class="proton-4" id="proton4"><p class="text-button"> Otras curiosidadesgi </p> </div>
+                <div class="proton-5"><a href="pages/jugamos.html" class="text-button"> ¡Juega con el flúor! </a></div>
+                <div class="proton-6" id="proton6"><p class="text-button"> Curiosidades </p></div>
+                <div class="proton-7" id="proton7"><p class="text-button"> ¡Sigue descubriendo quién soy! </p></div>
+                <div class="proton-8" id="proton8"><p class="text-button"> ¿Otro Dato? </p></div>
+                <div class="proton-9" id="proton9"><p class="text-button" >¡Descubre quién soy!</p></div>
+            </div>
         </div>
-        </a>
-    </div> -->
     </div>
-
 <footer id="common-footer"> </footer>
 <script src="src/js/script.js"></script>
 <script src="src/js/main.js"></script>
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+<link rel="stylesheet" href="https://unpkg.com/tippy.js@6/dist/tippy.css">
 </body>
 </html>
