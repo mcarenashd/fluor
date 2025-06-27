@@ -1,223 +1,346 @@
-body {
-    background-color: #BFAAAA
-}
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     /* para que no salga bordes*/
+ }
+
+ body {
+     background-color: #BFAAAA
+ }
 
  .title {
-    text-align: center;
-    color: #592851;
+     text-align: center;
+     color: #592851;
+     margin-bottom: 30px;
  }
-.container {
-    width: 100%;
-    height: 100%;
-    border-radius: 15px;
-    display: flex;/*convierte el contenedor en flexible*/
-    flex-wrap: wrap;/*Permite que los elementos "salten" a la siguiente línea si no caben*/
-    gap: 60px;/*Espacio de 60 píxeles entre cada elemento hijo*/
-    justify-content: center;/* Centra los elementos horizontalmente*/
 
-}
-.imagines {
+ .container {
+     width: 100%;
+     height: 100%;
+     border-radius: 15px;
+     display: flex;
+     /*convierte el contenedor en flexible*/
+     flex-wrap: wrap;
+     /*Permite que los elementos "salten" a la siguiente línea si no caben*/
+     gap: 60px;
+     /*Espacio de 60 píxeles entre cada elemento hijo*/
+     justify-content: center;
+     /* Centra los elementos horizontalmente*/
+
+ }
+
+ .imagines {
      width: 200px;
-     height: 300px;   
+     height: 300px;
      /* border-radius: 30px;  */
-    /* display: flex; */
-    object-fit: cover;/* Mantiene las proporciones de la imagen, recortando si es necesario*/
+     /* display: flex; */
+     object-fit: cover;
+     /* Mantiene las proporciones de la imagen, recortando si es necesario*/
      margin-top: -1.5rem;
-     margin-bottom: -0.5rem; /*Empuja la imagen hacia abajo dentro de su contenedor*/
-    /* margin-bottom: 0px; no hay margen inferior */
-    /*border-bottom-left-radius: 50px;Esquina inferior izquierda más redondeada*/
-    /*border-bottom-right-radius: 50px;/Esquina inferior derecha más redondeada*/
-   }
-    
-/*CONTENEDOR DE TARJETA */
-.card {
-    perspective: 1000px;/*Establece la "distancia de visualización" para efectos 3D
-Mientras mayor el valor, menos pronunciado el efecto 3D*/
-    
-}
-
-/*INTERIOR DE LA TARJETA*/
-.card-inner {
-    position: relative;/*Permite posicionar elementos hijos de forma absoluta*/
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 1s;/*ANIMACIÓN - Cualquier cambio en transform durará 0.6*/
-    transform-style: preserve-3d;/*Mantiene las transformaciones 3D en elementos hijos*/
-
-
-}
-/*ACTIVACION DE LA ROTACION*/
-.card:hover .card-inner {/*Cuando el mouse está sobre .card, selecciona el .card-inner interior*/
-    transform: rotateY(180deg);/*Rota el elemento 180 grados en el eje Y (horizontal)
-RESULTADO: La tarjeta se voltea mostrando su parte trasera*/
-}
- /*CARA FRONTAL DE LA TARJETA*/
-.card-front{ /* esto es las tarjatas de colores*/
-    width: 200px;
-    height: 400px;
-    margin: 2px;
-    border-radius: 100px; /*Esquinas muy redondas*/
-    display: flex;
-    align-items: flex-end;  /* se alinea abajo*/
-    justify-content: space-between;   
-    justify-content: center;
-    flex-grow: 1;/*Puede crecer si hay espacio extra*/
-    flex-shrink: 1;/*Puede encogerse si falta espacio*/
-    flex-basis: 200px;
-    overflow: hidden; /*la imagen se queda dentro de ka tarjeta*/
-    backface-visibility: hidden;/*oculta la parte trasera cuando este rotada*/
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.8);;
-} 
-/*CARA TRASERA DE LA TARJETA*/
-.card-back {
-    position: absolute; /*Se posiciona de forma absoluta (se superpone)*/
-    top:0;/*Se posiciona en la parte superior*/
-    left: 0;/*Se posiciona en la parte izquierda*/
-    transform: rotateY(180deg);/*Está rotada 180° inicialmente (oculta)*/
-    backface-visibility: hidden;/*Oculta su parte trasera*/
-    width: 200px;/* DE AQUI PARA ABAJO LE HE DADO LO MISMOS VALORES QUE A LA CARA FRONTAL*/
-    height: 400px;
-    margin: 2px;
-    border-radius: 100px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.8);
-}
-     
-
-.morada {
-    background-color: #592851;
-}
-.violeta {
-    background-color: #732F6E;
-}
-.verde-c {
-    background-color:#A8BFBB ;
-}
-.verde-o {
-background-color:#86A694 ;
-}
-.rosa {
-background-color:#BFAAAA ;
-}
-.name{
-text-align: center;
-margin: 1px;
-color: white;
-
-}
-
-.rosa p, .verde-c p, .morada p,  .violeta p, .verde-o p {  
-    color:  white;
-    margin-top: 2.5rem; 
-    text-align:  center;
-    margin-left: 20px;
-    margin-right: 20px; 
-}
-
-.morada p {
-    margin-top: 6rem;  
+     margin-bottom: -0.5rem;
+     /*Empuja la imagen hacia abajo dentro de su contenedor*/
+     /* margin-bottom: 0px; no hay margen inferior */
+     /*border-bottom-left-radius: 50px;Esquina inferior izquierda más redondeada*/
+     /*border-bottom-right-radius: 50px;/Esquina inferior derecha más redondeada*/
  }
-   
+
+ /*CONTENEDOR DE TARJETA */
+ .card {
+     perspective: 1000px;
+     /*Establece la "distancia de visualización" para efectos 3D
+Mientras mayor el valor, menos pronunciado el efecto 3D*/
+
+ }
+
+ /*INTERIOR DE LA TARJETA*/
+ .card-inner {
+     position: relative;
+     /*Permite posicionar elementos hijos de forma absoluta*/
+     width: 100%;
+     height: 100%;
+     text-align: center;
+     transition: transform 1s;
+     /*ANIMACIÓN - Cualquier cambio en transform durará 0.6*/
+     transform-style: preserve-3d;
+     /*Mantiene las transformaciones 3D en elementos hijos*/
+
+
+ }
+
+ /*ACTIVACION DE LA ROTACION*/
+ .card:hover .card-inner {
+     /*Cuando el mouse está sobre .card, selecciona el .card-inner interior*/
+     transform: rotateY(180deg);
+     /*Rota el elemento 180 grados en el eje Y (horizontal)
+RESULTADO: La tarjeta se voltea mostrando su parte trasera*/
+ }
+
+ /*CARA FRONTAL DE LA TARJETA*/
+ .card-front {
+     /* esto es las tarjatas de colores*/
+     width: 200px;
+     height: 400px;
+     margin: 2px;
+     border-radius: 100px;
+     /*Esquinas muy redondas*/
+     display: flex;
+     align-items: flex-end;
+     /* se alinea abajo*/
+     justify-content: space-between;
+     justify-content: center;
+     flex-grow: 1;
+     /*Puede crecer si hay espacio extra*/
+     flex-shrink: 1;
+     /*Puede encogerse si falta espacio*/
+     flex-basis: 200px;
+     overflow: hidden;
+     /*la imagen se queda dentro de ka tarjeta*/
+     backface-visibility: hidden;
+     /*oculta la parte trasera cuando este rotada*/
+     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.8);
+     ;
+ }
+
+ /*CARA TRASERA DE LA TARJETA*/
+ .card-back {
+     position: absolute;
+     /*Se posiciona de forma absoluta (se superpone)*/
+     top: 0;
+     /*Se posiciona en la parte superior*/
+     left: 0;
+     /*Se posiciona en la parte izquierda*/
+     transform: rotateY(180deg);
+     /*Está rotada 180° inicialmente (oculta)*/
+     backface-visibility: hidden;
+     /*Oculta su parte trasera*/
+     width: 200px;
+     /* DE AQUI PARA ABAJO LE HE DADO LO MISMOS VALORES QUE A LA CARA FRONTAL*/
+     height: 400px;
+     margin: 2px;
+     border-radius: 100px;
+     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.8);
+ }
+
+
+ .morada {
+     background-color: #592851;
+ }
+
+ .violeta {
+     background-color: #732F6E;
+ }
+
+ .verde-c {
+     background-color: #A8BFBB;
+ }
+
+ .verde-o {
+     background-color: #86A694;
+ }
+
+ .rosa {
+     background-color: #BFAAAA;
+ }
+
+ .name {
+     text-align: center;
+     margin: 1px;
+     color: white;
+
+ }
+
+ .rosa p,
+ .verde-c p,
+ .morada p,
+ .violeta p,
+ .verde-o p {
+     color: white;
+     margin-top: 2.5rem;
+     text-align: center;
+     margin-left: 20px;
+     margin-right: 20px;
+     
+ }
+
+ .morada p {
+     margin-top: 6rem;
+ }
+
  .verde-c p {
      margin-top: 3rem;
  }
- .violeta p{
-    margin-top: 5rem;
- }
- .verde-o p{
-      margin-top: 5rem;
+
+ .violeta p {
+     margin-top: 5rem;
  }
 
-.agradecimiento-contenedor {
-    text-align: center;
-    margin: 0 5rem; /*centra horizontalmente el bloque arriba y abajo o en los lados auto*/
-   color: #592851;
-}
-/*quitamos la viñeta estandar*/
-.list-atomica{
-    list-style: none;/*quita los puntitos que pone html en las listas*/
-    padding-left: 1rem; 
-    margin-left: 5rem;
-    margin-right: 5rem;
-    font-family:"Baloo 2", sans-serif;
-    font-size: 18px;
-    font-weight:lighter;  
- 
-}
+ .verde-o p {
+     margin-top: 5rem;
+ }
+
+ .agradecimiento-contenedor {
+     text-align: center;
+     margin: 0 5rem;
+     /*centra horizontalmente el bloque arriba y abajo o en los lados auto*/
+     color: #592851;
+     margin-top: 30px;
+ }
+
+ /*quitamos la viñeta estandar*/
+ .list-atomica {
+     list-style: none;
+     /*quita los puntitos que pone html en las listas*/
+     padding-left: 1rem;
+     margin-left: 5rem;
+     margin-right: 5rem;
+     font-family: "Baloo 2", sans-serif;
+     font-size: 18px;
+     font-weight: lighter;
+     margin-top: 20px;
+
+ }
+
  /* 2️ Creamos espacio para el icono a la izquierda */
-.list-atomica li {
-    position: relative;/*Necesaria si algún elemento hijo usa position: absolute (aunque aquí ya no lo usamos, por si acaso).*/
-    padding-left: 2.5rem;  
-    text-align: left;  
-    gap: 1rem; /*Añade espacio entre el icono y el texto.*/
-    display: flex;/* convierte el li en un contenedor flexible para poder alinear el icono y el texto uno al lado del otro*/
-    line-height: 1.5;/*Aumenta la altura de línea para que el texto sea más legible.*/
-    align-items: flex-start; /*Alinea el icono y el texto arriba del todo. Si quieres que estén centrados verticalmente, puedes usar center.*/
-    margin: 0 auto 2rem auto; /*Centra cada <li> y le da espacio entre uno y otro (1.5rem abajo).*/
-}
+ .list-atomica li {
+     position: relative;
+     /*Necesaria si algún elemento hijo usa position: absolute (aunque aquí ya no lo usamos, por si acaso).*/
+     padding-left: 2.5rem;
+     text-align: left;
+     gap: 1rem;
+     /*Añade espacio entre el icono y el texto.*/
+     display: flex;
+     /* convierte el li en un contenedor flexible para poder alinear el icono y el texto uno al lado del otro*/
+     line-height: 1.5;
+     /*Aumenta la altura de línea para que el texto sea más legible.*/
+     align-items: flex-start;
+     /*Alinea el icono y el texto arriba del todo. Si quieres que estén centrados verticalmente, puedes usar center.*/
+     margin: 0 auto 2rem auto;
+     /*Centra cada <li> y le da espacio entre uno y otro (1.5rem abajo).*/
+ }
 
-/* 3 Inyectamos el icono */
-.list-atomica li::before { /*se utiliza before para poner el que queremos nosotros*/
-    content: ""; /*aqui no se pone nada para que salga tu icono*/
-    position: absolute;  
-    left: 0;
-   flex-shrink: 0;/*Impide que el icono se deforme cuando el espacio se reduce.*/
-    width: 1.2rem;/*Tamaño del icono.*/
-    height: 1.2rem; 
-    background: url(/src/images/img-creadoras/fluorite-gemstones-icon-png.webp);
-   /*todo esto se pone pq si no no saldria nuestro icono de la url,*/
-    background-size: contain;/*Ajusta el icono para que encaje sin recortarse.*/
-    background-repeat: no-repeat;/*Evita que se repita la imagen.*/
-    background-position: center;/*Centra la imagen dentro del espacio asignado.*/
-    margin-top: 0.2rem;
-   
-}
+ /* 3 Inyectamos el icono */
+ .list-atomica li::before {
+     /*se utiliza before para poner el que queremos nosotros*/
+     content: "";
+     /*aqui no se pone nada para que salga tu icono*/
+     position: absolute;
+     left: 0;
+     flex-shrink: 0;
+     /*Impide que el icono se deforme cuando el espacio se reduce.*/
+     width: 1.2rem;
+     /*Tamaño del icono.*/
+     height: 1.2rem;
+     background: url(/src/images/img-creadoras/fluorite-gemstones-icon-png.webp);
+     /*todo esto se pone pq si no no saldria nuestro icono de la url,*/
+     background-size: contain;
+     /*Ajusta el icono para que encaje sin recortarse.*/
+     background-repeat: no-repeat;
+     /*Evita que se repita la imagen.*/
+     background-position: center;
+     /*Centra la imagen dentro del espacio asignado.*/
+     margin-top: 0.2rem;
+
+ }
+
  .list-atomica:hover li::before {
-    filter: brightness(1.5);
-    filter:
-        drop-shadow(0 0 2px #592851)
-        drop-shadow(0 0 3px #732F6E)
-        drop-shadow(0 0 4px #A8BFBB )
-        drop-shadow(0 0 5px #86A694 )
-        drop-shadow(0 0 6px #BFAAAA);        
-
-    
-}
-
-.icono-LinkedIn{
-    width: 60px;
-    height: 60px;
-    border-radius: 30px;
-    /* margin-top: 4rem; */
-    transition: transform 0.3s; 
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5); ;
-    
-}
-.icono-LinkedIn:hover{
-    transform: scale(1.2);
-}
+     filter: brightness(1.5);
+     filter:
+         drop-shadow(0 0 2px #592851) drop-shadow(0 0 3px #732F6E) drop-shadow(0 0 4px #A8BFBB) drop-shadow(0 0 5px #86A694) drop-shadow(0 0 6px #BFAAAA);
 
 
-/* creo el efecto de los corazones*/
-.corazon-lluvia {
-    position: fixed; /*se queda fijo en la pantalla*/
-    top: -50px;/*empieza arriba fuera de la pantalla*/
-    font-size: 24px; /*tamaño corazon*/
-    z-index: 9999; /*se pone por encima de todo*/
-    pointer-events: none; /* no interfiere con click de raton*/
-    animation: caer 3s linear forwards; /*animacion de caida*/
-}
-/*animacion de caida*/
-@keyframes caer {
-    0% {
-        transform: translateY(-50px) rotate(0deg);/* el corazon esta arriba y es transparente*/
-        opacity: 0;
-    }
+ }
 
-    10% {
-        opacity: 1; /* a los 10% el corazon ya es visible un 1*/
-    }
+ .icono-LinkedIn {
+     width: 60px;
+     height: 60px;
+     border-radius: 30px;
+     /* margin-top: 4rem; */
+     transition: transform 0.3s;
+     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+     margin-top: 10px;
 
-      100% { transform: translateY(calc(100vh + 50px)) rotate(360deg);/* alfinal que es el 100% ha caido y desaparece*/
-      }
-}
+ }
+
+ .icono-LinkedIn:hover {
+     transform: scale(1.2);
+ }
+
+
+ /* creo el efecto de los corazones*/
+ .corazon-lluvia {
+     position: fixed;
+     /*se queda fijo en la pantalla*/
+     top: -50px;
+     /*empieza arriba fuera de la pantalla*/
+     font-size: 24px;
+     /*tamaño corazon*/
+     z-index: 9999;
+     /*se pone por encima de todo*/
+     pointer-events: none;
+     /* no interfiere con click de raton*/
+     animation: caer 3s linear forwards;
+     /*animacion de caida*/
+ }
+
+ /*animacion de caida*/
+ @keyframes caer {
+     0% {
+         transform: translateY(-50px) rotate(0deg);
+         /* el corazon esta arriba y es transparente*/
+         opacity: 0;
+     }
+
+     10% {
+         opacity: 1;
+         /* a los 10% el corazon ya es visible un 1*/
+     }
+
+     100% {
+         transform: translateY(calc(100vh + 50px)) rotate(360deg);
+         /* alfinal que es el 100% ha caido y desaparece*/
+     }
+ }
+
+ /*Responsive*/
+ @media(max-width: 768px) {
+     .agradecimiento-contenedor {
+         margin: 0;
+         padding: 0;
+
+     }
+
+     .list-atomica {
+         margin: 0;
+         padding: 0;
+         margin-top: 20px;
+     }
+
+     .gratitude {
+         font-size: 20px;
+         margin-top: 25px;
+
+     }
+
+     .title {
+         font-size: 30px;
+         margin-bottom: 50px;
+
+     }
+
+     .name {
+         font-size: 25px;
+         margin-bottom: 30px;
+     }
+
+     .card-front {
+         width: 100%;
+
+     }
+
+     .card-inner {
+         width: 100%;
+
+     }
+
+ }

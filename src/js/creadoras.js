@@ -1,6 +1,6 @@
 // SELECIONAR TODAS LAS TAJETAS//
-const tarjetas = document.querySelectorAll(".card");
-// const tarjetaAtras = document.querySelectorAll(".card-back")
+ const tarjetas = document.querySelectorAll(".card");
+//  const tarjetaAtras = document.querySelectorAll(".card-back")
 
 
 //Creo una funcion para crear un corazon//
@@ -29,7 +29,7 @@ function crearCorazon() {
 
 //voy a crear multiples corazones con una funcion//
 function lluviaCorazones() {
-    for (let i = 0; i < 15; i++) { // esto es el bucle para que cree hasta 15 corazones//
+    for (let i = 0; i < 20; i++) { // esto es el bucle para que cree hasta 15 corazones//
         setTimeout(() => {
             crearCorazon()
         }, i * 100);
@@ -71,7 +71,7 @@ if (tarjetas.length > 0) {//esto pregunta si exixten tarjetas dentro del html,lo
               setTimeout(() => {
                 tarjetasActivadas.delete(index);
                 console.log("🧹 Tarjeta", index + 1, "limpiada, puede activarse de nuevo");
-            }, 50);
+            }, 500);
 
          });
     });
