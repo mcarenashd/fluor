@@ -1,14 +1,227 @@
-/* COMENTARIO */
-body{
-    background-color: #86A694;
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 10px;
+    background-color:#86A694;
+    margin: 0;
 }
 
-.box-container{
-    background-color:#FDF6E2;
-    width: 600px;
-    height: 600px;
-    border-radius: 20%;
-    display: flex;
+#titulo {
     justify-self: center;
+    width: 700px;
+    height: 60px;
+    border-bottom: 20%;
+    background-color: #fdf6e2;
+    display: flex;
+    justify-content: center;
     align-items: center;
+    
+}
+
+h1 {
+    color: black;
+    margin-bottom: 20px;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.juego {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.tablero {
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    gap: 1px;
+    max-width: 100%;
+    margin: 20px auto;
+    aspect-ratio: 1;
+    background-color: #3498db;
+    padding: 2px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.celda {
+    aspect-ratio: 1;
+    border: 1px solid #2980b9;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: clamp(8px, 1.5vw, 16px);
+    min-height: 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.celda:hover {
+    background-color: #e8f4fd;
+}
+
+.seleccionada {
+    background-color: #3498db !important;
+    color: white;
+}
+
+.encontrada {
+    background-color: #27ae60 !important;
+    color: white;
+}
+
+.palabras {
+    margin: 20px 0;
+}
+
+.palabras h3 {
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    margin-bottom: 15px;
+}
+
+.palabra {
+    display: inline-block;
+    margin: 5px;
+    padding: 8px 15px;
+    background-color: #ecf0f1;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: clamp(12px, 2.5vw, 16px);
+}
+
+.palabra.encontrada {
+    background-color: #27ae60;
+    color: white;
+    text-decoration: line-through;
+}
+
+.botones {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    font-size: clamp(14px, 2.5vw, 16px);
+    font-weight: bold;
+    transition: background-color 0.3s;
+    min-width: 120px;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.mensaje {
+    margin: 20px 0;
+    font-size: clamp(16px, 3vw, 18px);
+    font-weight: bold;
+    color: rgb(201, 99, 248);
+    min-height: 25px;
+}
+
+/* Responsive específico */
+@media (max-width: 768px) {
+    body {
+        padding: 5px;
+    }
+    
+    .juego {
+        padding: 0 5px;
+    }
+    
+    .tablero {
+        gap: 0.5px;
+        padding: 1px;
+        margin: 15px auto;
+    }
+    
+    .celda {
+        border-width: 0.5px;
+    }
+    
+    .palabra {
+        margin: 3px;
+        padding: 6px 12px;
+    }
+    
+    .botones {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    button {
+        width: 100%;
+        max-width: 200px;
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .tablero {
+        max-width: 95vw;
+        margin: 10px auto;
+    }
+    
+    .celda {
+        font-size: clamp(6px, 2vw, 12px);
+    }
+    
+    h1 {
+        font-size: clamp(1.2rem, 5vw, 2rem);
+        margin-bottom: 15px;
+    }
+    
+    .palabras {
+        margin: 15px 0;
+    }
+    
+    .palabra {
+        margin: 2px;
+        padding: 4px 8px;
+        font-size: clamp(10px, 3vw, 14px);
+    }
+}
+
+@media (max-width: 320px) {
+    .tablero {
+        max-width: 98vw;
+    }
+    
+    .celda {
+        font-size: 8px;
+    }
+    
+    .palabra {
+        font-size: 10px;
+        padding: 3px 6px;
+    }
+}
+
+/* Para pantallas muy grandes */
+@media (max-width: 1200px) {
+    .tablero {
+        max-width: 600px;
+    }
+    
+    .celda {
+        font-size: 18px;
+    }
 }
