@@ -6,6 +6,8 @@ body {
     margin: 0;
 }
 
+/*Para la sopa de letras*/
+
 #titulo {
     justify-self: center;
     width: 700px;
@@ -225,3 +227,14 @@ button:active {
         font-size: 18px;
     }
 }
+
+/*Para el footer*/
+
+footer {
+  margin-top: 7%;
+}
+#text-footer {
+  color: #fdf6e2;
+  text-align: center;
+}
+
