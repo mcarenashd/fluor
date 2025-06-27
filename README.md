@@ -49,14 +49,18 @@ Desde el inicio, decidimos trabajar de forma **organizada y colaborativa**:
 
 ### 🎨 Diseño y Planificación
 
-- :white_check_mark: Creamos un **Design System y un prototipo en Figma** para decidir la apariencia de nuestras páginas
+- :white_check_mark: Creamos un **prototipo en Figma** para decidir la apariencia de nuestras páginas
+
+![Basic Design System - Proyecto Flúor](../src/images/img-general/PrototypePages_Fluor.png)
+![Prototipo Figma - Proyecto Flúor](../src/images/img-general/basicDesignSystem_Fluor.png)
+*Wireframes y mockups iniciales diseñados en Figma*
 - :white_check_mark: Definimos una **estructura de carpetas clara**: `img/`, `css/`, `js/`, `pages/`, etc.
 
 ### 👥 Gestión de Equipo
 
 - :arrows_counterclockwise: **GitHub** para versionado y gestión de tareas
 - :clipboard: **Tablero Kanban** para organizar tareas, milestones y deadlines
-- :speaking_head: con el fin de estar informadas del estado del proyecto y de darnos apoyo mutuo, realizamos **reuniones de Standup diarios**, donde comentamos:
+- :speaking_head: **Daily Standups**, reuniones para mantener sincronización del equipo y facilitar el apoyo mutuo, donde compartimos:
   - Lo que hicimos ayer
   - Lo que vamos a hacer hoy
   - Dificultades encontradas
@@ -81,7 +85,7 @@ Agradecemos a quienes comparten recursos libres que hemos podido utilizar:
 - `SweetAlert2` - Alertas personalizadas
 
 ### 🎓 Fuentes de Aprendizaje
-- **YouTube**: Canales como CódigoWeb, @ninoslab
+- **YouTube**: Canales como CódigoWeb, @ninoslab, @midudev
 - **Inspiración visual**: Intro de Star Wars para animación de la historia
 
 ---
@@ -124,7 +128,7 @@ Agradecemos a quienes comparten recursos libres que hemos podido utilizar:
 
 **Gracias por visitar nuestro proyecto – esperamos que te guste tanto como a nosotras crearlo** :sparkles:
 
-[Fluor Animation](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNmViM2M3bWd4bDQyb2VpYmJ5a3Z0Z205NWp5Y2N1MTdldTB1NDAzbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xT5LMI17X3TCCzxn0Y/giphy.gif)
+![Fluor Animation](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNmViM2M3bWd4bDQyb2VpYmJ5a3Z0Z205NWp5Y2N1MTdldTB1NDAzbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xT5LMI17X3TCCzxn0Y/giphy.gif)
 
 *Hecho con :purple_heart: por el equipo Flúor*
 
