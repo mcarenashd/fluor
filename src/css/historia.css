@@ -7,6 +7,8 @@
   --rose-dust: #BFAAAA;
   --cream: #FDF6E2;
   --mustard: #FBCB66;
+  --black: #000000;
+  --grey-shadow: #949494;
 }
 
 /*-------ESTILOS GENERALES---------*/
@@ -116,7 +118,7 @@ h2, .p_short {
   height: 50px;
   border: 2.5px solid black;
   border-radius: 50px;
-  box-shadow: 4px 4px 0 #949494;
+  box-shadow: 4px 4px 0 var(--grey-shadow);
   cursor: pointer;
   overflow: hidden;
   background-color: transparent;
@@ -169,7 +171,7 @@ h2, .p_short {
   
   border: 2.5px solid black;
   border-radius: 50px;
-  box-shadow: 4px 4px 0 #949494;
+  box-shadow: 4px 4px 0 var(--grey-shadow);
   background-color: var(--mustard);
   font-family: "Baloo 2", sans-serif;
   font-size: 22px;
@@ -179,25 +181,40 @@ h2, .p_short {
 }
 
 
-/* Responsive - pendiente revisar */
+/* -----------RESPONSIVE DESIGN------------ */
 @media (max-width: 768px) {
     .intro-starwars {
-        width: 95%;
-        height: 700px;
-        margin: 20px auto;
-        border-radius: 20px;
+        width: 90%;
+        height: 400px;
+        margin: 15px auto;
+        padding: 15px;
+        border-radius: 30px;
     }
+
+    .intro-starwars h2 {
+    padding-top: 1em;
+    font-size: 24px;
+  }
     
     .content-overlay {
-        padding: 2rem;
-        max-width: 90%;
+        padding: 1rem;
+        max-width: 95%;
+        height: 800px;
+        font-size: 14px;
+       line-height: 1.4;
     }
     
-    h2 {
-        font-size: 28px;
-    }
-    
-    p {
+       p {
         font-size: 16px;
     }
 }
+  /* Responsive.button*/
+    .btn-container {
+    width: 50%; /* Más ancho en móvil */
+    min-width: 150px; /* Ancho mínimo mayor */
+    height: 55px; 
+    
+    .btn-text {
+    font-size: 18px; /* Texto ligeramente más pequeño pero legible */
+    padding: 0 10px; /* Padding interno para dar espacio */
+  }
