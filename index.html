@@ -1,57 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-        <link rel="stylesheet" href="src/css/style.css">
-        <link rel="stylesheet" href="src/css/index.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Forum&family=Fredoka:wght@300..700&family=Marmelad&family=Oswald:wght@700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Forum&family=Fredoka:wght@300..700&family=Marmelad&family=Oswald:wght@700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Forum&family=Fredoka:wght@300..700&family=Marmelad&family=Oswald:wght@700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/css/style.css" />
+    <link rel="stylesheet" href="src/css/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Forum&family=Fredoka:wght@300..700&family=Marmelad&family=Oswald:wght@700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Forum&family=Fredoka:wght@300..700&family=Marmelad&family=Oswald:wght@700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Forum&family=Fredoka:wght@300..700&family=Marmelad&family=Oswald:wght@700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Document</title>
 </head>
+
 <body>
     <nav class="navbar">
-    <div class="nav-container1">
-    <div class="nav-container2">
-        <div class="nav-rectangle"></div>
-    </div>
-    <div class="nav-line"></div>
-    <img class="nav-image" src="src/images/img-general/vector_3.png" alt="nav-image">
-    <div class="nav-text"><a href="index.html"><h1 class="h1-nav">FLÚOR</h1></a></div>
-    </div>
-   </nav>
+        <div class="nav-container1">
+            <div class="nav-container2">
+                <div class="nav-rectangle"></div>
+                <div class="nav-left">
+                    <div class="nav-text">
+                        <a href="../index.html">
+                            <h1 class="h1-nav-hamb">F</h1>
+                            <h1 class="h1-nav">FLÚOR</h1>
+                        </a>
+                    </div>
+                    <div class="custom-navbar-shape">
+
+                        <button class="hamburger" id="hamburger" type="button">
+                            &#9776;
+                        </button>
+                    </div>
+                </div>
+                <!-- Enlaces distribuidos en el resto de la navbar -->
+                <div class="nav-links" id="nav-links">
+                    <a href="../index.html">¿Cómo soy?</a>
+                    <a href="pages/donde-estoy.html">¿Dónde estoy?</a>
+                    <a href="pages/historia.html">Mi Historia</a>
+                    <a href="pages/jugamos.html"> ¿Jugamos?</a>
+                    <a href="pages/creadoras.html">Creadoras</a>
+                </div>
+            </div>
+        </div>
+    </nav>
     <div class="index" id="indexCont">
         <div class="atom" id="atom">
             <!--Órbitas-->
             <div class="orbit" id="orbitCont">
-            <div class="inner-orbit"><img class="fluor-image" src="src/images/img-index/fluor_white_F.png" alt="fluor-img"></div>
-            <div class="outer-orbit"></div>
+                <div class="inner-orbit">
+                    <img class="fluor-image" src="src/images/img-index/fluor_white_F.png" alt="fluor-img" />
+                </div>
+                <div class="outer-orbit"></div>
             </div>
             <!--Protones-->
             <div class="proton" id="protonCont">
                 <div class="rotador-1">
-                <div class="proton-1" id="proton1"><a href="pages/creadoras.html" class="text-button"> ¡Las científicas detrás del átomo! </a></div>
+                    <div class="proton-1" id="proton1">
+                        <a href="pages/creadoras.html" class="text-button">
+                            ¡Las científicas detrás del átomo!
+                        </a>
+                    </div>
                 </div>
-                <div class="proton-2"><a href="pages/donde-estoy.html" class="text-button"> Mi lugar en el universo químico </a></div>
-                <div class="proton-3"><a href="pages/historia.html" class="text-button"> Mi pasado radiante </a></div>
-                <div class="proton-4" id="proton4"><p class="text-button"> Otras curiosidadesgi </p> </div>
-                <div class="proton-5"><a href="pages/jugamos.html" class="text-button"> ¡Juega con el flúor! </a></div>
-                <div class="proton-6" id="proton6"><p class="text-button"> Curiosidades </p></div>
-                <div class="proton-7" id="proton7"><p class="text-button"> ¡Sigue descubriendo quién soy! </p></div>
-                <div class="proton-8" id="proton8"><p class="text-button"> ¿Otro Dato? </p></div>
-                <div class="proton-9" id="proton9"><p class="text-button" >¡Descubre quién soy!</p></div>
+                <div class="proton-2">
+                    <a href="pages/donde-estoy.html" class="text-button">
+                        Mi lugar en el universo químico
+                    </a>
+                </div>
+                <div class="proton-3">
+                    <a href="pages/historia.html" class="text-button">
+                        Mi pasado radiante
+                    </a>
+                </div>
+                <div class="proton-4" id="proton4">
+                    <p class="text-button">Otras curiosidades</p>
+                </div>
+                <div class="proton-5">
+                    <a href="pages/jugamos.html" class="text-button">
+                        ¡Juega con el flúor!
+                    </a>
+                </div>
+                <div class="proton-6" id="proton6">
+                    <p class="text-button">Curiosidades</p>
+                </div>
+                <div class="proton-7" id="proton7">
+                    <p class="text-button">¡Sigue descubriendo quién soy!</p>
+                </div>
+                <div class="proton-8" id="proton8">
+                    <p class="text-button">¿Otro Dato?</p>
+                </div>
+                <div class="proton-9" id="proton9">
+                    <p class="text-button">¡Descubre quién soy!</p>
+                </div>
             </div>
         </div>
     </div>
-<footer id="common-footer"> </footer>
-<script src="src/js/script.js"></script>
-<script src="src/js/main.js"></script>
-<script src="https://unpkg.com/@popperjs/core@2"></script>
-<script src="https://unpkg.com/tippy.js@6"></script>
-<link rel="stylesheet" href="https://unpkg.com/tippy.js@6/dist/tippy.css">
+    <footer id="common-footer"></footer>
+    <script src="src/js/script.js"></script>
+    <script src="src/js/main.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/dist/tippy.css" />
 </body>
+
 </html>
