@@ -11,6 +11,8 @@
   --grey-shadow: #949494;
 }
 
+
+
 /*-------ESTILOS GENERALES---------*/
 body {background-color: var(--mint-gray);
   font-weight: 300;
@@ -81,7 +83,9 @@ h2, .p_short {
     }
 }
 
-
+#common-footer {
+  margin: 0 20px; /* Añade márgenes laterales al footer */
+}
 
 /*----------------QUIZ------------------*/
 
@@ -116,7 +120,7 @@ h2, .p_short {
   position: relative;
   width: 20%;
   height: 50px;
-  border: 2.5px solid black;
+  border: 2.5px solid var(--black);
   border-radius: 50px;
   box-shadow: 4px 4px 0 var(--grey-shadow);
   cursor: pointer;
@@ -207,14 +211,24 @@ h2, .p_short {
        p {
         font-size: 16px;
     }
-}
-  /* Responsive.button*/
-    .btn-container {
-    width: 50%; /* Más ancho en móvil */
-    min-width: 150px; /* Ancho mínimo mayor */
-    height: 55px; 
-    
-    .btn-text {
-    font-size: 18px; /* Texto ligeramente más pequeño pero legible */
-    padding: 0 10px; /* Padding interno para dar espacio */
+
+  .info-section {
+    padding: 20px 15px;
+    margin: 0 10px;
   }
+
+      #common-footer {
+    margin: 30px 20px 5px 20px;
+  }
+
+    /* Responsive.button*/
+    .btn-container {
+    width: 50%; 
+    min-width: 150px;
+    height: 55px; 
+    }
+
+    .btn-text {
+    font-size: 18px;
+    padding: 0 10px;
+  }}

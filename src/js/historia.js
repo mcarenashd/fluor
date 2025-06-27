@@ -45,7 +45,7 @@ function checkAllAnswers() {
     } else {
           // Reproducir sonido de error
         var wrongSound = new Audio('../src/images/img-historia/incorrect-buzzer-retro.wav');
-        wrongSound.volume = 0.08; 
+        wrongSound.volume = 0.04; 
         wrongSound.play();
         // Mensaje de error con SweetAlert2
         Swal.fire({
@@ -136,8 +136,8 @@ function startFireworks() {
             '../src/images/img-historia/explosion2.mp3'
                   ],
             volume: {
-                min: 1,
-                max: 3
+                min: 2,
+                max: 6
                     }
 },
     });
