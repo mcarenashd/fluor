@@ -1,47 +1,241 @@
 body {
-    /* display: flex; */
-    background-color: #592851;
+  background-color: #592851;
 }
 
-
-.index{
-    /* display: flex; */
-    width: 100%;
-    height: 100%;
-    /* box-sizing: border-box; qué hace */
-    justify-content: center;
-}
-
-svg {
-  display: block;
-  margin: 0 auto;
-}
-
-.index svg { 
-    width: 60%;
-    height: 100%;
-    object-fit: contain;
-    display: block;
-    box-sizing: border-box;
-    justify-content: center;
-}
-
-circle:hover {
-  animation-play-state: paused;
-}
-
-.info-section {
-  width: 40%;
+.index {
+  display: flex;
+  width: 100%;
   height: 100%;
-  padding: 2rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5%;
+}
+.atom {
+  position: relative;
+  width: 90vmin;
+  aspect-ratio: 1/1;
+}
+
+.orbit {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.outer-orbit {
+  position: absolute;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border: 2px solid #86a694;
+  border-radius: 50%;
+}
+
+.inner-orbit {
+  position: absolute;
+  width: 60%;
+  aspect-ratio: 1 / 1;
+  border: 2px solid #86a694;
+  border-radius: 50%;
+  top: 20%;
+  left: 20%;
+  display: flex;
+  align-items: center; /* centra verticalmente */
+  justify-content: center;
+}
+
+.fluor-image {
+  width: 70%;
+}
+.proton {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: flex;
+}
+
+@keyframes orbit-outer {
+  0% {
+    transform: rotate(0deg) translateX(45vmin) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(45vmin) rotate(-360deg);
+  }
+}
+
+@keyframes orbit-inner {
+  0% {
+    transform: rotate(0deg) translateX(27vmin) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(27vmin) rotate(-360deg);
+  }
+}
+
+/* Estilos base para todos los protones */
+.proton-1,
+.proton-2,
+.proton-3,
+.proton-4,
+.proton-5,
+.proton-6,
+.proton-7,
+.proton-8,
+.proton-9 {
+  position: absolute;
+  width: 15%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+  padding: 5px;
+  /* Posición central para que funcione la rotación */
+  top: 50%;
+  left: 50%;
+  margin-top: -7.5%; /* Ajustar para centrar (mitad del width) */
+  margin-left: -7.5%; /* Ajustar para centrar (mitad del width) */
+}
+
+/* Protones en órbita externa */
+.proton-1 {
+  background: radial-gradient(circle at 25% 25%, #ffffff 0%, #bfaaaa 60%);
+  animation: orbit-outer 60s linear infinite;
+  animation-delay: -0s;
+}
+
+.proton-5 {
+  background: radial-gradient(circle at 30% 30%, #ffffff 0%, #86a694 50%);
+  animation: orbit-outer 60s linear infinite;
+  animation-delay: -12s;
+}
+
+.proton-6 {
+  background: radial-gradient(circle at 25% 25%, #ffffff 0%, #fdf6e2 60%);
+  animation: orbit-outer 60s linear infinite;
+  animation-delay: -24s;
+}
+
+.proton-7 {
+  background: radial-gradient(circle at 25% 25%, #ffffff 0%, #fdf6e2 60%);
+  animation: orbit-outer 60s linear infinite;
+  animation-delay: -36s;
+}
+
+.proton-8 {
+  background: radial-gradient(circle at 25% 25%, #ffffff 0%, #fdf6e2 60%);
+  animation: orbit-outer 60s linear infinite;
+  animation-delay: -48s;
+}
+
+/* Protones en órbita interna */
+.proton-2 {
+  background: radial-gradient(circle at 25% 25%, #ffffff 0%, #732f6e 70%);
+  animation: orbit-inner 60s linear infinite;
+  animation-delay: -5s;
+}
+
+.proton-3 {
+  background: radial-gradient(circle at 30% 30%, #ffffff 0%, #a8bfbb 50%);
+  animation: orbit-inner 60s linear infinite;
+  animation-delay: -19s;
+}
+
+.proton-4 {
+  background: radial-gradient(circle at 25% 25%, #ffffff 0%, #fdf6e2 60%);
+  animation: orbit-inner 60s linear infinite;
+  animation-delay: -36s;
+}
+
+.proton-9 {
+  background: radial-gradient(circle at 25% 25%, #ffffff 0%, #fdf6e2 60%);
+  animation: orbit-inner 60s linear infinite;
+  animation-delay: -51s;
+}
+
+#proton9, #proton8, #proton7, #proton6, #proton4 {
+  pointer-events: auto;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.text-button {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(
+    10px,
+    1.5vw,
+    16px
+  ); /* Ajusta el tamaño del font dependiendo el tamaño de la pantalla */
+  padding: 5%;
+  font-family: "Baloo 2", sans-serif;
+  font-weight: bolder;
+  color: #592851;
+}
+
+/* FOOTER STYLE */
+footer {
+  margin-top: 7%;
+}
+#text-footer {
+  color: #fdf6e2;
+  text-align: center;
+}
+/* CODIGO PARA LOS POPUPS */
+
+h2#swal2-title {
+  font-family: "Fredoka", sans-serif;
+  font-size: 2vw;
+  font-weight: bold;
+  margin-top: 0px;
+  padding: 2%;
+  margin-top: 5%;
+}
+
+div#swal2-container {
+  font-family: "Baloo 2", sans-serif;
+  font-size: 16px;
+  font-weight: lighter;
+  padding: 1px;
+  overflow: hidden;
+  margin: 0px;
+
+}
+
+.swal-custom-popup {
+  font-family: "Baloo 2", sans-serif;
+  border-radius: 50px;
+  overflow: hidden;
+  width: 30%;
+  height: 90%;
   margin: 0;
-  background-color: #FDF6E2;
-  border-radius: 30px;
 }
 
-text{
-    font-family:"Baloo 2", sans-serif;
-    font-weight: bolder;
-    font-size: 2px;
+.my-custom-confirm {
+  border: 2.5px solid black;
+  border-radius: 50px;
+  box-shadow: 4px 4px 0 #949494;
+  background-color: var(--mustard);
+  font-family: "Baloo 2", sans-serif;
+  font-size: 1vw;
+  font-weight: bold;
+  color: black;
+  padding: 10px 20px;
 }
 
+.swal-custom-image {
+    object-fit: cover !important; /* Para que la imagen cubra todo el espacio */
+    margin: 0;
+    overflow: hidden;
+    object-position: center;
+    height: 300px;
+    width: 100%;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
