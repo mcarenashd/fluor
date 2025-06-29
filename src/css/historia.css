@@ -57,6 +57,30 @@ h2, .p_short {
     object-fit: cover;
 }
 
+.audio-toggle-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.audio-toggle-btn:hover {
+    background: rgba(0, 0, 0, 0.7);
+    transform: scale(1.1);
+}
+
+.audio-toggle-btn img {
+    width: 24px;
+    height: 24px;
+}
+
 .content-overlay {
     position: relative;
     z-index: 1;

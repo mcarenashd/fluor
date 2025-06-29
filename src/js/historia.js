@@ -6,6 +6,56 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+    // BACKGROUND AUDIO - Solo cargar, no reproducir aún
+    const audio = document.getElementById('background-audio');
+    let audioLoaded = false;
+    
+    if (audio) {
+        console.log('Audio encontrado:', audio.src);
+        audio.volume = 0.1;
+        
+        // Eventos de audio
+        audio.addEventListener('canplay', () => {
+            console.log('Audio: Listo para reproducir');
+            audioLoaded = true;
+        });
+        audio.addEventListener('error', (e) => {
+            console.error('Error en audio:', e);
+        });
+    } else {
+        console.error('Elemento audio no encontrado');
+    }
+    
+    // AUDIO TOGGLE BUTTON
+    const audioToggle = document.getElementById('audio-toggle');
+    const audioIcon = document.getElementById('audio-icon');
+    
+    if (audioToggle && audio && audioIcon) {
+        // Configuración inicial: audio apagado, icono de sound-off
+        audioIcon.src = '../src/images/assets-historia/icons/sound-off.png';
+        
+        audioToggle.addEventListener('click', function() {
+            console.log('Botón de audio clickeado');
+            
+            if (audio.paused) {
+                // Activar audio
+                audio.play().then(() => {
+                    audio.volume = 0.1;
+                    audioIcon.src = '../src/images/assets-historia/icons/sound-on.png';
+                    console.log('Audio activado y reproduciendo');
+                }).catch(e => {
+                    console.error('Error al reproducir audio:', e);
+                });
+            } else {
+                // Desactivar audio
+                audio.pause();
+                audioIcon.src = '../src/images/assets-historia/icons/sound-off.png';
+                console.log('Audio pausado');
+            }
+        });
+    } else {
+        console.error('Elementos del botón de audio no encontrados');
+    };
 
 //-----------------------QUIZ----------------------
 function checkAllAnswers() {
@@ -137,7 +187,7 @@ function startFireworks() {
                   ],
             volume: {
                 min: 2,
-                max: 6
+                max: 7
                     }
 },
     });
