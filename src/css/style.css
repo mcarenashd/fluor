@@ -105,6 +105,7 @@ a {
   text-decoration: none;
   color: inherit;
   margin: 0 auto;
+  padding-left:0 ;
 }
 
 .nav-text {
@@ -126,6 +127,7 @@ a {
 .nav-container2 {
   height: 100%;
   position: static;
+  width: 100%;
 }
 
 .nav-left {
@@ -146,6 +148,7 @@ a {
   align-items: center;
   z-index: 5;
   left: 30%;
+  justify-content: space-around;
 }
 
 .nav-links a {
@@ -153,7 +156,7 @@ a {
   font-family: "Fredoka", sans-serif;
   font-size: 1.3vw;
   font-weight: 400;
-  padding: 5%;
+  padding: 3%;
   border-radius: 8px;
   transition: all 0.3s ease;
   white-space: nowrap;
