@@ -44,7 +44,7 @@ function checkAllAnswers() {
         
     } else {
           // Reproducir sonido de error
-        var wrongSound = new Audio('../src/images/img-historia/incorrect-buzzer-retro.wav');
+        var wrongSound = new Audio('../src/images/assets-historia/audio/incorrect-buzzer-retro.wav');
         wrongSound.volume = 0.04; 
         wrongSound.play();
         // Mensaje de error con SweetAlert2
@@ -131,9 +131,9 @@ function startFireworks() {
         sound: {
             enabled: true,
             files: [
-            '../src/images/img-historia/explosion0.mp3',
-            '../src/images/img-historia/explosion1.mp3',
-            '../src/images/img-historia/explosion2.mp3'
+            '../src/images/assets-historia/audio/explosion0.mp3',
+            '../src/images/assets-historia/audio/explosion1.mp3',
+            '../src/images/assets-historia/audio/explosion2.mp3'
                   ],
             volume: {
                 min: 2,
