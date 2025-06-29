@@ -1,5 +1,5 @@
 // SELECIONAR TODAS LAS TAJETAS//
- const tarjetas = document.querySelectorAll(".card");
+const tarjetas = document.querySelectorAll(".card");
 //  const tarjetaAtras = document.querySelectorAll(".card-back")
 
 
@@ -47,11 +47,11 @@ Después de ese tiempo, se ejecuta crearCorazon().*/
 const tarjetasActivadas = new Set();//esto set es que tarjetas ya activaron lluvia y la guardamos en la constante tarjetasActivadas
 if (tarjetas.length > 0) {//esto pregunta si exixten tarjetas dentro del html,lo declaramos arriba tarjetas=card
     tarjetas.forEach(function (tarjeta, index) { //forEach es un método que hace que el código dentro se ejecute una vez por cada tarjeta.//
-      
+
         console.log('🔗 Conectando tarjeta', index + 1);
-      
+
         tarjeta.addEventListener('mouseenter', function () { //Añade un evento a cada tarjeta.Ese evento se activa cuando el ratón pasa por encima (mouseenter).//
-        
+
             console.log("raton sobre tarjeta", index + 1);
             // lluviaCorazones()
             setTimeout(() => { // espera dos segundos antes de activar lo siguiente que viene
@@ -65,15 +65,15 @@ if (tarjetas.length > 0) {//esto pregunta si exixten tarjetas dentro del html,lo
         });
 
         // Cuando el ratón sale de la tarjeta, permitimos que se active de nuevo
-         tarjeta.addEventListener('mouseleave', function () {
+        tarjeta.addEventListener('mouseleave', function () {
             console.log("Ratón salió de tarjeta", index + 1);
             // tarjetasActivadas.delete(index);
-              setTimeout(() => {
+            setTimeout(() => {
                 tarjetasActivadas.delete(index);
                 console.log("🧹 Tarjeta", index + 1, "limpiada, puede activarse de nuevo");
-            }, 500);
+            }, 100);
 
-         });
+        });
     });
 
     console.log("lluvia de corazones activada");
