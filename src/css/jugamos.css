@@ -6,6 +6,170 @@ body {
     margin: 0;
 }
 
+/* Estilo de Navbar*/
+
+.h1-nav {
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+  font-size: 2.5vw;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  margin: 0 auto;
+}
+
+.nav-text {
+  color: var(--plum-deep);
+  text-align: left;
+  font-family: "Fredoka", sans-serif;
+  font-weight: 500;
+  position: absolute;
+  left: 4%;
+  z-index: 4;
+}
+
+.nav-container1 {
+  height: 80px;
+  position: relative;
+  width: 100%;
+}
+
+.nav-container2 {
+  height: 100%;
+  position: static;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 5;
+  height: 100%;
+}
+
+.nav-links {
+  position: absolute;
+  right: 25%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  z-index: 5;
+  left: 30%;
+}
+
+.nav-links a {
+  color: var(--cream);
+  font-family: "Fredoka", sans-serif;
+  font-size: 1.3vw;
+  font-weight: 400;
+  padding: 5%;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  text-decoration: none;
+  margin: 0;
+}
+
+.nav-links a:hover {
+  background-color: rgba(253, 246, 226, 0.2);
+  color: var(--cream);
+  transform: translateY(0px);
+  height: 100%;
+}
+
+.custom-navbar-shape {
+  width: 30vw;
+  height: 100%;
+  background-color: var(--light-cream);
+  display: flex;
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 0%,
+    80% 50%,
+    100% 100%,
+    100% 100%,
+    0% 100%
+  );
+}
+
+/* Efecto sliding del Navbar*/ 
+
+.nav-rectangle {
+  background: linear-gradient(
+    90deg,
+    rgba(89, 40, 81, 1) 15.384615957736969%,
+    rgba(115, 47, 110, 1) 34.13461446762085%,
+    rgba(168, 191, 187, 1) 54.326921701431274%,
+    rgba(134, 166, 148, 1) 70.67307829856873%,
+    rgba(191, 170, 170, 1) 88.46153616905212%,
+    rgba(89, 40, 81, 1) 100%
+  );
+  width: 100%;
+  height: 99%;
+  position: absolute;
+  left: 0.25px;
+  top: 0.5px;
+  background-size: 200% 100%;
+  animation: slideGradient 4s ease-in-out infinite;
+  z-index: 1;
+}
+
+.navbar-sliding {
+  background: linear-gradient(
+    90deg,
+    rgba(89, 40, 81, 1) 15.384615957736969%,
+    rgba(115, 47, 110, 1) 34.13461446762085%,
+    rgba(168, 191, 187, 1) 54.326921701431274%,
+    rgba(134, 166, 148, 1) 70.67307829856873%,
+    rgba(191, 170, 170, 1) 88.46153616905212%,
+    rgba(89, 40, 81, 1) 100%
+  );
+  background-size: 200% 100%;
+  animation: slideGradient 4s ease-in-out infinite;
+}
+
+.navbar-sliding-fast {
+  background: linear-gradient(
+    90deg,
+    rgba(89, 40, 81, 1) 15.384615957736969%,
+    rgba(115, 47, 110, 1) 34.13461446762085%,
+    rgba(168, 191, 187, 1) 54.326921701431274%,
+    rgba(134, 166, 148, 1) 70.67307829856873%,
+    rgba(191, 170, 170, 1) 88.46153616905212%,
+    rgba(89, 40, 81, 1) 100%
+  );
+  background-size: 200% 100%;
+  animation: slideGradient 2s ease-in-out infinite;
+}
+
+.navbar-sliding-slow {
+  background: linear-gradient(
+    90deg,
+    rgba(89, 40, 81, 1) 15.384615957736969%,
+    rgba(115, 47, 110, 1) 34.13461446762085%,
+    rgba(168, 191, 187, 1) 54.326921701431274%,
+    rgba(134, 166, 148, 1) 70.67307829856873%,
+    rgba(191, 170, 170, 1) 88.46153616905212%,
+    rgba(89, 40, 81, 1) 100%
+  );
+  background-size: 200% 100%;
+  animation: slideGradient 6s ease-in-out infinite;
+}
+
+@keyframes slideGradient {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
 /*Para la sopa de letras*/
 
 #titulo {
