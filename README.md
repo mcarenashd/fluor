@@ -42,17 +42,17 @@ Nuestro sitio web consta de **5 páginas principales**:
 
 > Además, integramos **Figma** para el diseño visual y la planificación de prototipos
 
-### 💡 Funcionalidades Destacadas
+### 💡 Funcionalidades Destacadas por página
 
-- **Index**: Átomo animado con protones interactivos que enlazan al resto del sitio
+- 🏠 **Página principal index/¿Cómo soy?**: Átomo animado con protones interactivos que enlazan al resto del sitio
 
-- **¿Dónde Estoy?**: Tarjetas 3D con efecto flip, animación de destello y modal con curiosidad sobre fluorescencia y sonido
+- 🔍 **¿Dónde Estoy?**: Tarjetas 3D con efecto flip, animación de destello y modal con curiosidad sobre fluorescencia y sonido
 
-- **Historia**: Texto animado en formato de apertura cinematográfica con audio e inspiración galáctica y un quiz con efectos y sonido
+- 📜 **Mi historia**: Texto animado en formato de apertura cinematográfica con audio e inspiración galáctica y un quiz con efectos y sonido
 
-- **Jugamos**: Juego de sopa de letras con detección dinámica de palabras mediante lógica en JS
+- 🎮 **¿Jugamos?**: Juego de sopa de letras con detección dinámica de palabras mediante lógica en JS
 
-- **Creadoras**:
+- 👩‍💻 **Creadoras**:
 
   - Tarjetas con imágenes generadas con IA al frente y frases personales detrás
 
@@ -121,7 +121,7 @@ Agradecemos profundamente a las plataformas, autores y comunidades que comparten
 
 - [`SweetAlert2`](https://sweetalert2.github.io/) – Modales personalizados
 - [`howler.js`](https://howlerjs.com/) – Reproducción avanzada de audio
-- `fireworks-js` – Efectos de fuegos artificiales en celebraciones
+- [`fireworks-js`](https://fireworks.js.org/) – Efectos de fuegos artificiales
 - Variables CSS, `@keyframes`, `transform` y `perspective` para animaciones visuales
 
 ### 🎓 Fuentes de Aprendizaje e Inspiración
@@ -140,21 +140,18 @@ Agradecemos profundamente a las plataformas, autores y comunidades que comparten
 
 ## 🚀 Posibles Futuras Mejoras
 
-> [!WARNING]
-> ### Si hubiéramos tenido más tiempo...
-
 Aunque estamos orgullosas del resultado, nos gustaría seguir mejorando el proyecto. Algunas de las ideas que nos encantaría implementar en próximas versiones incluyen:
 
-- **Página principal (index.html)**: Representar el átomo de flúor en **3D**, con movimientos más realistas y profundidad espacial para simular mejor su estructura atómica.
+- 🏠 **Página principal index/¿Cómo soy?**: Representar el átomo de flúor en **3D**, con movimientos más realistas y profundidad espacial para simular mejor su estructura atómica.
 
-- **Página "¿Dónde Estoy?"**:
+- 🔍 **Página "¿Dónde Estoy?"**:
   - Incorporar efectos visuales avanzados, como partículas flotantes, transiciones más elaboradas y desplazamiento con efecto parallax
   - Añadir sonido personalizado, con música ambiental, efectos únicos para cada tarjeta y transiciones auditivas
   - Desarrollar interactividad enriquecida, como mini-juegos integrados, tooltips informativos y animaciones activadas por scroll
 
-- **Página "Historia"**: Configurar la sección del quiz para que las preguntas aparezcan una a una de forma dinámica, mejorando la claridad y usabilidad del juego.
+- 📜 **Página "Historia"**: Configurar la sección del quiz para que las preguntas aparezcan una a una de forma dinámica, mejorando la claridad y usabilidad del juego.
 
-- **Página "Creadoras"**: Añadir efectos al texto de las tarjetas, como animaciones sutiles o brillos que refuercen el carácter lúdico y visual de esta sección.
+- 👩‍💻 **Página "Creadoras"**: Añadir efectos al texto de las tarjetas, como animaciones sutiles o brillos que refuercen el carácter lúdico y visual de esta sección.
 
 ### Mejoras generales del sitio:
 
@@ -164,15 +161,15 @@ Aunque estamos orgullosas del resultado, nos gustaría seguir mejorando el proye
 
 ---
 
-## 👩‍💻 Equipo de Desarrollo
+## 👩🏽‍🏫👩🏻‍🏫👩🏼‍🏫👩🏾‍🏫👩🏽‍🏫 Equipo de Desarrollo
 
 | Desarrolladora | GitHub | LinkedIn |
 |----------------|--------|----------|
-| **Camila Arenas** | [GitHub](https://github.com/mcarenashd) | [LinkedIn](www.linkedin.com/in/mcarenash) |
+| **Camila Arenas** | [GitHub](https://github.com/mcarenashd) | [LinkedIn](https://www.linkedin.com/in/mcarenash) |
 | **Gema Yébenes** | [GitHub](https://github.com/gemayc) | [LinkedIn](https://www.linkedin.com/in/gema-yebenes-83b6a6100/) |
 | **Mariana Moreno** | [GitHub](https://github.com/MarianaMH1195) | [LinkedIn](https://www.linkedin.com/in/mariana-moreno-henao-70305a16b/) |
 | **Olga Ramírez** | [GitHub](https://github.com/olgararo) | [LinkedIn](https://www.linkedin.com/in/olga-ramirez-rodriguez/) |
-| **Priscelis Codrington** | [GitHub](https://github.com/priscelis) | [LinkedIn](https://www.linkedin.com/in/priscelis-codrington-5195b0206) |
+| **Priscelis Codrington** | [GitHub](https://github.com/priscelis) | [LinkedIn](https://www.linkedin.com/in/priscelis-codrington-5195b0206/) |
 
 ---
 
