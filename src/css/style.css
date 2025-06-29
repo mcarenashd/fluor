@@ -280,7 +280,7 @@ a {
   z-index: 5;
   font-size: 28px;
   background: none;
-  color: black;
+  color: var(--berry-dark);
   border: none;
   cursor: pointer;
   display: none;
