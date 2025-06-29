@@ -105,7 +105,6 @@ a {
   text-decoration: none;
   color: inherit;
   margin: 0 auto;
-  padding-left:0 ;
 }
 
 .nav-text {
@@ -140,7 +139,7 @@ a {
 
 .nav-links {
   position: absolute;
-  right: 25%;
+  /* right: 20%; */
   top: 50%;
   transform: translateY(-50%);
   display: flex;
