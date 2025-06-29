@@ -303,6 +303,33 @@ button:active {
     min-height: 25px;
 }
 
+:root {
+  --plum-deep: #59287f;
+  --cream: #fdf6e2;
+  --light-cream: #f5f0e6;
+}
+
+/* Estilos para el botón hamburguesa */
+.hamburger {
+  display: none; /* Oculto por defecto en desktop */
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--plum-deep);
+  cursor: pointer;
+  padding: 10px;
+  z-index: 10;
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hamburger:hover {
+  color: var(--cream);
+}
+
+
 /* Responsive específico */
 @media (max-width: 768px) {
     body {
@@ -338,6 +365,63 @@ button:active {
         max-width: 200px;
         margin: 5px 0;
     }
+
+    /* Para el Nav-bar y la hamburguersa*/ 
+
+    .hamburger {
+    display: block;
+  }
+  
+  .h1-nav {
+    display: none; /* Ocultar "FLÚOR" completo */
+  }
+  
+  .h1-nav-hamb {
+    display: block; /* Mostrar solo "F" */
+    position: absolute;
+    left: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--plum-deep);
+    flex-direction: column;
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 999;
+  }
+
+   .nav-links.active {
+    display: flex;
+  }
+  
+  .nav-links a {
+    padding: 1rem;
+    font-size: 1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    width: 100%;
+    text-align: center;
+  }
+  
+  .nav-links a:last-child {
+    border-bottom: none;
+  }
+  
+  /* Ajustar la forma del navbar */
+  .custom-navbar-shape {
+    width: 50vw;
+  }
+  
+  /* Ajustar posición del texto */
+  .nav-text {
+    left: 2%;
+  }
 }
 
 @media (max-width: 480px) {
@@ -364,6 +448,28 @@ button:active {
         padding: 4px 8px;
         font-size: clamp(10px, 3vw, 14px);
     }
+
+    /*Para el nav-bar y la hamburguer*/
+
+    .custom-navbar-shape {
+    width: 60vw;
+  }
+  
+  .h1-nav-hamb {
+    font-size: 1.5rem;
+    left: 50px;
+  }
+  
+  .hamburger {
+    font-size: 1.2rem;
+    left: 10px;
+  }
+  
+  .nav-links a {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
+
 }
 
 @media (max-width: 320px) {
@@ -379,6 +485,20 @@ button:active {
         font-size: 10px;
         padding: 3px 6px;
     }
+
+  /* Para el nav-Bar y la hamburguesa */
+    .custom-navbar-shape {
+    width: 70vw;
+  }
+  
+  .h1-nav-hamb {
+    font-size: 1.2rem;
+    left: 40px;
+  }
+  
+  .hamburger {
+    left: 8px;
+  }
 }
 
 /* Para pantallas muy grandes */
@@ -402,3 +522,52 @@ footer {
   text-align: center;
 }
 
+/*Para los botones*/
+
+
+.btn-container {
+      position: relative;
+      width: 300px;
+      height: 100px;
+      border: 4px solid black;
+      border-radius: 50px;
+      box-shadow: 8px 8px 0 #5b5b5b;
+      cursor: pointer;
+      overflow: hidden;
+      background-color: transparent;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    .btn-fill {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #91b6a1;
+      border-radius: 50px;
+      top: 10px; /* empieza más abajo /
+      left: 0;
+      transition: top 0.5s ease;
+      z-index: 0;
+    }
+
+    .btn-text {
+      position: relative;
+      z-index: 1;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: black;
+      font-family: sans-serif;
+    }
+
+    .btn-container:hover .btn-fill {
+      top: 0px; / sube al hacer hover */
+    }
+
+    .btn-container:hover {
+      transform: translateY(-5px);
+      box-shadow: 5px 5px 0 #5b5b5b;
+    }
