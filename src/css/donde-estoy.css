@@ -217,10 +217,10 @@ div#swal2-container {
 }
 
 .my-custom-confirm {
-  border: 2.5px solid black;
+  /*border: 2.5px solid black;*/
   border-radius: 50px;
   /* box-shadow: 4px 4px 0 #949494; */
-  background-color: var(--mustard);
+  background-color: black;
   font-family: "Baloo 2", sans-serif;
   font-size: 1vw;
   font-weight: bold;

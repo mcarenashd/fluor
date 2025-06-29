@@ -29,19 +29,40 @@
         <div class="nav-container1">
             <div class="nav-container2">
                 <div class="nav-rectangle"></div>
+                <div class="nav-left">
+                    <div class="nav-text">
+                        <a href="../index.html">
+                            <h1 class="h1-nav-hamb">F</h1>
+                            <h1 class="h1-nav">FLÚOR</h1>
+                        </a>
+                    </div>
+                    <div class="custom-navbar-shape">
+
+                        <button class="hamburger" id="hamburger" type="button">
+                            &#9776;
+                        </button>
+                    </div>
+                </div>
+                <!-- Enlaces distribuidos en el resto de la navbar -->
+                <div class="nav-links" id="nav-links">
+                    <a href="../index.html">¿Cómo soy?</a>
+                    <a href="pages/donde-estoy.html">¿Dónde estoy?</a>
+                    <a href="pages/historia.html">Mi Historia</a>
+                    <a href="pages/jugamos.html"> ¿Jugamos?</a>
+                    <a href="pages/creadoras.html">Creadoras</a>
+                </div>
             </div>
-            <div class="nav-line"></div>
-            <img class="nav-image" src="../src/images/img-general/vector_3.png" alt="nav-image"/>
-            <div class="nav-text"><a href="../index.html">
-                    <h1 class="h1-nav">FLÚOR</h1>
-                </a></div>
         </div>
     </nav>
     <main class="intro-starwars">
+        <!-- VIDEO SPACE -->
         <video class="background-video" muted loop id="background-video">
-            <source src="../src/images/img-historia/video_space.mp4" type="video/mp4">
+            <source src="../src/images/assets-historia/video/video_space.mp4" type="video/mp4">
             Tu navegador no soporta el elemento video.
         </video>
+        <button class="audio-toggle-btn" id="audio-toggle">
+            <img src="../src/images/assets-historia/icons/sound-off.png" alt="Toggle Audio" id="audio-icon">
+        </button>
         <div class="content-overlay">
             <h2>El Elemento Fantasma</h2>
             <p>Hace mucho, mucho tiempo... en un laboratorio no muy lejano...</p>
@@ -94,7 +115,14 @@
         </div>
     </div>
     <footer id="common-footer"> </footer>
+        <!-- Audio de fondo -->
+    <audio id="background-audio" loop preload="auto">
+        <source src="../src/images/assets-historia/audio/space_factorio.mp3" type="audio/mp3">
+        Tu navegador no soporta el elemento audio.
+    </audio>
+
     <script src="../src/js/historia.js"></script>
     <script src="../src/js/main.js"></script>
 </body>
+
 </html>

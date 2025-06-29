@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="../src/css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
 
   <link
     href="https://fonts.googleapis.com/css2?family=Forum&family=Fredoka:wght@300..700&family=Marmelad&family=Oswald:wght@700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
@@ -25,19 +26,34 @@
 
 <body>
   <nav class="navbar">
-    <div class="nav-container1">
-      <div class="nav-container2">
-        <div class="nav-rectangle"></div>
+        <div class="nav-container1">
+            <div class="nav-container2">
+                <div class="nav-rectangle"></div>
+                <div class="nav-left">
+                    <div class="nav-text">
+                        <a href="../index.html">
+                            <h1 class="h1-nav-hamb">F</h1>
+                            <h1 class="h1-nav">FLÚOR</h1>
+                        </a>
+                    </div>
+                    <div class="custom-navbar-shape">
 
-      </div>
-      <div class="nav-line"></div>
-      <img class="nav-image" src="..\src\images\img-general\vector_3.png" alt="nav-image" />
-      <div class="nav-text"><a href="index.html">
-          <h1 class="h1-nav">FLÚOR</h1>
-
-        </a></div>
-    </div>
-  </nav>
+                        <button class="hamburger" id="hamburger" type="button">
+                            &#9776;
+                        </button>
+                    </div>
+                </div>
+                <!-- Enlaces distribuidos en el resto de la navbar -->
+                <div class="nav-links" id="nav-links">
+                    <a href="../index.html">¿Cómo soy?</a>
+                    <a href="pages/donde-estoy.html">¿Dónde estoy?</a>
+                    <a href="pages/historia.html">Mi Historia</a>
+                    <a href="pages/jugamos.html"> ¿Jugamos?</a>
+                    <a href="pages/creadoras.html">Creadoras</a>
+                </div>
+            </div>
+        </div>
+    </nav>
   <h2 class = "h2title">Mi lugar en el universo</h2>
   <div class="main">
 
@@ -142,6 +158,7 @@
   <script>
 
   </script>
+  
 
 </body>
 
