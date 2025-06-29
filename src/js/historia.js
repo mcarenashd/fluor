@@ -6,6 +6,56 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+    // BACKGROUND AUDIO - Solo cargar, no reproducir aún
+    const audio = document.getElementById('background-audio');
+    let audioLoaded = false;
+    
+    if (audio) {
+        console.log('Audio encontrado:', audio.src);
+        audio.volume = 0.1;
+        
+        // Eventos de audio
+        audio.addEventListener('canplay', () => {
+            console.log('Audio: Listo para reproducir');
+            audioLoaded = true;
+        });
+        audio.addEventListener('error', (e) => {
+            console.error('Error en audio:', e);
+        });
+    } else {
+        console.error('Elemento audio no encontrado');
+    }
+    
+    // AUDIO TOGGLE BUTTON
+    const audioToggle = document.getElementById('audio-toggle');
+    const audioIcon = document.getElementById('audio-icon');
+    
+    if (audioToggle && audio && audioIcon) {
+        // Configuración inicial: audio apagado, icono de sound-off
+        audioIcon.src = '../src/images/assets-historia/icons/sound-off.png';
+        
+        audioToggle.addEventListener('click', function() {
+            console.log('Botón de audio clickeado');
+            
+            if (audio.paused) {
+                // Activar audio
+                audio.play().then(() => {
+                    audio.volume = 0.1;
+                    audioIcon.src = '../src/images/assets-historia/icons/sound-on.png';
+                    console.log('Audio activado y reproduciendo');
+                }).catch(e => {
+                    console.error('Error al reproducir audio:', e);
+                });
+            } else {
+                // Desactivar audio
+                audio.pause();
+                audioIcon.src = '../src/images/assets-historia/icons/sound-off.png';
+                console.log('Audio pausado');
+            }
+        });
+    } else {
+        console.error('Elementos del botón de audio no encontrados');
+    };
 
 //-----------------------QUIZ----------------------
 function checkAllAnswers() {
@@ -44,8 +94,8 @@ function checkAllAnswers() {
         
     } else {
           // Reproducir sonido de error
-        var wrongSound = new Audio('../src/images/img-historia/incorrect-buzzer-retro.wav');
-        wrongSound.volume = 0.08; 
+        var wrongSound = new Audio('../src/images/assets-historia/audio/incorrect-buzzer-retro.wav');
+        wrongSound.volume = 0.04; 
         wrongSound.play();
         // Mensaje de error con SweetAlert2
         Swal.fire({
@@ -131,13 +181,13 @@ function startFireworks() {
         sound: {
             enabled: true,
             files: [
-            '../src/images/img-historia/explosion0.mp3',
-            '../src/images/img-historia/explosion1.mp3',
-            '../src/images/img-historia/explosion2.mp3'
+            '../src/images/assets-historia/audio/explosion0.mp3',
+            '../src/images/assets-historia/audio/explosion1.mp3',
+            '../src/images/assets-historia/audio/explosion2.mp3'
                   ],
             volume: {
-                min: 1,
-                max: 3
+                min: 2,
+                max: 7
                     }
 },
     });

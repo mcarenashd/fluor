@@ -7,7 +7,11 @@
   --rose-dust: #BFAAAA;
   --cream: #FDF6E2;
   --mustard: #FBCB66;
+  --black: #000000;
+  --grey-shadow: #949494;
 }
+
+
 
 /*-------ESTILOS GENERALES---------*/
 body {background-color: var(--mint-gray);
@@ -53,6 +57,30 @@ h2, .p_short {
     object-fit: cover;
 }
 
+.audio-toggle-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 500;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.audio-toggle-btn:hover {
+    background: rgba(0, 0, 0, 0.7);
+    transform: scale(1.1);
+}
+
+.audio-toggle-btn img {
+    width: 24px;
+    height: 24px;
+}
+
 .content-overlay {
     position: relative;
     z-index: 1;
@@ -79,7 +107,9 @@ h2, .p_short {
     }
 }
 
-
+#common-footer {
+  margin: 0 20px; /* Añade márgenes laterales al footer */
+}
 
 /*----------------QUIZ------------------*/
 
@@ -114,9 +144,9 @@ h2, .p_short {
   position: relative;
   width: 20%;
   height: 50px;
-  border: 2.5px solid black;
+  border: 2.5px solid var(--black);
   border-radius: 50px;
-  box-shadow: 4px 4px 0 #949494;
+  box-shadow: 4px 4px 0 var(--grey-shadow);
   cursor: pointer;
   overflow: hidden;
   background-color: transparent;
@@ -169,7 +199,7 @@ h2, .p_short {
   
   border: 2.5px solid black;
   border-radius: 50px;
-  box-shadow: 4px 4px 0 #949494;
+  box-shadow: 4px 4px 0 var(--grey-shadow);
   background-color: var(--mustard);
   font-family: "Baloo 2", sans-serif;
   font-size: 22px;
@@ -179,25 +209,50 @@ h2, .p_short {
 }
 
 
-/* Responsive - pendiente revisar */
+/* -----------RESPONSIVE DESIGN------------ */
 @media (max-width: 768px) {
     .intro-starwars {
-        width: 95%;
-        height: 700px;
-        margin: 20px auto;
-        border-radius: 20px;
+        width: 90%;
+        height: 400px;
+        margin: 15px auto;
+        padding: 15px;
+        border-radius: 30px;
     }
+
+    .intro-starwars h2 {
+    padding-top: 1em;
+    font-size: 24px;
+  }
     
     .content-overlay {
-        padding: 2rem;
-        max-width: 90%;
+        padding: 1rem;
+        max-width: 95%;
+        height: 800px;
+        font-size: 14px;
+       line-height: 1.4;
     }
     
-    h2 {
-        font-size: 28px;
-    }
-    
-    p {
+       p {
         font-size: 16px;
     }
-}
+
+  .info-section {
+    padding: 20px 15px;
+    margin: 0 10px;
+  }
+
+      #common-footer {
+    margin: 30px 20px 5px 20px;
+  }
+
+    /* Responsive.button*/
+    .btn-container {
+    width: 50%; 
+    min-width: 150px;
+    height: 55px; 
+    }
+
+    .btn-text {
+    font-size: 18px;
+    padding: 0 10px;
+  }}
