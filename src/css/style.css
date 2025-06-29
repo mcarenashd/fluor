@@ -1,11 +1,11 @@
 :root {
   --plum-deep: #592851;
-  --berry-dark: #732F6E;
-  --mint-gray: #A8BFBB;
-  --sage-green: #86A694;
-  --rose-dust: #BFAAAA;
-  --cream: #FDF6E2;
-  --mustard: #FBCB66;
+  --berry-dark: #732f6e;
+  --mint-gray: #a8bfbb;
+  --sage-green: #86a694;
+  --rose-dust: #bfaaaa;
+  --cream: #fdf6e2;
+  --mustard: #fbcb66;
   --light-cream: #fff7e4;
 }
 
@@ -38,7 +38,7 @@ p {
 .btn-container {
   position: relative;
   width: 20%;
-  height: 50PX;
+  height: 50px;
   border: 2.5px solid black;
   border-radius: 50px;
   box-shadow: 4px 4px 0 var(--mint-gray);
@@ -126,6 +126,7 @@ a {
 .nav-container2 {
   height: 100%;
   position: static;
+  width: 100%;
 }
 
 .nav-left {
@@ -138,7 +139,7 @@ a {
 
 .nav-links {
   position: absolute;
-  right: 25%;
+  /* right: 20%; */
   top: 50%;
   transform: translateY(-50%);
   display: flex;
@@ -146,6 +147,7 @@ a {
   align-items: center;
   z-index: 5;
   left: 30%;
+  justify-content: space-around;
 }
 
 .nav-links a {
@@ -153,7 +155,7 @@ a {
   font-family: "Fredoka", sans-serif;
   font-size: 1.3vw;
   font-weight: 400;
-  padding: 5%;
+  padding: 3%;
   border-radius: 8px;
   transition: all 0.3s ease;
   white-space: nowrap;
@@ -184,7 +186,7 @@ a {
   );
 }
 
-/* Efecto sliding del Navbar*/ 
+/* Efecto sliding del Navbar*/
 
 .nav-rectangle {
   background: linear-gradient(
@@ -249,7 +251,8 @@ a {
 }
 
 @keyframes slideGradient {
-  0%, 100% {
+  0%,
+  100% {
     background-position: 0% 50%;
   }
   50% {
@@ -278,9 +281,9 @@ a {
 
 .hamburger {
   z-index: 5;
-  font-size: 28px;
+  font-size: 30px;
   background: none;
-  color: black;
+  color: var(--berry-dark);
   border: none;
   cursor: pointer;
   display: none;
@@ -294,27 +297,34 @@ a {
   display: none;
 }
 
+/* Reemplaza la sección @media (max-width: 768px) existente con este código más simple y funcional */
+
 @media (max-width: 768px) {
   .nav-links {
     display: none;
     flex-direction: column;
     background-color: var(--cream);
     position: absolute;
-    top: 71px;
-    right: 0px;
-    width: 25%;
-    padding: 0;
+    top: 90px; 
+    width: 60%;
+    min-height: 100vh; /* Más alto - 70% de la altura de la ventana */
+    padding: 1rem 1rem; /* Más padding vertical */
     color: var(--plum-deep);
+    gap: 1.5rem; /* Más espacio entre elementos */
+    z-index: 1000;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    border-radius: 15px; /* Esquinas redondeadas */
+    justify-content: flex-end; /* Alinear desde arriba */
   }
 
   .nav-links.show {
     display: flex;
-    padding: 0%;
-    left: 9%;
+    top:100%
   }
 
   .hamburger {
     display: block;
+    z-index: 1001;
   }
 
   .h1-nav {
@@ -343,14 +353,27 @@ a {
   .nav-links a {
     color: var(--plum-deep);
     font-family: "Fredoka", sans-serif;
-    font-size: 1.7vw;
-    font-weight: 400;
-    padding: 0;
-    border-radius: 8px;
+    font-size: 1.4rem; /* Ligeramente más grande */
+    font-weight: 600; /* Más bold */
+    padding: 1.2rem 1.5rem; /* Más padding para botones más grandes */
+    border-radius: 12px; /* Esquinas más redondeadas */
     transition: all 0.3s ease;
-    white-space: nowrap;
     text-decoration: none;
-    margin: 0;
+    text-align: center;
+    margin: 0.3rem 0; /* Margen vertical */
+    background-color: rgba(255,255,255,0.7);
+    border: 2px solid var(--mint-gray);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  .nav-links a:hover {
+    background-color: var(--mint-gray);
+    color: var(--plum-deep);
+    transform: translateY(-2px);
+  }
+
+  /* Asegurar que el menú se cierre correctamente */
+  .nav-links:not(.show) {
+    display: none;
   }
 }
-
