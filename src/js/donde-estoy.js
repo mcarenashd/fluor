@@ -27,3 +27,18 @@ function mostrarMensaje() {
 }
 
 boton.addEventListener("click", function () { mostrarMensaje() })
+
+  const sonidoNeon = new Howl({
+    src: ['..\src\images\img-donde-estoy\sonidos-donde-estoy\Neon-flickering-sound-effect.mp3'], // naranja Free Sounds
+    volume: 10
+  });
+  const sonidoSpark = new Howl({
+    src: ['..\src\images\img-donde-estoy\sonidos-donde-estoy\Neon-flickering-sound-effect.mp3'], // Freesound
+    volume: 10
+  });
+
+  const gif = document.getElementById("boton");
+  gif.addEventListener("mouseover", () => {
+    sonidoNeon.play();
+    setTimeout(() => { sonidoSpark.play(); }, 300);
+  });
