@@ -3,19 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¿Jugamos?</title>
+    <title>Sopa de Letras - Fluor </title>
+   <link rel="stylesheet" href="../src/css/style.css">
     <link rel="stylesheet" href="../src/css/jugamos.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Forum&family=Fredoka:wght@300..700&family=Marmelad&family=Oswald:wght@700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Forum&family=Fredoka:wght@300..700&family=Marmelad&family=Oswald:wght@700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Forum&family=Fredoka:wght@300..700&family=Marmelad&family=Oswald:wght@700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Forum&family=Fredoka:wght@300..700&family=Marmelad&family=Oswald:wght@700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
 <body>
-<<<<<<< HEAD
-    
-=======
+<nav class="navbar">
+        <div class="nav-container1">
+            <div class="nav-container2">
+                <div class="nav-rectangle"></div>
+                <div class="nav-left">
+                    <div class="nav-text">
+                        <a href="../index.html">
+                            <h1 class="h1-nav-hamb">F</h1>
+                            <h1 class="h1-nav">FLÚOR</h1>
+                        </a>
+                    </div>
+                    <div class="custom-navbar-shape">
 
-  <div class="sopa-table"></div>
+                        <button class="hamburger" id="hamburger" type="button">
+                            &#9776;
+                        </button>
+                    </div>
+                </div>
+                <!-- Enlaces distribuidos en el resto de la navbar -->
+                <div class="nav-links" id="nav-links">
+                    <a href="../index.html">¿Cómo soy?</a>
+                    <a href="../pages/donde-estoy.html">¿Dónde estoy?</a>
+                    <a href="../pages/historia.html">Mi Historia</a>
+                    <a href="../pages/jugamos.html"> ¿Jugamos?</a>
+                    <a href="../pages/creadoras.html">Creadoras</a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
->>>>>>> ef43ebbc6ae1c703405e7b8bd13dcee55189b6e7
+    <div class="juego">
+        <div id="titulo">
+        <h1 class="h1-jugamos">¡Aprendamos palabras nuevas! </h1>
+        </div>
+        <div class="palabras">
+            <h3>Encuentra estas palabras:</h3>
+            <div id="listaPalabras"></div>
+        </div>
+
+        <div id="tablero" class="tablero"></div>
+
+        <div class="botones">
+            <button onclick="nuevoJuego()"> Nuevo Juego</button>
+            <button onclick="limpiarSeleccion()"> Limpiar</button>
+        </div>
+ <div class="btn-container">
+    <div class="btn-fill"></div>
+    <div class="btn-text">Start Adventure</div>
+  </div>
+        <div id="mensaje" class="mensaje"></div>
+    </div>
+
+    <footer id="common-footer"> </footer>
+    <script src="../src/js/jugamos.js"></script>
+    <script src="../src/js/main.js"></script>
 </body>
 </html>

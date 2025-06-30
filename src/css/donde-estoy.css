@@ -4,12 +4,12 @@ body {
   margin: 0;
 }
 
-h2 {
+.h2title {
   text-align: center;
   margin-top: 30px;
   margin-bottom: 40px;
   color: #ffebdc;
-   text-shadow: 0 1px 3px rgba(3, 3, 3, 0.886);
+ text-shadow: 0 1px 3px rgba(3, 3, 3, 0.886); 
 }
 
 
@@ -181,11 +181,18 @@ h2 {
 
 h2#swal2-title {
   font-family: "Fredoka", sans-serif;
-  font-size: 2vw;
+  font-size: 1.5vw;
   font-weight: bold;
   margin-top: 0px;
   padding: 2%;
   margin-top: 5%;
+   color: #fff;
+      text-shadow:
+        0 0 5px #151414,
+ 0 0 10px #0ff,
+        0 0 20px #0ff,
+        0 0 40px #0ff,
+        0 0 80px #0ff;
 }
 
 div#swal2-container {
@@ -195,6 +202,7 @@ div#swal2-container {
   padding: 1px;
   overflow: hidden;
   margin: 0px;
+  color: #fff;
 
 }
 
@@ -202,20 +210,27 @@ div#swal2-container {
   font-family: "Baloo 2", sans-serif;
   border-radius: 50px;
   overflow: hidden;
-  width: 30%;
-  height: 90%;
+  width: 50%;
+  height: 100%;
+  color: white;
   margin: 0;
 }
 
 .my-custom-confirm {
-  border: 2.5px solid black;
+  /*border: 2.5px solid black;*/
   border-radius: 50px;
-  box-shadow: 4px 4px 0 #949494;
-  background-color: var(--mustard);
+  /* box-shadow: 4px 4px 0 #949494; */
+  background-color: black;
   font-family: "Baloo 2", sans-serif;
   font-size: 1vw;
   font-weight: bold;
-  color: black;
+  color: #fff;
+      text-shadow:
+        0 0 5px #151414,
+ 0 0 10px #0ff,
+        0 0 20px #0ff,
+        0 0 40px #0ff,
+        0 0 80px #0ff;
   padding: 10px 20px;
 }
 
@@ -224,9 +239,10 @@ div#swal2-container {
     margin: 0;
     overflow: hidden;
     object-position: center;
-    height: 300px;
+    height: 250px;
     width: 100%;
 }
+
 
 
 

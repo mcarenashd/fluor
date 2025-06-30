@@ -1,8 +1,19 @@
 body {
   background-color: #592851;
+  margin: 0;
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+
 .index {
+  flex: 1;
   display: flex;
   width: 100%;
   height: 100%;
@@ -51,6 +62,10 @@ body {
   width: 100%;
   position: absolute;
   display: flex;
+}
+
+footer{
+  margin-top: auto;
 }
 
 @keyframes orbit-outer {
@@ -238,4 +253,48 @@ ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
+}
+
+.neon-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1001;
+  background-color: var(--mustard);
+  color: black;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 30px;
+  font-family: "Fredoka", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  box-shadow: 0 0 10px #fbcb66;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.neon-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #fbcb66;
+}
+
+/* Modo Neón activado */
+body.neon-mode {
+  background-color: black;
+}
+
+body.neon-mode .proton-1,
+body.neon-mode .proton-2,
+body.neon-mode .proton-3,
+body.neon-mode .proton-4,
+body.neon-mode .proton-5,
+body.neon-mode .proton-6,
+body.neon-mode .proton-7,
+body.neon-mode .proton-8,
+body.neon-mode .proton-9 {
+  box-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+  border: 2px solid #0ff;
+}
+
+body.neon-mode .text-button {
+  color: #0ff;
 }

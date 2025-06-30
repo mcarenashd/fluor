@@ -39,7 +39,7 @@ function mostrarMensaje1 () {
                 <li>🔗 Formo enlaces súper fuertes en la química orgánica.</li>
             </ul>
         `,
-            imageUrl: "src/images/img-index/fluor-gif1.gif",
+            imageUrl: "src/images/img-index/fluor-gif5.gif",
             confirmButtonText: "Home",
             confirmButtonColor: "#f9d369",
             background: "#FDF6E2",
@@ -52,7 +52,6 @@ function mostrarMensaje1 () {
             },
             backdrop: `
           rgba(0,0,123,0.4)
-             url("/images/nyan-cat.gif")
             left top
             no-repeat
             `
@@ -116,7 +115,6 @@ function mostrarMensaje2 () {
             },
             backdrop: `
           rgba(0,0,123,0.4)
-             url("/images/nyan-cat.gif")
             left top
             no-repeat
             `
@@ -134,7 +132,7 @@ function mostrarMensaje3 () {
                 <li>🔬 Formo enlaces tan fuertes que casi son indestructibles.</li>
                 <li>🔢 Estoy en gafas especiales, cohetes y satélites.</li>
                 <li>🎯 En química orgánica, ¡soy clave para moléculas súper resistentes!</li>`,
-            imageUrl: "src/images/img-index/fluor-gif2.gif",
+            imageUrl: "src/images/img-index/fluor-gif6.gif",
             confirmButtonText: "Home",
             confirmButtonColor: "#f9d369",
             background: "#FDF6E2",   
@@ -146,7 +144,6 @@ function mostrarMensaje3 () {
             },
             backdrop: `
           rgba(0,0,123,0.4)
-             url("/images/nyan-cat.gif")
             left top
             no-repeat
             `
@@ -177,7 +174,6 @@ function mostrarMensaje4 () {
             },
             backdrop: `
           rgba(0,0,123,0.4)
-             url("/images/nyan-cat.gif")
             left top
             no-repeat
             `
@@ -185,3 +181,9 @@ function mostrarMensaje4 () {
 }
 
 proton4.addEventListener("click", function(){mostrarMensaje4()})
+
+const toggleNeonBtn = document.getElementById("toggleNeon");
+
+toggleNeonBtn.addEventListener("click", () => {
+    document.body.classList.toggle("neon-mode");
+});
