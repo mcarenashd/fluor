@@ -239,7 +239,7 @@ RESULTADO: La tarjeta se voltea mostrando su parte trasera*/
     width: 1.2rem;
     /*Tamaño del icono.*/
     height: 1.2rem;
-    background: url(../src/images/img-creadoras/fluorite.webp);
+    background: url(../src/images/img-creadoras/fluorite.png);
     /*todo esto se pone pq si no no saldria nuestro icono de la url,*/
     background-size: contain;
     /*Ajusta el icono para que encaje sin recortarse.*/
