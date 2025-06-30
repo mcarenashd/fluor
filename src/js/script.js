@@ -26,18 +26,41 @@ if (atomContainer) {
   });
 }
 
+
+const baseModalConfig = {
+  confirmButtonText: "🏠 Volver",
+  confirmButtonColor: "#fbcb66",
+  background: "#FDF6E2",
+  color: "#592851",
+  customClass: {
+    popup: 'swal-custom-popup',
+    confirmButton: 'my-custom-confirm',
+    image: 'swal-custom-image',
+  },
+  backdrop: `rgba(0,0,123,0.4)`,
+  allowOutsideClick: true,
+  allowEscapeKey: true,
+  showCloseButton: false, 
+  width: null, 
+  heightAuto: true, 
+};
+
 const proton9 = document.getElementById("proton9");
 
 function mostrarMensaje1 () {
         Swal.fire({
+          ...baseModalConfig,
             title: "Datos científicos interesantes",
-            html: `<ul style="text-align: left; margin: 0 auto; display: inline-block;">
+            html: `
+            <div class="modal-content-wrapper">
+            <ul style="text-align: left; margin: 0 auto; display: inline-block;">
                 <li>🔥 Soy el elemento más electronegativo de todos.</li>
                 <li>💎 A temperatura ambiente soy un gas tóxico y amarillo.</li>
                 <li>⚗️ Puedo reaccionar hasta con gases nobles como el xenón.</li>
                 <li>💥 El flúor puro es tan reactivo que casi nada sobrevive a mi contacto.</li>
                 <li>🔗 Formo enlaces súper fuertes en la química orgánica.</li>
             </ul>
+            </div>
         `,
             imageUrl: "src/images/img-index/fluor-gif5.gif",
             confirmButtonText: "Home",

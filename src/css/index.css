@@ -202,7 +202,7 @@ footer {
 
 h2#swal2-title {
   font-family: "Fredoka", sans-serif;
-  font-size: 2vw;
+  font-size: 2.5vw;
   font-weight: bold;
   margin-top: 0px;
   padding: 2%;
@@ -211,21 +211,21 @@ h2#swal2-title {
 
 div#swal2-container {
   font-family: "Baloo 2", sans-serif;
-  font-size: 16px;
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem); /* Responsive font size */
   font-weight: lighter;
   padding: 1px;
   overflow: hidden;
   margin: 0px;
-
 }
 
 .swal-custom-popup {
   font-family: "Baloo 2", sans-serif;
-  border-radius: 50px;
+  border-radius: 30px;
   overflow: hidden;
-  width: 30%;
-  height: 90%;
+  width: min(90vw, 500px); /* Responsive width with max limit */
+  max-height: 85vh; /* Limit height to viewport */
   margin: 0;
+  padding: 1rem;
 }
 
 .my-custom-confirm {
@@ -240,24 +240,75 @@ div#swal2-container {
   padding: 10px 20px;
 }
 
-.swal-custom-image {
-    object-fit: cover !important; /* Para que la imagen cubra todo el espacio */
-    margin: 0;
-    overflow: hidden;
-    object-position: center;
-    height: 300px;
-    width: 100%;
+.my-custom-confirm:hover {
+  transform: translateY(-2px);
+  box-shadow: 6px 6px 0 #949494;
 }
 
-ul {
+.swal-custom-image {
+  object-fit: cover !important;
+  margin: 0;
+  overflow: hidden;
+  object-position: center;
+  height: clamp(200px, 40vw, 300px); /* Responsive image height */
+  width: 100%;
+  border-radius: 15px;
+}
+
+/* Estilos para las listas dentro de los modales */
+.swal2-html-container ul {
   list-style-type: none;
   padding: 0;
-  margin: 0;
+  margin: 1rem 0;
+  text-align: left;
+}
+
+.swal2-html-container li {
+  font-size: clamp(0.85rem, 2.2vw, 1rem);
+  line-height: 1.5;
+  margin-bottom: 0.8rem;
+  padding: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  border-left: 4px solid var(--mustard);
+}
+
+/*Responsive PopUps*/
+@media (max-width: 768px) {
+  h2#swal2-title {
+  font-family: "Fredoka", sans-serif;
+  font-size: 5vw;
+  font-weight: bold;
+  margin-top: 0px;
+  padding: 0%;
+  margin-top: 0%;
+}
+
+  .swal-custom-popup {
+    width: 95vw;
+    max-height: 80vh;
+    border-radius: 20px;
+  }
+  
+  .swal-custom-image {
+    height: clamp(150px, 35vw, 250px);
+  }
+  
+  .my-custom-confirm {
+    font-size: 1rem;
+    padding: 10px 20px;
+    margin-top: 0;
+  }
+  
+  .swal2-html-container li {
+    font-size: rem;
+    margin-bottom: 0.6rem;
+  }
 }
 
 .neon-button {
-  position: fixed;
-  bottom: 20px;
+  position:fixed;
+  bottom: 20%;
   right: 20px;
   z-index: 1001;
   background-color: var(--mustard);
@@ -293,8 +344,14 @@ body.neon-mode .proton-8,
 body.neon-mode .proton-9 {
   box-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
   border: 2px solid #0ff;
+    color: #0ff;
+
 }
 
 body.neon-mode .text-button {
   color: #0ff;
+  text-shadow:
+    0 0 4px #000,
+    0 0 10px #000,
+    0 0 20px #000;
 }
