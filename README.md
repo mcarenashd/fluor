@@ -8,7 +8,9 @@
 
 ## 🌟 Descripción del Proyecto
 
-Bienvenidas al repositorio de **Flúor**, nuestra propuesta dentro del **Collaborative Periodic Table Project** de Factoría F5. Este proyecto forma parte del bootcamp de Desarrollo Web, y es nuestra primera gran experiencia creando una página web en equipo con HTML, CSS y JavaScript.
+Bienvenidas al repositorio de **Flúor**, nuestra propuesta dentro del **Collaborative Periodic Table Project** de Factoría F5. Esta es nuestra primera gran aventura grupal en el mundo del desarrollo front-end con HTML, CSS y JavaScript.
+
+Cada sección fue diseñada por una integrante del equipo, lo que se refleja en la diversidad de ideas, estilos y recursos aplicados.
 
 > [!TIP]
 > Flúor no es solo un elemento químico. Es historia, tecnología, salud y curiosidad. Nuestra web lo explora desde distintas perspectivas, con el objetivo de informar, sorprender y entretener.
@@ -21,25 +23,42 @@ Nuestro sitio web consta de **5 páginas principales**:
 
 | Página | Descripción |
 |--------|-------------|
-| 🏠 **index.html** | Página de presentación inicial animada con enlaces al resto de secciones |
-| 🔍 **donde-estoy.html** | Usos del flúor en la actualidad y curiosidades |
-| 📜 **historia.html** | Una narración épica sobre el descubrimiento del flúor, su peligrosidad y su impacto |
+| 🏠 **index.html** | Portal animado con un átomo interactivo que conecta al resto del sitio |
+| 🔍 **donde-estoy.html** | Tarjetas 3D con usos contidianos del flúor y curiosidades científicas |
+| 📜 **historia.html** | Narrativa animada estilo Star Wars sobre el descubrimiento del flúor y su impacto |
 | 🎮 **jugamos.html** | Un juego interactivo tipo sopa de letras, para aprender jugando |
-| 👩‍💻 **creadoras.html** | Quiénes somos, nuestras fotos, perfiles y agradecimientos |
+| 👩‍💻 **creadoras.html** | Galería de creadoras con tarjetas interactivas, animaciones y agradecimientos |
 
 ---
 
 ## 🛠️ Tecnologías Utilizadas
 
 - ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white) **HTML5** - Estructura y contenido
-- ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white) **CSS3** - Diseño visual: tipografías, colores, layout, animaciones  
-- ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black) **JavaScript** - Interactividad (animaciones, juegos, botones)
+- ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white) **CSS3** - Diseño visual: tipografías, colores, layout, animaciones, gradientes, flexbox y grid
+- ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black) **JavaScript**:
+  - Interacciones personalizadas con addEventListener
+  - Librerías: SweetAlert2, fireworks-js, howler.js para sonido
+  - Efectos animados como el átomo, sopa de letras, tarjetas 3D y lluvia de corazones
 
-### 💡 Ejemplos de Implementación
+> Además, integramos **Figma** para el diseño visual y la planificación de prototipos
 
-- **`index.html`**: JavaScript para animar el átomo de entrada
-- **`jugamos.html`**: Sopa de letras dinámica con lógica JS  
-- **Todas las páginas**: Variables CSS y sistema de diseño común
+### 💡 Funcionalidades Destacadas por página
+
+- 🏠 **Página principal index/¿Cómo soy?**: Átomo animado con protones interactivos que enlazan al resto del sitio
+
+- 🔍 **¿Dónde Estoy?**: Tarjetas 3D con efecto flip, animación de destello y modal con curiosidad sobre fluorescencia y sonido
+
+- 📜 **Mi historia**: Texto animado en formato de apertura cinematográfica con audio e inspiración galáctica y un quiz con efectos y sonido
+
+- 🎮 **¿Jugamos?**: Juego de sopa de letras con detección dinámica de palabras mediante lógica en JS
+
+- 👩‍💻 **Creadoras**:
+
+  - Tarjetas con imágenes generadas con IA al frente y frases personales detrás
+
+  - Lluvia de corazones al voltear las tarjetas
+
+  - Animación brillante de fluorita para cerrar con emoción
 
 ---
 
@@ -54,16 +73,13 @@ Desde el inicio, decidimos trabajar de forma **organizada y colaborativa**:
 ![Basic Design System - Proyecto Flúor](../src/images/img-general/PrototypePages_Fluor.png)
 ![Prototipo Figma - Proyecto Flúor](../src/images/img-general/basicDesignSystem_Fluor.png)
 *Wireframes y mockups iniciales diseñados en Figma*
-- :white_check_mark: Definimos una **estructura de carpetas clara**: `img/`, `css/`, `js/`, `pages/`, etc.
+- :white_check_mark: Definimos una **estructura de carpetas clara**: `img/`,`assets/`, `css/`, `js/`, `pages/`, etc.
 
 ### 👥 Gestión de Equipo
 
 - :arrows_counterclockwise: **GitHub** para versionado y gestión de tareas
 - :clipboard: **Tablero Kanban** para organizar tareas, milestones y deadlines
-- :speaking_head: **Daily Standups**, reuniones para mantener sincronización del equipo y facilitar el apoyo mutuo, donde compartimos:
-  - Lo que hicimos ayer
-  - Lo que vamos a hacer hoy
-  - Dificultades encontradas
+- :speaking_head: **Standups diarios** para compartir avances, bloqueos y aprendizajes
 
 
 > [!IMPORTANT]
@@ -73,43 +89,87 @@ Desde el inicio, decidimos trabajar de forma **organizada y colaborativa**:
 
 ## 🎨 Recursos y Créditos
 
-Agradecemos a quienes comparten recursos libres que hemos podido utilizar:
+Agradecemos profundamente a las plataformas, autores y comunidades que comparten recursos libres o de uso gratuito, los cuales han enriquecido enormemente nuestro proyecto.
 
 ### 🖼️ Recursos Visuales y Multimedia
-- **Tipografías**: Google Fonts (Fredoka, Baloo, Poppins)
-- **Imágenes y Vídeos**: Google Images, Freepik
-- **Sonidos**: Freesound (sonidos libres)
 
-### 📚 Librerías y Herramientas
-- `fireworks-js` - Efectos de fuegos artificiales
-- `SweetAlert2` - Alertas personalizadas
+- **Tipografías**:  
+  - [Fredoka](https://fonts.google.com/specimen/Fredoka), [Baloo 2](https://fonts.google.com/specimen/Baloo+2), [Poppins](https://fonts.google.com/specimen/Poppins) — vía [Google Fonts](https://fonts.google.com)
+- **Imágenes**:  
+  - [Freepik](https://www.freepik.es), [Google Images](https://www.google.com/imghp)  
+  - Imágenes de las creadoras generadas por IA con Apple Image Playground 
+  - Imagen central del símbolo del flúor generada con ayuda de **ChatGPT**
+- **GIFs animados**:  
+  - [GIPHY](https://giphy.com)  
 
-### 🎓 Fuentes de Aprendizaje
-- **YouTube**: Canales como CódigoWeb, @ninoslab, @midudev
-- **Inspiración visual**: Intro de Star Wars para animación de la historia
+- **Vídeo de introducción**:  
+  - [Vídeo del espacio](https://www.freepik.es/video-gratis/cielo-estrellado-noche_3544997) por *BaldasaridStock* vía Freepik
+- **Iconografía**:  
+  - Iconos de volumen del autor **@FACH**, familia *Generic black fill*:
+    - [Icono de vocero](https://www.freepik.es/icono/vocero_11620784)  
+    - [Icono de sonido apagado](https://www.freepik.es/icono/sonido-apagado_11620807)
+
+### 🔊 Recursos Sonoros
+
+- [Incorrect buzzer retro](https://freesound.org/people/EtherAudio/sounds/750933/)  
+  por [EtherAudio](https://freesound.org/people/EtherAudio/) | Licencia: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+
+- [Space Journey Through Nebulae and Galaxy](https://freesound.org/s/731238/)  
+  por [Universfield](https://freesound.org/people/Universfield/) | Licencia: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+
+### 📦 Librerías y Herramientas
+
+- [`SweetAlert2`](https://sweetalert2.github.io/) – Modales personalizados
+- [`howler.js`](https://howlerjs.com/) – Reproducción avanzada de audio
+- [`fireworks-js`](https://fireworks.js.org/) – Efectos de fuegos artificiales
+- Variables CSS, `@keyframes`, `transform` y `perspective` para animaciones visuales
+
+### 🎓 Fuentes de Aprendizaje e Inspiración
+
+- **YouTube**:  
+  - [@ninoslab](https://www.youtube.com/@ninoslab)  
+  - [CódigoWeb](https://www.youtube.com/c/CódigoWeb)  
+  - [@midudev](https://www.youtube.com/@midudev)
+- **Inspiración visual**:  
+  - Animación estilo *Star Wars*  
+  - Tarjetas coleccionables 3D  
+  - Interfaces sci-fi con efectos neón
+
 
 ---
 
-## 🚀 Futuras Mejoras
+## 🚀 Posibles Futuras Mejoras
 
-> [!WARNING]
-> ### Si hubiéramos tenido más tiempo...
+Aunque estamos orgullosas del resultado, nos gustaría seguir mejorando el proyecto. Algunas de las ideas que nos encantaría implementar en próximas versiones incluyen:
 
-- :iphone: **Versión responsiva** para móviles con mejor UX
-- :musical_note: **Audio de fondo** o efectos sonoros en la historia animada
-- :dart: **Segunda actividad interactiva** o minijuego adicional
+- 🏠 **Página principal index/¿Cómo soy?**: Representar el átomo de flúor en **3D**, con movimientos más realistas y profundidad espacial para simular mejor su estructura atómica.
+
+- 🔍 **Página "¿Dónde Estoy?"**:
+  - Incorporar efectos visuales avanzados, como partículas flotantes, transiciones más elaboradas y desplazamiento con efecto parallax
+  - Añadir sonido personalizado, con música ambiental, efectos únicos para cada tarjeta y transiciones auditivas
+  - Desarrollar interactividad enriquecida, como mini-juegos integrados, tooltips informativos y animaciones activadas por scroll
+
+- 📜 **Página "Historia"**: Configurar la sección del quiz para que las preguntas aparezcan una a una de forma dinámica, mejorando la claridad y usabilidad del juego.
+
+- 👩‍💻 **Página "Creadoras"**: Añadir efectos al texto de las tarjetas, como animaciones sutiles o brillos que refuercen el carácter lúdico y visual de esta sección.
+
+### Mejoras generales del sitio:
+
+- **Optimización del rendimiento**, implementando carga diferida de imágenes, compresión de archivos y minimización de recursos
+
+- **Ampliar la accesibilidad y adaptabilidad móvil**, garantizando una experiencia fluida y agradable en una mayor variedad de dispositivos
 
 ---
 
-## 👩‍💻 Equipo de Desarrollo
+## 👩🏽‍🏫👩🏻‍🏫👩🏼‍🏫👩🏾‍🏫👩🏽‍🏫 Equipo de Desarrollo
 
 | Desarrolladora | GitHub | LinkedIn |
 |----------------|--------|----------|
-| **Camila Arenas** | [GitHub](enlace-github) | [LinkedIn](enlace-linkedin) |
-| **Gema Yébenes** | [GitHub](enlace-github) | [LinkedIn](enlace-linkedin) |
-| **Mariana Moreno** | [GitHub](enlace-github) | [LinkedIn](enlace-linkedin) |
+| **Camila Arenas** | [GitHub](https://github.com/mcarenashd) | [LinkedIn](https://www.linkedin.com/in/mcarenash) |
+| **Gema Yébenes** | [GitHub](https://github.com/gemayc) | [LinkedIn](https://www.linkedin.com/in/gema-yebenes-83b6a6100/) |
+| **Mariana Moreno** | [GitHub](https://github.com/MarianaMH1195) | [LinkedIn](https://www.linkedin.com/in/mariana-moreno-henao-70305a16b/) |
 | **Olga Ramírez** | [GitHub](https://github.com/olgararo) | [LinkedIn](https://www.linkedin.com/in/olga-ramirez-rodriguez/) |
-| **Priscelis Codrington** | [GitHub](enlace-github) | [LinkedIn](enlace-linkedin) |
+| **Priscelis Codrington** | [GitHub](https://github.com/priscelis) | [LinkedIn](https://www.linkedin.com/in/priscelis-codrington-5195b0206/) |
 
 ---
 
