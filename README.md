@@ -70,8 +70,8 @@ Desde el inicio, decidimos trabajar de forma **organizada y colaborativa**:
 
 - :white_check_mark: Creamos un **prototipo en Figma** para decidir la apariencia de nuestras páginas
 
-![Basic Design System - Proyecto Flúor](../src/images/img-general/PrototypePages_Fluor.png)
-![Prototipo Figma - Proyecto Flúor](../src/images/img-general/basicDesignSystem_Fluor.png)
+![Basic Design System - Proyecto Flúor](./src/images/img-general/PrototypePages_Fluor.png)
+![Prototipo Figma - Proyecto Flúor](./src/images/img-general/basicDesignSystem_Fluor.png)
 *Wireframes y mockups iniciales diseñados en Figma*
 - :white_check_mark: Definimos una **estructura de carpetas clara**: `img/`,`assets/`, `css/`, `js/`, `pages/`, etc.
 
