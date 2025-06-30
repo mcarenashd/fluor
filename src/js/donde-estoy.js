@@ -33,12 +33,12 @@ const boton = document.getElementById("boton");
 // Crear los objetos de audio con Howler.js
 const sonidoNeon = new Howl({
     src: ['../src/images/img-donde-estoy/sonidos-donde-estoy/Neon-flickering-sound-effect.mp3'], 
-    volume: 1.0
+    volume: 0.5
 });
 
 const sonidoSpark = new Howl({
-    src: ['../src/images/img-donde-estoy/sonidos-donde-estoy/Neon-flickering-sound-effect.mp3'],  
-    volume: 1.0
+    src: ['../src/images/img-donde-estoy/sonidos-donde-estoy/Electrical-pop-sound-effect.mp3'],  
+    volume: 0.7
 });
 
 function mostrarMensaje() {
@@ -59,7 +59,7 @@ function mostrarMensaje() {
       image: 'swal-custom-image'
     },
 
-     backdrop: `rgba(0, 0, 0, 0.85)
+     backdrop: `rgba(0, 0, 0, 0.93)
              url("/images/nyan-cat.gif")
             left top
             no-repeat
