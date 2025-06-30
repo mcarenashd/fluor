@@ -44,13 +44,13 @@ Nuestro sitio web consta de **5 páginas principales**:
 
 ### 💡 Funcionalidades Destacadas por página
 
-- 🏠 **Página principal index/¿Cómo soy?**: Átomo animado con protones interactivos que enlazan al resto del sitio
+- 🏠 **Página principal index/¿Cómo soy?**: Átomo con electrones en movimiento que enlazan al resto de páginas, y con efecto visual fluorescente
 
 - 🔍 **¿Dónde Estoy?**: Tarjetas 3D con efecto flip, animación de destello y modal con curiosidad sobre fluorescencia y sonido
 
 - 📜 **Mi historia**: Texto animado en formato de apertura cinematográfica con audio e inspiración galáctica y un quiz con efectos y sonido
 
-- 🎮 **¿Jugamos?**: Juego de sopa de letras con detección dinámica de palabras mediante lógica en JS
+- 🎮 **¿Jugamos?**: Juego de sopa de letras 20x20 con detección bidireccional de palabras y algoritmos para definir la lógica del juego
 
 - 👩‍💻 **Creadoras**:
 
@@ -134,6 +134,10 @@ Agradecemos profundamente a las plataformas, autores y comunidades que comparten
   - Animación estilo *Star Wars*  
   - Tarjetas coleccionables 3D  
   - Interfaces sci-fi con efectos neón
+- **Recursos de desarrollo adicionales**:
+ - [CSS-Tricks](https://css-tricks.com/) – Técnicas avanzadas de CSS Grid y Flexbox
+ - [MDN Web Docs](https://developer.mozilla.org/) – Documentación completa de Touch Events
+ - [StackOverflow](https://stackoverflow.com/) – Soluciones a desafíos específicos de JavaScript
 
 
 ---
@@ -152,6 +156,8 @@ Aunque estamos orgullosas del resultado, nos gustaría seguir mejorando el proye
 - 📜 **Página "Historia"**: Configurar la sección del quiz para que las preguntas aparezcan una a una de forma dinámica, mejorando la claridad y usabilidad del juego.
 
 - 👩‍💻 **Página "Creadoras"**: Añadir efectos al texto de las tarjetas, como animaciones sutiles o brillos que refuercen el carácter lúdico y visual de esta sección.
+
+- 🎮 **Página "¿Jugamos?"**: Añadir múltiples niveles de dificultad con tableros de 15x15 y 25x25, palabras en diagonal, añadir un sistema de puntuación con tiempo, guardado de progreso de partidas y añadir efectos visuales y sonoros.
 
 ### Mejoras generales del sitio:
 
