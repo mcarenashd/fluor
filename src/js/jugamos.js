@@ -1,6 +1,6 @@
   // Variables principales
         let tablero = [];
-        let palabras = ['COMPUESTO', 'DIENTE', 'HALÓGENO', 'BUCAL', 'SOL'];
+        let palabras = ['COMPUESTO', 'DIENTE', 'HALÓGENO', 'BUCAL'];
         let palabrasEncontradas = [];
         let seleccionando = false;
         let celdaInicio = null;
@@ -70,7 +70,7 @@
             
             for (let i = 0; i < 20; i++) {
                 for (let j = 0; j < 20; j++) {
-                    const celda = document.createElement('div');
+                    const celda = document.createElement('div'); // Este es un DOM
                     celda.className = 'celda';
                     celda.textContent = tablero[i][j];
                     celda.dataset.fila = i;
@@ -84,8 +84,8 @@
                     // Para móviles
                     celda.addEventListener('touchstart', empezarSeleccion);
                     celda.addEventListener('touchmove', function(e) {
-                        e.preventDefault();
-                        const touch = e.touches[0];
+                        e.preventDefault(); // Evita que no se mueva ni haga scroll en la pantalla cuando selecciones
+                        const touch = e.touches[0]; // Cantidad de dedos se tocan en la pantalla 
                         const elemento = document.elementFromPoint(touch.clientX, touch.clientY);
                         if (elemento && elemento.classList.contains('celda')) {
                             continuarSeleccion({target: elemento, preventDefault: () => {}});

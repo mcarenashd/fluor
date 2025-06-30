@@ -1,5 +1,6 @@
 // SELECIONAR TODAS LAS TAJETAS//
 const tarjetas = document.querySelectorAll(".card");
+//  const tarjetaAtras = document.querySelectorAll(".card-back")
 
 
 //Creo una funcion para crear un corazon//
@@ -28,7 +29,7 @@ function crearCorazon() {
 
 //voy a crear multiples corazones con una funcion//
 function lluviaCorazones() {
-    for (let i = 0; i < 15; i++) { // esto es el bucle para que cree hasta 15 corazones//
+    for (let i = 0; i < 20; i++) { // esto es el bucle para que cree hasta 15 corazones//
         setTimeout(() => {
             crearCorazon()
         }, i * 100);
@@ -43,14 +44,35 @@ Después de ese tiempo, se ejecuta crearCorazon().*/
 //“Crea 15 corazones, pero con un pequeño retraso entre cada uno, como una lluvia.”//
 
 //todo lo conectamos con las tarjetas//
+const tarjetasActivadas = new Set();//esto set es que tarjetas ya activaron lluvia y la guardamos en la constante tarjetasActivadas
 if (tarjetas.length > 0) {//esto pregunta si exixten tarjetas dentro del html,lo declaramos arriba tarjetas=card
     tarjetas.forEach(function (tarjeta, index) { //forEach es un método que hace que el código dentro se ejecute una vez por cada tarjeta.//
+
         console.log('🔗 Conectando tarjeta', index + 1);
 
         tarjeta.addEventListener('mouseenter', function () { //Añade un evento a cada tarjeta.Ese evento se activa cuando el ratón pasa por encima (mouseenter).//
 
             console.log("raton sobre tarjeta", index + 1);
-            lluviaCorazones()
+            // lluviaCorazones()
+            setTimeout(() => { // espera dos segundos antes de activar lo siguiente que viene
+                // Solo activamos la lluvia una vez por entrada del ratón
+                if (!tarjetasActivadas.has(index)) {
+                    console.log("Activando lluvia para tarjeta", index + 1);
+                    lluviaCorazones();//ejecuta la función que crea los corazones
+                    tarjetasActivadas.add(index);
+                }
+            }, 1000); // 2000ms = 2s que dura tu animación CSS
+        });
+
+        // Cuando el ratón sale de la tarjeta, permitimos que se active de nuevo
+        tarjeta.addEventListener('mouseleave', function () {
+            console.log("Ratón salió de tarjeta", index + 1);
+            // tarjetasActivadas.delete(index);
+            setTimeout(() => {
+                tarjetasActivadas.delete(index);
+                console.log("🧹 Tarjeta", index + 1, "limpiada, puede activarse de nuevo");
+            }, 100);
+
         });
     });
 
