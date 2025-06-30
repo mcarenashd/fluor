@@ -181,3 +181,9 @@ function mostrarMensaje4 () {
 }
 
 proton4.addEventListener("click", function(){mostrarMensaje4()})
+
+const toggleNeonBtn = document.getElementById("toggleNeon");
+
+toggleNeonBtn.addEventListener("click", () => {
+    document.body.classList.toggle("neon-mode");
+});
