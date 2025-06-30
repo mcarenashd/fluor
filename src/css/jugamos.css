@@ -1,3 +1,9 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     text-align: center;
@@ -23,7 +29,7 @@ body {
 }
 
 .h1-jugamos{
-    color: black;
+    color: #732F6E;
     margin-bottom: 20px;
     font-size: clamp(1.5rem, 4vw, 2.5rem);
 }
@@ -104,26 +110,13 @@ body {
     text-decoration: line-through;
 }
 
-.botones {
-    margin: 20px 0;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
+section{
+  display:inline-flex;
+  margin-top: 2%;
+  justify-items: center;
 }
 
-button {
-    padding: 12px 20px;
-    border: none;
-    border-radius: 8px;
-    background-color: #3498db;
-    color: white;
-    cursor: pointer;
-    font-size: clamp(14px, 2.5vw, 16px);
-    font-weight: bold;
-    transition: background-color 0.3s;
-    min-width: 120px;
-}
+
 
 button:hover {
     background-color: #2980b9;
@@ -137,14 +130,14 @@ button:active {
     margin: 20px 0;
     font-size: clamp(16px, 3vw, 18px);
     font-weight: bold;
-    color: rgb(201, 99, 248);
+    color: rgb(255, 255, 255);
     min-height: 25px;
 }
 
 /* Responsive específico */
 @media (max-width: 768px) {
     body {
-        padding: 5px;
+      padding: 5px;
     }
     
     .juego {
@@ -189,7 +182,7 @@ button:active {
     }
     
     h1 {
-        font-size: clamp(1.2rem, 5vw, 2rem);
+      font-size: clamp(1.2rem, 5vw, 2rem);
         margin-bottom: 15px;
     }
     
@@ -242,7 +235,6 @@ footer {
 
 /*Para los botones*/
 
-
 .btn-container {
       position: relative;
       width: 10rem;
@@ -252,8 +244,10 @@ footer {
       box-shadow: 8px 8px 0 #5b5b5b;
       cursor: pointer;
       overflow: hidden;
+      gap: 10px;
       background-color: transparent;
       transition: box-shadow 0.3s ease, transform 0.3s ease;
+      gap: 10px;
     
     }
 
