@@ -1,6 +1,6 @@
   // Variables principales
         let tablero = [];
-        let palabras = ['COMPUESTO', 'DIENTE', 'HALÓGENO', 'BUCAL', 'SOL'];
+        let palabras = ['COMPUESTO', 'DIENTE', 'HALÓGENO', 'BUCAL'];
         let palabrasEncontradas = [];
         let seleccionando = false;
         let celdaInicio = null;
