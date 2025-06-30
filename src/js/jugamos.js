@@ -1,6 +1,6 @@
   // Variables principales
         let tablero = [];
-        let palabras = ['COMPUESTO', 'DIENTE', 'HALÓGENO', 'BUCAL'];
+        let palabras = ['COMPUESTO', 'DIENTE', 'HALÓGENO', 'BUCAL', 'IONICO','FLUORESCENTE', 'EXPERIMENTO', 'FLUORITA', 'ELECTRONEGATIVIDAD', 'CORROSIVO'];
         let palabrasEncontradas = [];
         let seleccionando = false;
         let celdaInicio = null;
@@ -52,12 +52,18 @@
             crearTablero();
             
             // Colocar cada palabra
-            colocarPalabra('COMPUESTO', 0, 0, 'horizontal');
-            colocarPalabra('DIENTE', 2, 1, 'horizontal');
-            colocarPalabra('DIENTE', 1, 0, 'vertical');
+            colocarPalabra('COMPUESTO', 0, 0, 'vertical');
+            colocarPalabra('DIENTE', 15, 11, 'horizontal');
             colocarPalabra('HALÓGENO',  4, 3, 'horizontal');
-            colocarPalabra('BUCAL', 5, 2, 'vertical');
-            
+            colocarPalabra('IONICO', 11, 2, 'vertical');
+            colocarPalabra('FLUORESCENTE', 8, 19, 'vertical');
+            colocarPalabra('CORROSIVO', 9, 7, 'vertical');
+            colocarPalabra('BUCAL', 8, 10, 'vertical');
+            colocarPalabra('EXPERIMENTO', 19, 1, 'horizontal');
+            colocarPalabra('FLUORITA', 2, 10, 'horizontal');
+            colocarPalabra('ELECTRONEGATIVIDAD',6, 2, 'horizontal');
+           
+
             llenarEspaciosVacios();
             mostrarTablero();
             mostrarPalabras();
