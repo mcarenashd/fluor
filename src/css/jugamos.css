@@ -35,7 +35,7 @@ body {
 }
 
 .juego {
-   max-width: 600px; /* Cambiar de 800px a 600px */
+   max-width: 600px; 
    width: 100%;
    margin: 0 auto;
    padding: 0 10px;
@@ -46,7 +46,7 @@ body {
    display: grid;
    grid-template-columns: repeat(20, 1fr);
    gap: 1px;
-   max-width: 500px; /* Agregar esta línea */
+   max-width: 500px; 
    margin: 20px auto;
    aspect-ratio: 1;
    background-color: #3498db;
@@ -225,7 +225,7 @@ button:active {
 }
 
 /* Para pantallas muy grandes */
-@media (max-width: 1200px) {
+@media (min-width: 1200px) {
    .tablero {
        max-width: 500px;
    }
