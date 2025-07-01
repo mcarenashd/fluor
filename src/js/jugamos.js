@@ -56,7 +56,7 @@
             colocarPalabra('DIENTE', 15, 11, 'horizontal');
             colocarPalabra('HALÓGENO',  4, 3, 'horizontal');
             colocarPalabra('IONICO', 11, 2, 'vertical');
-            colocarPalabra('FLUORESCENTE', 8, 19, 'vertical');
+            colocarPalabra('FLUORESCENTE', 8, 18, 'vertical');
             colocarPalabra('CORROSIVO', 9, 7, 'vertical');
             colocarPalabra('BUCAL', 8, 10, 'vertical');
             colocarPalabra('EXPERIMENTO', 19, 1, 'horizontal');
