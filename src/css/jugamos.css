@@ -1,332 +1,298 @@
 *{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding: 10px;
-    background-color:#86A694;
-    margin: 0;
+   font-family: Arial, sans-serif;
+   text-align: center;
+   padding: 10px;
+   background-color:#86A694;
+   margin: 0;
 }
 
 /*Para la sopa de letras*/
 
 #titulo {
-    justify-self: center;
-    width: 600px;
-    height: 80px;
-    border-bottom: 20%;
-    background-color: #fdf6e2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10%;
-    border-radius: 30px;
-    margin-left: 00px;
+   justify-self: center;
+   width: 700px;
+   height: 80px;
+   border-bottom: 20%;
+   background-color: #fdf6e2;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 10%;
+   border-radius: 30px;
 
 }
 
 .h1-jugamos{
-    color: #732F6E;
-    margin-bottom: 20px;
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
+   color: #732F6E;
+   margin-bottom: 20px;
+   font-size: clamp(1.5rem, 4vw, 2.5rem);
 }
 
 .juego {
-    max-width: 800px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 10px;
-    box-sizing: border-box;
+   max-width: 600px; /* Cambiar de 800px a 600px */
+   width: 100%;
+   margin: 0 auto;
+   padding: 0 10px;
+   box-sizing: border-box;
 }
 
 .tablero {
-    display: grid;
-    grid-template-columns: repeat(20, 1fr);
-    gap: 1px;
-    max-width: 100%;
-    margin: 20px auto;
-    aspect-ratio: 1;
-    background-color: #3498db;
-    padding: 2px;
-    border-radius: 8px;
-    overflow: hidden;
+   display: grid;
+   grid-template-columns: repeat(20, 1fr);
+   gap: 1px;
+   max-width: 500px; /* Agregar esta línea */
+   margin: 20px auto;
+   aspect-ratio: 1;
+   background-color: #3498db;
+   padding: 2px;
+   border-radius: 8px;
+   overflow: hidden;
 }
-
 .celda {
-    aspect-ratio: 1;
-    border: 1px solid #2980b9;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    font-size: clamp(8px, 1.5vw, 25px);
-    min-height: 0;
-    user-select: none;
-    -webkit-user-select: none;
+   aspect-ratio: 1;
+   border: 1px solid #2980b9;
+   background-color: white;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-weight: bold;
+   cursor: pointer;
+   transition: background-color 0.3s;
+   font-size: clamp(10px, 2vw, 14px);
+   min-height: 0;
+   user-select: none;
+   -webkit-user-select: none;
 }
 
 .celda:hover {
-    background-color: #e8f4fd;
+   background-color: #e8f4fd;
 }
 
 .seleccionada {
-    background-color: #3498db !important;
-    color: white;
+   background-color: #3498db !important;
+   color: white;
 }
 
 .encontrada {
-    background-color: #27ae60 !important;
-    color: white;
+   background-color: #27ae60 !important;
+   color: white;
 }
 
 .palabras {
-    margin: 20px 0;
+   margin: 20px 0;
 }
 
 .palabras h3 {
-    font-size: clamp(1rem, 3vw, 1.2rem);
-    margin-bottom: 15px;
+   font-size: clamp(1rem, 3vw, 1.2rem);
+   margin-bottom: 15px;
 }
 
 .palabra {
-    display: inline-block;
-    margin: 5px;
-    padding: 8px 15px;
-    background-color: #ecf0f1;
-    border-radius: 20px;
-    font-weight: bold;
-    font-size: clamp(12px, 2.5vw, 16px);
+   display: inline-block;
+   margin: 5px;
+   padding: 8px 15px;
+   background-color: #ecf0f1;
+   border-radius: 20px;
+   font-weight: bold;
+   font-size: clamp(12px, 2.5vw, 16px);
 }
 
 .palabra.encontrada {
-    background-color: #27ae60;
-    color: white;
-    text-decoration: line-through;
+   background-color: #27ae60;
+   color: white;
+   text-decoration: line-through;
 }
 
 section{
-  display:inline-flex;
-  margin-top: 2%;
-  justify-items: center;
+ display:inline-flex;
+ margin-top: 2%;
+ justify-items: center;
 }
 
 
 
 button:hover {
-    background-color: #2980b9;
+   background-color: #2980b9;
 }
 
 button:active {
-    transform: scale(0.98);
+   transform: scale(0.98);
 }
 
 .mensaje {
-    margin: 20px 0;
-    font-size: clamp(16px, 3vw, 18px);
-    font-weight: bold;
-    color: rgb(255, 255, 255);
-    min-height: 25px;
+   margin: 20px 0;
+   font-size: clamp(16px, 3vw, 18px);
+   font-weight: bold;
+   color: rgb(255, 255, 255);
+   min-height: 25px;
 }
 
 /* Responsive específico */
 @media (max-width: 768px) {
-    body {
-      padding: 5px;
-    }
-    
-    #titulo{
-        width: 420px;
-        height:40px;
-        padding-top: 20px;
-        margin-left: 90px;
-    }
-    .juego {
-        padding: 0 5px;
-    }
-    
-    .tablero {
-        gap: 0.5px;
-        padding: 1px;
-        margin: 15px auto;
-    }
-    
-    .celda {
-        border-width: 0.5px;
-    }
-    
-    .palabra {
-        margin: 3px;
-        padding: 6px 12px;
-    }
-    
-    .botones {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    button {
-        width: 100%;
-        max-width: 200px;
-        margin: 5px 0;
-    }
+ 
+   #titulo{
+       width: 400px;
+       height: 50px;
+       padding-top: 10px;
+   }
+
+   .juego {
+       padding: 0 5px;
+   }
+  
+   .tablero {
+       gap: 0.5px;
+       padding: 1px;
+       margin: 15px auto;
+   }
+  
+   .celda {
+       border-width: 0.5px;
+   }
+  
+   .palabra {
+       margin: 3px;
+       padding: 6px 12px;
+   }
+  
+   .botones {
+       flex-direction: column;
+       align-items: center;
+   }
+  
+   button {
+       width: 100%;
+       max-width: 200px;
+       margin: 5px 0;
+   }
 }
 
 @media (max-width: 480px) {
+   .tablero {
+       max-width: 95vw;
+       margin: 10px auto;
+   }
+  
+   .celda {
+       font-size: clamp(8px, 2.5vw, 12px);
+   }
+  
+   h1 {
+     font-size: clamp(1.2rem, 5vw, 2rem);
+       margin-bottom: 15px;
+   }
+  
+   .palabras {
+       margin: 15px 0;
+   }
+  
+   .palabra {
+       margin: 2px;
+       padding: 4px 8px;
+       font-size: clamp(10px, 3vw, 14px);
+   }
 
-    body{
-        height: 844px;
-    }
-
-    #titulo{
-        padding-top: 20px;
-        margin-left: 20px;
-        width: 360px;
-        height: 40px;
-        display:flex;
-       text-align: center;
-    }
-    .h1-jugamos{
-        font-size: 20px;
-
-    }
-    .tablero {
-        max-width: 95vw;
-        margin: 10px auto;
-    }
-    
-    .celda {
-        font-size: clamp(6px, 2vw, 12px);
-    }
-    
-    h1 {
-      font-size: clamp(1.2rem, 5vw, 2rem);
-        margin-bottom: 15px;
-    }
-    
-    .palabras {
-        margin: 15px 0;
-    }
-    
-    .palabra {
-        margin: 2px;
-        padding: 4px 8px;
-        font-size: clamp(10px, 3vw, 14px);
-    }
-
-    .btn-container {
-         border:400px;
-         width: 20px;
-    }
-    
-     
+   #titulo{
+       width: 350px;
+       height: 40px;
+   }
 }
 
-
 @media (max-width: 320px) {
-    .tablero {
-        max-width: 310px;
-        margin: 0 auto;
-    }
-    
-    .celda {
-    font-size: 0.01px
-       
-    }
-    
-    .palabra {
-        font-size: 10px;
-        padding: 3px 6px;
-    }
-
-    .btn-text {
-        font-size: 3px;
-     }
-
-    #titulo{
-        width: 280px;
-        margin: 15px;
-    }
-    .h1-jugamos{
-        font-size: 15px;
-    }
+   .tablero {
+       max-width: 98vw;
+   }
+  
+   .celda {
+       font-size: 8px;
+   }
+  
+   .palabra {
+       font-size: 10px;
+       padding: 3px 6px;
+      
+   }
+   #titulo{
+       width: 200px;
+       height: 70px;
+   }
 }
 
 /* Para pantallas muy grandes */
 @media (max-width: 1200px) {
-    .tablero {
-        max-width: 600px;
-    }
-    
-    .celda {
-        font-size: 20px;
-    }
+   .tablero {
+       max-width: 500px;
+   }
+  
+   .celda {
+       font-size: 16px;
+   }
 }
 
 /*Para el footer*/
 
 footer {
-  margin-top: 7%;
+ margin-top: 7%;
 }
 #text-footer {
-  color: #fdf6e2;
-  text-align: center;
+ color: #fdf6e2;
+ text-align: center;
 }
 
 /*Para los botones*/
 
 .btn-container {
-      position: relative;
-      width: 10rem;
-      height: 3rem;
-      border: 3px solid black;
-      border-radius: 50px;
-      box-shadow: 8px 8px 0 #5b5b5b;
-      cursor: pointer;
-      overflow: hidden;
-      gap: 10px;
-      background-color: transparent;
-      transition: box-shadow 0.3s ease, transform 0.3s ease;
-      gap: 10px;
-    
-    }
+     position: relative;
+     width: 10rem;
+     height: 3rem;
+     border: 3px solid black;
+     border-radius: 50px;
+     box-shadow: 8px 8px 0 #5b5b5b;
+     cursor: pointer;
+     overflow: hidden;
+     gap: 10px;
+     background-color: transparent;
+     transition: box-shadow 0.3s ease, transform 0.3s ease;
+     gap: 10px;
+  
+   }
 
-    .btn-fill {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-color: #FBCB66;
-      border-radius: 50px;
-      top: 10px; /* empieza más abajo */
-      left: 0;
-      transition: top 0.5s ease;
-      z-index: 0;
-    }
+   .btn-fill {
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     background-color: #FBCB66;
+     border-radius: 50px;
+     top: 10px; /* empieza más abajo */
+     left: 0;
+     transition: top 0.5s ease;
+     z-index: 0;
+   }
 
-    .btn-text {
-      position: relative;
-      z-index: 1;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.3rem;
-      font-weight: 900;
-      color: black;
-      font-family: sans-serif;
-    }
+   .btn-text {
+     position: relative;
+     z-index: 1;
+     height: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-size: 1.3rem;
+     font-weight: 900;
+     color: black;
+     font-family: sans-serif;
+   }
 
-    .btn-container:hover .btn-fill {
-      top: 0px; /*sube al hacer hover */
-    }
+   .btn-container:hover .btn-fill {
+     top: 0px; /*sube al hacer hover */
+   }
 
-    .btn-container:hover {
-      transform: translateY(-5px);
-      box-shadow: 5px 5px 0 #5b5b5b;
-    }
+   .btn-container:hover {
+     transform: translateY(-5px);
+     box-shadow: 5px 5px 0 #5b5b5b;
+   }
