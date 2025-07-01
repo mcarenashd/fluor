@@ -1,3 +1,4 @@
+// codigo para obtener el boton del html por medio del id //
 const boton = document.getElementById("boton");
 
 // Crear los objetos de audio con Howler.js
@@ -47,5 +48,6 @@ function mostrarMensaje() {
   });
 }
 
+// evento en el boton para activar la funcion que muestra el popup 
 boton.addEventListener("click", function () { mostrarMensaje() })
 
