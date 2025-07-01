@@ -1,32 +1,29 @@
 // Event listeners para protones
 // Control de animaciones - HOVER SOBRE TODO EL ÁTOMO
-const atomContainer = document.getElementById("atom"); // El contenedor principal del átomo
+const atomContainer = document.getElementById("atom"); // El contenedor principal del átomo. (Línea 75 del html)
 
-if (atomContainer) {
+if (atomContainer) { // Este if asegura que atomContainer efectivamente exista antes de seguir con la función.
   atomContainer.addEventListener("mouseenter", () => {
     // Pausar todas las animaciones de los protones
-    const allProtones = document.querySelectorAll('[class*="proton-"]');
-    allProtones.forEach(proton => {
+    const allProtones = document.querySelectorAll('[class*="proton-"]'); // Selecciona todos los protones con una clase que contiene la palabra protón y las guarda en una constante llamada allProtones (*= significa que contiene esa palabra en cualquier parte del nombre de la clase)
+    allProtones.forEach(proton => { // Para cada protón, pausa su animación CSS.
       proton.style.animationPlayState = 'paused';
     });
     
-    // Opcional: añadir una clase para efectos visuales adicionales
-    atomContainer.classList.add('atom-paused');
+    atomContainer.classList.add('atom-paused'); // Opcional: añadir una clase para efectos visuales adicionales cuando el efecto visual pare.
   });
 
-  atomContainer.addEventListener("mouseleave", () => {
-    // Reanudar todas las animaciones
-    const allProtones = document.querySelectorAll('[class*="proton-"]');
+  atomContainer.addEventListener("mouseleave", () => { //Se va a ejecutar una función cuando el mouse salga del atomContainer.
+    const allProtones = document.querySelectorAll('[class*="proton-"]'); // Nuevamente busca todos los protones.
     allProtones.forEach(proton => {
-      proton.style.animationPlayState = 'running';
+      proton.style.animationPlayState = 'running';     // Reanudar todas las animaciones
     });
     
-    // Remover la clase
-    atomContainer.classList.remove('atom-paused');
+    atomContainer.classList.remove('atom-paused');  // Remover la clase
   });
 }
 
-
+// Esto lo hice para volver los mensajes modales responsive. Entonces es una base de las características que van a llevar todos los mensajes modales.
 const baseModalConfig = {
   confirmButtonText: "🏠 Volver",
   confirmButtonColor: "#fbcb66",
@@ -41,11 +38,11 @@ const baseModalConfig = {
   allowOutsideClick: true,
   allowEscapeKey: true,
   showCloseButton: false, 
-  width: null, 
-  heightAuto: true, 
+  width: null, // No obliga a un ancho específico.
+  heightAuto: true, // Ajusta a su tamaño automáticamente. 
 };
 
-const proton9 = document.getElementById("proton9");
+const proton9 = document.getElementById("proton9"); // Busca en el HTML el protón con id=proton9.
 
 function mostrarMensaje1 () {
         Swal.fire({
