@@ -16,7 +16,7 @@ body {
 
 #titulo {
     justify-self: center;
-    width: 700px;
+    width: 600px;
     height: 80px;
     border-bottom: 20%;
     background-color: #fdf6e2;
@@ -25,6 +25,7 @@ body {
     align-items: center;
     margin-top: 10%;
     border-radius: 30px;
+    margin-left: 00px;
 
 }
 
@@ -65,7 +66,7 @@ body {
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s;
-    font-size: clamp(8px, 1.5vw, 16px);
+    font-size: clamp(8px, 1.5vw, 25px);
     min-height: 0;
     user-select: none;
     -webkit-user-select: none;
@@ -140,6 +141,12 @@ button:active {
       padding: 5px;
     }
     
+    #titulo{
+        width: 420px;
+        height:40px;
+        padding-top: 20px;
+        margin-left: 90px;
+    }
     .juego {
         padding: 0 5px;
     }
@@ -172,6 +179,23 @@ button:active {
 }
 
 @media (max-width: 480px) {
+
+    body{
+        height: 844px;
+    }
+
+    #titulo{
+        padding-top: 20px;
+        margin-left: 20px;
+        width: 360px;
+        height: 40px;
+        display:flex;
+       text-align: center;
+    }
+    .h1-jugamos{
+        font-size: 20px;
+
+    }
     .tablero {
         max-width: 95vw;
         margin: 10px auto;
@@ -195,20 +219,42 @@ button:active {
         padding: 4px 8px;
         font-size: clamp(10px, 3vw, 14px);
     }
+
+    .btn-container {
+         border:400px;
+         width: 20px;
+    }
+    
+     
 }
+
 
 @media (max-width: 320px) {
     .tablero {
-        max-width: 98vw;
+        max-width: 310px;
+        margin: 0 auto;
     }
     
     .celda {
-        font-size: 8px;
+    font-size: 0.01px
+       
     }
     
     .palabra {
         font-size: 10px;
         padding: 3px 6px;
+    }
+
+    .btn-text {
+        font-size: 3px;
+     }
+
+    #titulo{
+        width: 280px;
+        margin: 15px;
+    }
+    .h1-jugamos{
+        font-size: 15px;
     }
 }
 
@@ -219,7 +265,7 @@ button:active {
     }
     
     .celda {
-        font-size: 18px;
+        font-size: 20px;
     }
 }
 
