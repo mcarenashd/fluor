@@ -302,7 +302,7 @@ a {
   display: none;
 }
 
-/* Reemplaza la sección @media (max-width: 768px) existente con este código más simple y funcional */
+
 
 @media (max-width: 768px) {
   .nav-links {
