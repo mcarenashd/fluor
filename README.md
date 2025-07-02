@@ -184,7 +184,7 @@ Aunque estamos orgullosas del resultado, nos gustaría seguir mejorando el proye
 > [!TIP]
 > ### :point_right: Ver el proyecto publicado
 > 
-> :link: **[Accede a nuestra web en GitHub Pages](https://nombre-usuario.github.io/fluor)**
+> :link: **[Accede a nuestra web en GitHub Pages](https://mcarenashd.github.io/fluor/)**
 
 
 
