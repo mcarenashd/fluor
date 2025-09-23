@@ -9,6 +9,46 @@
   --light-cream: #fff7e4;
 }
 
+/* Home button styles */
+.home-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  margin-left: 1rem;
+  background-color: #ff4700;
+  color: #ffffff;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease,
+    background-color 0.2s ease;
+  z-index: 10; /* Añadido para asegurar que esté visible */
+}
+
+.home-button i {
+  font-size: 1rem;
+}
+
+.home-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+  background-color: #e24000;
+}
+
+/* Mobile tweaks: keep size tappable */
+@media screen and (max-width: 768px) {
+  .home-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+  }
+  .home-button i {
+    font-size: 1.1rem;
+  }
+}
+
 h1 {
   font-family: "Fredoka", sans-serif;
   font-size: 48px;
@@ -93,7 +133,7 @@ p {
 }
 
 /* Estilo de Navbar*/
-.navbar{
+.navbar {
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -120,6 +160,10 @@ a {
   position: absolute;
   left: 4%;
   z-index: 4;
+  /* LÍNEAS AÑADIDAS */
+  display: flex;         /* Para alinear elementos uno al lado del otro */
+  align-items: center;   /* Para centrarlos verticalmente */
+  gap: 1rem;             /* Para añadir un espacio entre ellos */
 }
 
 .nav-container1 {
@@ -302,7 +346,7 @@ a {
   display: none;
 }
 
-
+/* Reemplaza la sección @media (max-width: 768px) existente con este código más simple y funcional */
 
 @media (max-width: 768px) {
   .nav-links {
@@ -310,21 +354,21 @@ a {
     flex-direction: column;
     background-color: var(--cream);
     position: absolute;
-    top: 90px; 
+    top: 90px;
     width: 60%;
     min-height: 100vh; /* Más alto - 70% de la altura de la ventana */
     padding: 1rem 1rem; /* Más padding vertical */
     color: var(--plum-deep);
     gap: 1.5rem; /* Más espacio entre elementos */
     z-index: 1000;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
     border-radius: 15px; /* Esquinas redondeadas */
     justify-content: flex-end; /* Alinear desde arriba */
   }
 
   .nav-links.show {
     display: flex;
-    top:100%
+    top: 100%;
   }
 
   .hamburger {
@@ -366,9 +410,9 @@ a {
     text-decoration: none;
     text-align: center;
     margin: 0.3rem 0; /* Margen vertical */
-    background-color: rgba(255,255,255,0.7);
+    background-color: rgba(255, 255, 255, 0.7);
     border: 2px solid var(--mint-gray);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
 
   .nav-links a:hover {
